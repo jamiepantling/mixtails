@@ -1,9 +1,5 @@
 import { Component } from "react";
-<<<<<<< HEAD
 import styles from "./AuthPage.module.css";
-=======
-import "./AuthPage.module.css";
->>>>>>> main
 import LoginForm from "../../components/LoginForm/LoginForm";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
