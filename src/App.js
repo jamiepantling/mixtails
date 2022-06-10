@@ -1,9 +1,8 @@
 import './App.css'
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, Navigate } from "react-router-dom"
 import AuthPage from './pages/AuthPage/AuthPage';
+import HomePage from './pages/HomePage/HomePage'
 import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
-import UserLogout from './components/UserLogOut/UserLogOut'
-import Header from './components/Header/Header';
 import { Component } from 'react'
 
 export default class App extends Component {
@@ -34,7 +33,11 @@ export default class App extends Component {
     return (
       <div className="App">
         {this.state.user ?
-          <Header setUserInState={this.setUserInState}/>
+        <Routes>
+          <Route path="/home" element={<HomePage setUserInState={this.setUserInState} />}/>
+          <Route path="*" element={<Navigate to="/home" replace />}/>
+        </Routes>
+
         : (
         <>
           <AuthPage setUserInState={this.setUserInState} />
