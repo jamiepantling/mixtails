@@ -35,8 +35,8 @@ export default class App extends Component {
           <div>Mixtails app</div>
         : (
         <>
-          {/* <AuthPage setUserInState={this.setUserInState} /> */}
-          <SpotifyPage />
+          <AuthPage setUserInState={this.setUserInState} />
+          {/* <SpotifyPage /> */}
         </>
         )
         }
