@@ -22,7 +22,9 @@ const userSchema = new Schema({
   admin: {
     type: Boolean,
     default: false
-  } 
+  } ,
+  favcocktails: [{ type: Schema.Types.ObjectId, ref: 'Cocktail'}],
+  favmixes: [{ type: Schema.Types.ObjectId, ref: 'Mixtape'}]
 }, {
   timestamps: true,
   toJSON: {
