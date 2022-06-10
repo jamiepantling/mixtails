@@ -1,17 +1,17 @@
 import { Component } from "react";
-import "./AuthPage.css";
+import styles from "./AuthPage.module.css";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 
-export default class AuthPAge extends Component {
+export default class AuthPage extends Component {
   state = {
     showLogin: true,
   };
 
   render() {
     return (
-        <main className="AuthPage" >
+        <main className="styles.AuthPage" >
         
             {this.state.showLogin ? (
             <LoginForm setUserInState={this.props.setUserInState} />
