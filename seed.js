@@ -1,0 +1,144 @@
+// To populate the database, run this file with the terminal command:
+//    node seed.js
+require("dotenv").config();
+require("./config/database");
+
+const Cocktail = require("./models/Cocktail")
+
+  async function populateDB() {
+    // mongoose method to delete all documents in the model
+    await Cocktail.deleteMany({});
+    await Cocktail.create([
+      {
+        name: "Old-Fashioned",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      }, {
+        name: "Toronto",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Tommy's Margarita",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Daiquiri",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Manhattan",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Corpse Reviver #2",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "dry Martini",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Between the Sheets",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Mint Julep",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: "",
+      },
+      {
+        name: "Espresso Martini",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      },
+      {
+        name: "Gin & Tonic",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }, {
+        name: "Mojito",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }, {
+        name: "Moscow Mule",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }, {
+        name: "Parasol",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }, {
+        name: "White Russian",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }, {
+        name: "Americano",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }, {
+        name: "Negroni",
+        description: "",
+        instruction: "",
+        ingredients: ["", "", ""],
+        tags: ["", ""],
+        image: ''
+      }
+    ])
+  }
+
+populateDB()
