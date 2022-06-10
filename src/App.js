@@ -1,7 +1,9 @@
-import './App.css';
+import './App.css'
 import { Route, Routes } from "react-router-dom"
 import AuthPage from './pages/AuthPage/AuthPage';
 import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
+import UserLogout from './components/UserLogOut/UserLogOut'
+import Header from './components/Header/Header';
 import { Component } from 'react'
 
 export default class App extends Component {
@@ -32,7 +34,7 @@ export default class App extends Component {
     return (
       <div className="App">
         {this.state.user ?
-          <div>Mixtails app</div>
+          <Header setUserInState={this.setUserInState}/>
         : (
         <>
           <AuthPage setUserInState={this.setUserInState} />
