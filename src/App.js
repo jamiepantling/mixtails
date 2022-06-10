@@ -1,8 +1,10 @@
-import './App.css';
+import './App.css'
 import { Route, Routes } from "react-router-dom"
 import AuthPage from './pages/AuthPage/AuthPage';
 import HomePage from './pages/HomePage/HomePage'
 import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
+import UserLogout from './components/UserLogOut/UserLogOut'
+import Header from './components/Header/Header';
 import { Component } from 'react'
 
 export default class App extends Component {
@@ -38,6 +40,7 @@ export default class App extends Component {
             <HomePage/>
           </Route>
         </Routes>
+
         : (
         <>
           <AuthPage setUserInState={this.setUserInState} />
