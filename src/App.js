@@ -7,6 +7,7 @@ import UserProfilePage from './pages/UserProfilePage/UserProfilePage';
 // import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
 import CocktailList from './components/CocktailList/CocktailList'
 import MoodList from "./components/MoodList/MoodList"
+import MixtapeList from "./components/MixtapeList/MixtapeList"
 
 export default class App extends Component {
 
@@ -42,6 +43,7 @@ export default class App extends Component {
           {/* <Route path="/spotify" element={<SpotifyPage />}/> */}
           <Route path="/cocktails" element={<CocktailList />}/>
           <Route path="/moods" element={<MoodList />}/>
+          <Route path="/mixtapes" element={<MixtapeList />}/>
           <Route path="*" element={<Navigate to="/home" replace />}/>
         </Routes>
         : (
