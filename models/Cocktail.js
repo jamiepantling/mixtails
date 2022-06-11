@@ -1,14 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
 const cocktailSchema = new Schema({
-    name: {type: String},
-    description: { type: String },
-    instruction: { type: String},
-    ingredients: [String],
-    tags: [String],
-    createdBy: {type: Schema.Types.ObjectId, ref: 'User'}
-})
+  name: String ,
+  description: { type: String },
+  instruction: { type: String },
+  ingredients: [String],
+  tags: [String],
+  createdBy: { type: Schema.Types.ObjectId, ref: "User" },
+});
 
-module.exports = mongoose.model('Cocktail', cocktailSchema)
+module.exports = mongoose.model("Cocktail", cocktailSchema);
