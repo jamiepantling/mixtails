@@ -13,131 +13,132 @@ const Cocktail = require("./models/Cocktail")
         name: "Old-Fashioned",
         description: "",
         instruction: "",
-        ingredients: ["", "", ""],
+        ingredients: [{name: 'Bourbon', qty: 2}, {name: 'Simple Syrup', qty: 0.25}, {name: 'Bourbon', qty: 2}],
         tags: ["", ""],
         image: "",
-      }, {
-        name: "Toronto",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Tommy's Margarita",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Daiquiri",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Manhattan",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Corpse Reviver #2",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "dry Martini",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Between the Sheets",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Mint Julep",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: "",
-      },
-      {
-        name: "Espresso Martini",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      },
-      {
-        name: "Gin & Tonic",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }, {
-        name: "Mojito",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }, {
-        name: "Moscow Mule",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }, {
-        name: "Parasol",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }, {
-        name: "White Russian",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }, {
-        name: "Americano",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }, {
-        name: "Negroni",
-        description: "",
-        instruction: "",
-        ingredients: ["", "", ""],
-        tags: ["", ""],
-        image: ''
-      }
+      }, 
+      // {
+      //   name: "Toronto",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Tommy's Margarita",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Daiquiri",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Manhattan",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Corpse Reviver #2",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "dry Martini",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Between the Sheets",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Mint Julep",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: "",
+      // },
+      // {
+      //   name: "Espresso Martini",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // },
+      // {
+      //   name: "Gin & Tonic",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }, {
+      //   name: "Mojito",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }, {
+      //   name: "Moscow Mule",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }, {
+      //   name: "Parasol",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }, {
+      //   name: "White Russian",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }, {
+      //   name: "Americano",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }, {
+      //   name: "Negroni",
+      //   description: "",
+      //   instruction: "",
+      //   ingredients: ["", "", ""],
+      //   tags: ["", ""],
+      //   image: ''
+      // }
     ])
   }
 
