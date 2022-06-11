@@ -1,9 +1,10 @@
-import './App.css'
+import { Component } from 'react'
 import { Route, Routes, Navigate } from "react-router-dom"
+import './App.css'
 import AuthPage from './pages/AuthPage/AuthPage';
 import HomePage from './pages/HomePage/HomePage'
+import UserProfilePage from './pages/UserProfilePage/UserProfilePage';
 import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
-import { Component } from 'react'
 
 export default class App extends Component {
 
@@ -34,7 +35,8 @@ export default class App extends Component {
       <div className="App">
         {this.state.user ?
         <Routes>
-          <Route path="/home" element={<HomePage setUserInState={this.setUserInState} />}/>
+          <Route path="/home" element={<HomePage setUserInState={this.setUserInState} user ={this.state.user}/>}/>
+          <Route path="/user/:id" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />
           <Route path="*" element={<Navigate to="/home" replace />}/>
         </Routes>
 

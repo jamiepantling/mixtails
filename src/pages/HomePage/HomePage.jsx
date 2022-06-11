@@ -2,6 +2,9 @@ import Header from "../../components/Header/Header";
 
 export default function HomePage(props) {
     return (
-        <Header setUserInState={props.setUserInState}/>
+        <main>
+            <Header setUserInState={props.setUserInState}/>
+            <a href={`/user/${props.user._id}`}>Profile</a>
+        </main>
     )
 }
