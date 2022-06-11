@@ -2,7 +2,8 @@ import './App.css'
 import { Route, Routes, Navigate } from "react-router-dom"
 import AuthPage from './pages/AuthPage/AuthPage';
 import HomePage from './pages/HomePage/HomePage'
-import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
+// import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
+import CocktailList from './components/CocktailList/CocktailList'
 import { Component } from 'react'
 
 export default class App extends Component {
@@ -35,6 +36,7 @@ export default class App extends Component {
         {this.state.user ?
         <Routes>
           <Route path="/home" element={<HomePage setUserInState={this.setUserInState} />}/>
+          <Route path="/cocktails" element={<CocktailList />}/>
           <Route path="*" element={<Navigate to="/home" replace />}/>
         </Routes>
 
