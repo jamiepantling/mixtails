@@ -5,7 +5,7 @@ export default class UpdateUserForm extends Component {
   state = {
     error: "",
     bio: "",
-    username:""
+    username: "",
   };
 
   handleChange = (evt) => {
@@ -18,19 +18,20 @@ export default class UpdateUserForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      let jwt = localStorage.getItem("token");
-      const fetchResponse = await fetch("/api/users/update/:id", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + jwt,
-        },
-        body: JSON.stringify({
-          username: this.state.username,
-          bio: this.state.bio,
-        }),
-      });
-      console.log(fetchResponse);
+      const fetchResponse = await fetch(
+        `/api/users/update/${this.props.user._id}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: this.props.user.email,
+            username: this.state.username,
+            bio: this.state.bio,
+          }),
+        }
+      );
       if (!fetchResponse.ok) throw new Error("Fetch failed - Bad Request ");
 
       let token = await fetchResponse.json();
@@ -38,7 +39,6 @@ export default class UpdateUserForm extends Component {
       localStorage.setItem("token", token);
 
       const userDoc = JSON.parse(atob(token.split(".")[1])).user;
-      console.log(userDoc)
       this.props.setUserInState(userDoc);
     } catch (err) {
       console.log("Update Form error", err);

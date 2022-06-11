@@ -4,7 +4,10 @@ export default function HomePage(props) {
     return (
         <main>
             <Header setUserInState={props.setUserInState}/>
-            <a href={`/user/${props.user._id}`}>Profile</a>
+            <div>
+                <a href={`/user/${props.user._id}`}>Profile</a>
+            </div>
+            <a href={'/cocktails'}>Cocktails</a>
         </main>
     )
 }

@@ -42,17 +42,17 @@ async function login(req, res) {
 
 async function update(req, res) {
   try {
-    console.log(req)
-    console.log("im here in update")
-    let updatedUser = {
+    const updatedUser = await User.findOneAndUpdate({ 
+      email: req.body.email 
+    }, {
       username: req.body.username || req.user.username,
       bio: req.body.bio || req.user.bio
-    }
-
-    User.findByIdAndUpdate(req.user.id, updatedUser, {
+    }, {
       new: true
-    })
+    } )
+
     const token = jwt.sign({ updatedUser }, process.env.SECRET, { expiresIn: "24h" });
+    console.log(token)
     res.status(200).json(token)
   } catch {
     res.status(400).json(`Update failed, try Again`);
