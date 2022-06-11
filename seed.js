@@ -4,8 +4,19 @@ require("dotenv").config();
 require("./config/database");
 
 const Cocktail = require("./models/Cocktail")
+const Mood = require("./models/Mood")
 
   async function populateDB() {
+   
+   await Mood.deleteMany({})
+   await Mood.create([
+    {content: 'Happy'},
+    {content: 'Dramatic'},
+    {content: 'Hypocritical'},
+    {content: 'Insecure'},
+    {content: 'Depressed'}
+   ])
+   
     // mongoose method to delete all documents in the model
     await Cocktail.deleteMany({});
     await Cocktail.create([
@@ -13,8 +24,8 @@ const Cocktail = require("./models/Cocktail")
         name: "Old-Fashioned",
         description: "",
         instruction: "",
-        ingredients: [{name: 'Bourbon', qty: 2}, {name: 'Simple Syrup', qty: 0.25}, {name: 'Bourbon', qty: 2}],
-        tags: ["", ""],
+        ingredients: [{name: 'Bourbon', qty: 2}, {name: 'Simple Syrup', qty: 0.25}, {name: 'Angos', qty: 2}],
+        // tags: [{"", ""}],
         image: "",
       }, 
       // {
@@ -140,6 +151,7 @@ const Cocktail = require("./models/Cocktail")
       //   image: ''
       // }
     ])
+
   }
 
 populateDB()
