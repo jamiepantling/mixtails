@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function Spotify() {
-  const CLIENT_ID = String(process.env.SPOTIFY_CLIENT_ID)
+  // CHECK THIS: Create React App(CRA) enforces the prefix REACT_APP
+  //  on every custom variable. Please note that variables without
+  // the prefix are ignored during bundling.
+
+  const CLIENT_ID = String(process.env.REACT_APP_SPOTIFY_CLIENT_ID);
   const REDIRECT_URI = "http://localhost:3000";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
   const [token, setToken] = useState("");
+  const [searchKey, setSearchKey] = useState("")
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -18,7 +24,6 @@ export default function Spotify() {
         .split("&")
         .find((ele) => ele.startsWith("access_token"))
         .split("=")[1];
-      // console.log(token)
       window.location.hash = "";
       window.localStorage.setItem("token", token);
       setToken(token);
@@ -26,8 +31,24 @@ export default function Spotify() {
   }, []);
 
   const logout = () => {
-    setToken("")
-    window.localStorage.removeItem("token")
+    setToken("");
+    window.localStorage.removeItem("token");
+  };
+
+  const searchArtists = async (e) => {
+    e.preventDefault()
+    
+    const {data} = await axios.get("https://api.spotify.com/v1/search", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+      params: {
+        q: searchKey,
+        type: "artist"
+      }
+    })
+
+    console.log(data)
   }
 
   return (
@@ -41,6 +62,14 @@ export default function Spotify() {
         </a>
       ) : (
         <button onClick={logout}>Logout</button>
+      )}
+      {token ? (
+        <form onSubmit={searchArtists}>
+          <input type="text" onChange={(e => setSearchKey(e.target.value))}/>
+          <button type="submit">Search</button>
+        </form>
+      ) : (
+        <h2>Please Login</h2>
       )}
     </div>
   );
