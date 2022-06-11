@@ -37,14 +37,14 @@ export default class App extends Component {
         {this.state.user ?
         <Routes>
           <Route path="/home" element={<HomePage setUserInState={this.setUserInState} user ={this.state.user}/>}/>
-          <Route path="/user/:id" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />          <Route path="/cocktails" element={<CocktailList />}/>
+          <Route path="/user/:id" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />          
+          {/* <Route path="/spotify" element={<SpotifyPage />}/> */}
+          <Route path="/cocktails" element={<CocktailList />}/>
           <Route path="*" element={<Navigate to="/home" replace />}/>
         </Routes>
-
         : (
         <>
           <AuthPage setUserInState={this.setUserInState} />
-          {/* <SpotifyPage /> */}
         </>
         )
         }
