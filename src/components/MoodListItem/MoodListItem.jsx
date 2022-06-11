@@ -1,4 +1,4 @@
-import style from "./MoodListItem.module.css"
+import styles from "./MoodListItem.module.css"
 
 export default function MoodListItem(props) {
     return (

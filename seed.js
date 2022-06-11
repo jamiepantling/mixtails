@@ -5,6 +5,7 @@ require("./config/database");
 
 const Cocktail = require("./models/Cocktail")
 const Mood = require("./models/Mood")
+const Mixtape = require("./models/Mixtape")
 
   async function populateDB() {
    
@@ -15,6 +16,15 @@ const Mood = require("./models/Mood")
     {content: 'Hypocritical'},
     {content: 'Insecure'},
     {content: 'Depressed'}
+   ])
+
+   await Mixtape.deleteMany({})
+   await Mixtape.create([
+    {
+      name: 'Happy Mix'
+    },
+    {name: 'Sad Mix'},
+   
    ])
    
     // mongoose method to delete all documents in the model
