@@ -12,7 +12,6 @@ module.exports = {
 
 async function signup(req, res) {
   try {
-
     const hashedPassword = await bcrypt.hash(req.body.password, SALT_ROUNDS);
     const user = await User.create({
       username: req.body.username,
@@ -42,18 +41,22 @@ async function login(req, res) {
 
 async function update(req, res) {
   try {
-    const updatedUser = await User.findOneAndUpdate({ 
-      email: req.body.email 
-    }, {
-      username: req.body.username || req.user.username,
-      bio: req.body.bio || req.user.bio
-    }, {
-      new: true
-    } )
+    const updatedUser = await User.findOneAndUpdate(
+      { email: req.body.email },
+      {
+        username: req.body.username,
+        bio: req.body.bio,
+      },
+      {
+        new: true,
+      }
+    );
 
-    const token = jwt.sign({ updatedUser }, process.env.SECRET, { expiresIn: "24h" });
-    console.log(token)
-    res.status(200).json(token)
+    const token = jwt.sign({ updatedUser }, process.env.SECRET, {
+      expiresIn: "24h",
+    });
+    console.log(token);
+    res.status(200).json(token);
   } catch {
     res.status(400).json(`Update failed, try Again`);
   }

@@ -1,13 +1,16 @@
 import Header from "../../components/Header/Header";
+import style from "./HomePage.module.css"
 
 export default function HomePage(props) {
-    return (
-        <main>
-            <Header setUserInState={props.setUserInState}/>
-            <div>
-                <a href={`/user/${props.user._id}`}>Profile</a>
-            </div>
-            <a href={'/cocktails'}>Cocktails</a>
-        </main>
-    )
+  return (
+    <main>
+      <Header setUserInState={props.setUserInState} />
+      <a href={"/foods"}className={style.card}>
+          What are you feeling like?
+      </a>
+      <a href={"/flavours"} className={style.card}>
+          Savor the Flavour
+      </a>
+    </main>
+  );
 }

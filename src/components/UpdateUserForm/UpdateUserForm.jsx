@@ -27,8 +27,8 @@ export default class UpdateUserForm extends Component {
           },
           body: JSON.stringify({
             email: this.props.user.email,
-            username: this.state.username,
-            bio: this.state.bio,
+            username: this.state.username || this.props.user.username,
+            bio: this.state.bio || this.props.user.bio,
           }),
         }
       );

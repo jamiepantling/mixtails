@@ -1,10 +1,11 @@
-import MoodList from "../../components/MoodList/MoodList"
+import MoodList from "../../components/MoodList/MoodList";
+import Header from "../../components/Header/Header";
 
 export default function MoodPage(props) {
-    return (
-        <div>
-            Moods Page
-            <MoodList/>
-        </div>
-    )
+  return (
+    <main>
+      <Header setUserInState={props.setUserInState} />
+      <MoodList />
+    </main>
+  );
 }
