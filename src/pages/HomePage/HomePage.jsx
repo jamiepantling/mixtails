@@ -5,7 +5,7 @@ export default function HomePage(props) {
   return (
     <main>
       <Header setUserInState={props.setUserInState} />
-      <a href={"/foods"}className={style.card}>
+      <a href={"/moods"}className={style.card}>
           What are you feeling like?
       </a>
       <a href={"/flavours"} className={style.card}>
