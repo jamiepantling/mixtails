@@ -1,0 +1,15 @@
+.card {
+    display: block;
+    margin: 0 auto;
+    max-width: 50vw;
+    max-height: 33vh;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    line-height: 33vh;
+    font-size: 30px;
+}

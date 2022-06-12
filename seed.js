@@ -5,7 +5,8 @@ require("./config/database");
 
 const Cocktail = require("./models/Cocktail")
 const Mood = require("./models/Mood")
-const Mixtape = require("./models/Mixtape")
+const Mixtape = require("./models/Mixtape");
+const Tag = require("./models/Tag")
 
   async function populateDB() {
    
@@ -27,6 +28,15 @@ const Mixtape = require("./models/Mixtape")
    
    ])
    
+   await Tag.deleteMany({})
+   await Tag.create([
+     {content: 'Sweet'},
+     {content: 'Salty'},  
+     {content: 'Sour'},  
+     {content: 'Savoury'},
+     {content: 'Slanderous'}
+   ])
+
     // mongoose method to delete all documents in the model
     await Cocktail.deleteMany({});
     await Cocktail.create([
