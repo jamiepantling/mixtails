@@ -48,6 +48,14 @@ const Tag = require("./models/Tag")
         // tags: [{"", ""}],
         image: "",
       }, 
+      {
+        name: "Nasty Cocktail",
+        description: "",
+        instruction: "",
+        ingredients: [{name: 'Nastee', qty: 2}, {name: 'Nastee', qty: 0.25}, {name: 'Angos', qty: 2}],
+        // tags: [{"", ""}],
+        image: "",
+      }, 
       // {
       //   name: "Toronto",
       //   description: "",
