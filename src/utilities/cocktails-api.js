@@ -5,17 +5,15 @@ export function getCocktails() {
 }
 
 export function deleteCocktail(cocktailId) {
-  const options = getOptionsDelete();
-  options.body = JSON.stringify({ cocktailId })
-  return fetch(BASE_URL, options).then((res) => res.json());
-}
-
-function getOptionsDelete() {
-  return {
+  const options = {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
-      // Authorization: `Bearer ${getToken()}`
     },
+    body: JSON.stringify({
+      cocktailId,
+    }),
   };
+
+  return fetch(BASE_URL, options).then((res) => res.json());
 }
