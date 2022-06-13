@@ -1,10 +1,21 @@
-const Cocktail = require('../../models/Cocktail')
+const Cocktail = require("../../models/Cocktail");
 
 module.exports = {
-    show
+  index,
+  deleteCocktail,
+};
+
+async function index(req, res) {
+  const cocktails = await Cocktail.find({});
+  res.json(cocktails);
 }
 
-async function show(req,res) {
-    const cocktails = await Cocktail.find({})
-    res.json(cocktails)
+// cocktail delete function
+async function deleteCocktail(req, res) {
+  await Cocktail.findByIdAndDelete(req.body.cocktailId,
+    err => {
+      if (err) return res.send(err);
+    //   if (!req.user._id.equals(cocktail.createdBy)) cocktail.remove();
+    });
+
 }
