@@ -12,9 +12,6 @@ async function index(req, res) {
 
 // cocktail delete function
 async function deleteCocktail(req, res) {
-  console.log("controller function");
-  console.log(req.params)
-  console.log(req.body);
   await Cocktail.findByIdAndDelete(req.body.cocktailId,
     err => {
       if (err) return res.send(err);

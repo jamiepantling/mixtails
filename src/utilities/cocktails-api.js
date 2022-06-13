@@ -7,10 +7,8 @@ export function getCocktails() {
 export function deleteCocktail(cocktailId) {
   console.log("utils function");
   const options = getOptionsDelete();
-  // CHECK THIS - TO UNDERSTAND WHY NEEDS TO BE IN AN OBJECT 
   options.body = JSON.stringify({ cocktailId })
-  console.log(options);
-  return fetch(`${BASE_URL}/delete`, options).then((res) => res.json());
+  return fetch(BASE_URL, options).then((res) => res.json());
 }
 
 function getOptionsDelete() {
