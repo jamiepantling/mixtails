@@ -1,15 +1,18 @@
 import MixtapeList from "../../components/MixtapeList/MixtapeList";
 import Header from "../../components/Header/Header";
-import { useEffect, useState } from "react";
-
-export default function MixtapeDetailPage(props) {
-  let [mixtape, setMixtape] = useState({});
+import { Component } from 'react'
 
 
+export default class MixtapeDetailPage extends Component {
+
+render() {
+  
   return (
     <main>
-      <Header setUserInState={props.setUserInState} />
+      <Header setUserInState={this.props.setUserInState} />
       <MixtapeList />
+      
     </main>
   );
+}
 }
