@@ -1,8 +1,8 @@
-.mood:hover {
+.flavour:hover {
     cursor: pointer;
 }
 
-.mood {
+.flavour {
     border: 2px solid black;
     width: 80vw;
     height: 100px;
