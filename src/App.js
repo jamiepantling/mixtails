@@ -9,6 +9,7 @@ import CocktailList from './components/CocktailList/CocktailList'
 import MixtapeList from "./components/MixtapeList/MixtapeList"
 import MoodPage from './pages/MoodPage/MoodPage';
 import FlavourPage from './pages/FlavourPage/FlavourPage';
+import Playlist from './components/Playlist/Playlist'
 
 export default class App extends Component {
 
@@ -42,6 +43,7 @@ export default class App extends Component {
           <Route path="/home" element={<HomePage setUserInState={this.setUserInState} user ={this.state.user}/>}/>
           <Route path="/user" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />          
           {/* <Route path="/spotify" element={<SpotifyPage />}/> */}
+          <Route path="/playlist" element={<Playlist user={this.state.user} />}/>
           <Route path="/flavours" element={<FlavourPage setUserInState={this.setUserInState}/>} />
           <Route path="/cocktails" element={<CocktailList setUserInState={this.setUserInState} />}/>
           <Route path="/moods" element={<MoodPage setUserInState={this.setUserInState} />}/>

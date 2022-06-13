@@ -5,7 +5,6 @@ export function getCocktails() {
 }
 
 export function deleteCocktail(cocktailId) {
-  console.log("utils function");
   const options = getOptionsDelete();
   options.body = JSON.stringify({ cocktailId })
   return fetch(BASE_URL, options).then((res) => res.json());
