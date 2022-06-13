@@ -8,20 +8,22 @@ export default function MixtapeDetail(props) {
     let [mixtape, setMixtape] = useState({})
     let [moods, setMoods] = useState([])
     let [mixtapeMoods, setMixtapeMoods] = useState([])
+
     useEffect( () => {
-        async function getMoods(id) {
+        async function getMoods() {
             let res = await moodApi.getMoods()
             setMoods(res)
         }
         getMoods()
-        
+
     }, [])
 
+    async function getMixtape(id) {
+        let res = await mixtapeApi.getMixtapeById(id)
+        setMixtape(res)
+    }
+
     useEffect( () => {
-        async function getMixtape(id) {
-            let res = await mixtapeApi.getMixtapeById(id)
-            setMixtape(res)
-        }
         getMixtape(params.id);
     }, [])
 
@@ -29,7 +31,19 @@ export default function MixtapeDetail(props) {
         if (mixtape.moods) setMixtapeMoods(mixtape.moods.map(mood => moods.find(x=>x._id === mood).content))
     }, [mixtape])
 
-    let moodsList = moods.map(mood => <li>{mood.content}</li>)
+    const handleMoodClick = (moodId) => {
+        mixtapeApi.addMood(moodId, params.id)
+
+        let moodToAdd = moods.find(x=>x._id === moodId).content
+
+        setMixtapeMoods([...mixtapeMoods, moodToAdd])
+    }
+
+    
+
+    let moodsList = moods.map(mood =>  mixtapeMoods.includes(mood.content) || <button id={mood._id} onClick={() => handleMoodClick(mood._id)}>{mood.content}</button>)
+
+
     return (
         
         <div>
