@@ -6,10 +6,10 @@ export default function HomePage(props) {
   return (
     <main>
       <Header setUserInState={props.setUserInState} />
-      <Link to="/moods" className={style.card}>
+      <Link to="/moods" className={style.card1}>
           What are you feeling like?
       </Link>
-      <Link to="/flavours" className={style.card}>
+      <Link to="/flavours" className={style.card2}>
           Savor the Flavour
       </Link>
     </main>

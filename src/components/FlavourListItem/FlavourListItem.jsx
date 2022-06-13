@@ -1,8 +1,25 @@
+import { Component, useState } from "react";
+import style from "./FlavourListItem.module.css";
 
-export default function FlavourListItem(props) {
+export default class FlavourListItem extends Component {
+  state = {
+    showCocktails: false,
+  };
+  render() {
     return (
-
+      <div>
         <div>
-            {props.content}</div>
-    )
+          <h3
+            className={style.flavour}
+            onClick={() =>
+              this.setState({ showCocktails: !this.state.showCocktails })
+            }
+          >
+            {this.props.content}
+          </h3>
+          {this.state.showCocktails ? <div>Cocktails with said mood</div> : <></>}
+        </div>
+      </div>
+    );
+  }
 }

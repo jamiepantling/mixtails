@@ -1,5 +1,5 @@
 import MoodListItem from "../MoodListItem/MoodListItem"
-import styles from "./MoodList.module.css"
+import style from "./MoodList.module.css"
 import { useEffect, useState } from "react";
 import * as moodsApi from "../../utilities/moods-api";
 import { Link } from 'react-router-dom'
@@ -19,13 +19,11 @@ export default function MoodList(props) {
     }, []);
   
     const moods = moodList.map((mood) => (
-    <Link to={`/moods/${mood._id}`} ><MoodListItem key={mood._id} {...mood} /></Link>
+      <MoodListItem key={mood._id} {...mood} />
     ));
 
-
     return (
-        <div>
-          Mood list:
+        <div className={style.content}>
             {moods}
         </div>
     )

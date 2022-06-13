@@ -23,7 +23,7 @@ export default function FlavourList(props) {
 
     return (
         <div>
-          What chu wanna taste
+          <h2>Taste Profiles</h2>
             {tags}
         </div>
     )

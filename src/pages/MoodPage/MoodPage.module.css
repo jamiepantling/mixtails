@@ -1,0 +1,10 @@
+.content {
+ border: 2px solid white;
+ height: 100vh;
+ margin: 20px;
+}
+
+.title {
+    font-size: 60px;
+    color: black;
+}
