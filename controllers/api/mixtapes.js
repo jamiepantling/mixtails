@@ -11,9 +11,12 @@ async function index(req,res) {
 }
 
 async function show(req, res) {
-    
     const mixtape = await Mixtape.findById(req.params.id)
-    console.log("Mixtape: " + mixtape) 
     res.json(mixtape)
-    
+}
+
+async function getMoods(req, res) {
+    const mixtape = await Mixtape.findById(req.params.id)
+    const moods = mixtape.moods.populate("Mood")
+    res.json(moods)
 }
