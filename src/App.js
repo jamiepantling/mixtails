@@ -8,8 +8,11 @@ import UserProfilePage from './pages/UserProfilePage/UserProfilePage';
 import CocktailList from './components/CocktailList/CocktailList'
 import MixtapeList from "./components/MixtapeList/MixtapeList"
 import MoodPage from './pages/MoodPage/MoodPage';
+import MoodDetailPage from './pages/MoodDetailPage/MoodDetailPage';
 import FlavourPage from './pages/FlavourPage/FlavourPage';
 import Playlist from './components/Playlist/Playlist'
+import MixtapePage from './pages/MixtapePage/MixtapePage'
+import MixtapeDetailPage from './pages/MixtapeDetailPage/MixtapeDetailPage';
 
 export default class App extends Component {
 
@@ -46,8 +49,10 @@ export default class App extends Component {
           <Route path="/playlist" element={<Playlist user={this.state.user} />}/>
           <Route path="/flavours" element={<FlavourPage setUserInState={this.setUserInState}/>} />
           <Route path="/cocktails" element={<CocktailList setUserInState={this.setUserInState} />}/>
+          <Route path="/moods/:id" element={<MoodDetailPage setUserInState={this.setUserInState}/>} />
           <Route path="/moods" element={<MoodPage setUserInState={this.setUserInState} />}/>
-          <Route path="/mixtapes" element={<MixtapeList setUserInState={this.setUserInState}  />}/>
+          <Route path="/mixtapes/:id" element={<MixtapeDetailPage setUserInState={this.setUserInState}/>} />
+          <Route path="/mixtapes" element={<MixtapePage setUserInState={this.setUserInState}  />}/>
           <Route path="*" element={<Navigate to="/home" replace />}/>
         </Routes>
         : (

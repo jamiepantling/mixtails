@@ -1,16 +1,17 @@
 import Header from "../../components/Header/Header";
 import style from "./HomePage.module.css"
+import { Link } from 'react-router-dom'
 
 export default function HomePage(props) {
   return (
     <main>
       <Header setUserInState={props.setUserInState} />
-      <a href={"/moods"}className={style.card}>
+      <Link to="/moods" className={style.card}>
           What are you feeling like?
-      </a>
-      <a href={"/flavours"} className={style.card}>
+      </Link>
+      <Link to="/flavours" className={style.card}>
           Savor the Flavour
-      </a>
+      </Link>
     </main>
   );
 }
