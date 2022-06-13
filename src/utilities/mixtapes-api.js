@@ -8,21 +8,23 @@ export function getMixtapeById(id) {
   return fetch(`${BASE_URL}/${id}`).then((res) => res.json());
 }
 
-export function createMixtape(/* get arguments */) {
+export async function createMixtape(mixtape) {
   const options = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      //add mood(s)
-      //add playlist link
-      //add cocktails
+      name: mixtape.name,
+      cocktails: mixtape.cocktails,
+      moods: mixtape.moods,
+      playlist: mixtape.playlist,
+      createdBy: mixtape.createdBy
     }),
   };
-
   try {
-    let fetchResponse = fetch(`${BASE_URL}`, options);
+    let fetchResponse = await fetch(`${BASE_URL}`, options)
+    console.log("Fetch response ok?", fetchResponse.ok, fetchResponse)
     if (!fetchResponse.ok) throw new Error("Fetch Failed!");
   } catch (error) {
     console.log(("Mixtape Error: ", error));
