@@ -1,8 +1,9 @@
 const Mixtape = require('../../models/Mixtape')
 
 module.exports = {
-    index,
     show,
+    update,
+    index,
     addMood,
     // getMoods
 }
@@ -11,6 +12,11 @@ async function index(req,res) {
     const mixtapes = await Mixtape.find({})
     res.json(mixtapes)
 }
+
+async function update(req, res) {
+    
+}
+
 
 async function show(req, res) {
     const mixtape = await Mixtape.findById(req.params.id)
