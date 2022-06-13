@@ -1,8 +1,8 @@
 const BASE_URL = "/api/mixtapes";
 
-// export function getMixtapes() {
-//     return fetch(BASE_URL).then(res => res.json())
-// }
+export function getMixtapes() {
+    return fetch(BASE_URL).then(res => res.json())
+}
 
 export function getMixtapeById(id) {
   return fetch(`${BASE_URL}/${id}`).then((res) => res.json());

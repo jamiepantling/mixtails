@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 export default function MixtapeDetailPage(props) {
   let [mixtape, setMixtape] = useState({});
 
-  useEffect
 
   return (
     <main>
