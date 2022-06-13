@@ -15,13 +15,10 @@ export default class mixtapeForm extends Component {
     componentDidMount() {
         let fetchCocktails = async () => {
           const cocktails = await cocktailsAPI.getCocktails()
-          .then(this.setState({...this.state, allCocktails: cocktails }))
-          console.log(this.state)
+          this.setState({...this.state, allCocktails: cocktails })
         }
         fetchCocktails()
     }
-
-    // cocktails = () => (this.allCocktails.map(cocktail => <option key={cocktail._id}>{cocktail.name}</option>))
   
   render() {
         return (
@@ -38,7 +35,7 @@ export default class mixtapeForm extends Component {
               />
               <label>Add cocktails to your mixtape:</label>
               <select name="cocktails" id="cocktails">
-
+              {this.state.allCocktails.map(cocktail => <option key={cocktail._id}>{cocktail.name}</option>)}
               </select>
               <label>Add moods to your mixtape:</label>
               <select name="moods">
