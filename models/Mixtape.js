@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const mixtapeSchema = new Schema({
   name: { type: String },
-  drinks: [{ type: Schema.Types.ObjectId, ref: "Cocktail" }],
-  songs: [{ type: Schema.Types.ObjectId, ref: "Playlist" }],
+  cocktails: [{ type: Schema.Types.ObjectId, ref: "Cocktail" }],
+  playlists: [{ type: String }],
   moods: [{ type: Schema.Types.ObjectId, ref: "Mood" }],
   createdBy: { type: Schema.Types.ObjectId, ref: "User" },
   shared: { type: Boolean },

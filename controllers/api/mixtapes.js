@@ -5,6 +5,7 @@ module.exports = {
     update,
     index,
     addMood,
+    create
     // getMoods
 }
 
@@ -41,5 +42,21 @@ async function addMood(req, res) {
     } catch(error) {
         res.json(error)
     }    
+}
+
+async function create(req, res) {
+    try {
+        console.log(req.body)
+        const mixtape = await Mixtape.create({
+            name: req.body.name,
+            cocktails: [req.body.cocktails],
+            moods: [req.body.moods],
+            playlists: [req.body.playlist],
+            createdBy: req.body.createdBy
+        })
+        res.status(200).json()
+    } catch (error) {
+        console.log("Error! ", error)
+    }
 }
 
