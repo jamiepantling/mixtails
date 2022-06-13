@@ -10,6 +10,7 @@ import MixtapeList from "./components/MixtapeList/MixtapeList"
 import MoodPage from './pages/MoodPage/MoodPage';
 import MoodDetailPage from './pages/MoodDetailPage/MoodDetailPage';
 import FlavourPage from './pages/FlavourPage/FlavourPage';
+import Playlist from './components/Playlist/Playlist'
 import MixtapePage from './pages/MixtapePage/MixtapePage'
 import MixtapeDetailPage from './pages/MixtapeDetailPage/MixtapeDetailPage';
 
@@ -45,6 +46,7 @@ export default class App extends Component {
           <Route path="/home" element={<HomePage setUserInState={this.setUserInState} user ={this.state.user}/>}/>
           <Route path="/user" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />          
           {/* <Route path="/spotify" element={<SpotifyPage />}/> */}
+          <Route path="/playlist" element={<Playlist user={this.state.user} />}/>
           <Route path="/flavours" element={<FlavourPage setUserInState={this.setUserInState}/>} />
           <Route path="/cocktails" element={<CocktailList setUserInState={this.setUserInState} />}/>
           <Route path="/moods/:id" element={<MoodDetailPage setUserInState={this.setUserInState}/>} />
