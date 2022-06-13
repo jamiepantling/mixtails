@@ -41,7 +41,7 @@ async function login(req, res) {
 
 async function update(req, res) {
   try {
-    const updatedUser = await User.findOneAndUpdate(
+    const user = await User.findOneAndUpdate(
       { email: req.body.email },
       {
         username: req.body.username,
@@ -52,7 +52,7 @@ async function update(req, res) {
       }
     );
 
-    const token = jwt.sign({ updatedUser }, process.env.SECRET, {
+    const token = jwt.sign({ user }, process.env.SECRET, {
       expiresIn: "24h",
     });
     console.log(token);
