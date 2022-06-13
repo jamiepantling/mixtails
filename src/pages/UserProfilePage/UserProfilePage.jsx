@@ -1,6 +1,7 @@
 import { Component } from "react";
 import UpdateUserForm from "../../components/UpdateUserForm/UpdateUserForm";
 import Header from "../../components/Header/Header";
+import UserLogOut from "../../components/UserLogOut/UserLogOut";
 import "./UserProfilePage.css";
 
 export default class UserProfilePage extends Component {
@@ -34,6 +35,8 @@ export default class UserProfilePage extends Component {
         ) : (
           <></>
         )}
+
+        <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
     );
   }

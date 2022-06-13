@@ -1,6 +1,6 @@
 import Header from "../../components/Header/Header";
+import { Link } from "react-router-dom";
 import style from "./HomePage.module.css"
-import { Link } from 'react-router-dom'
 
 export default function HomePage(props) {
   return (
