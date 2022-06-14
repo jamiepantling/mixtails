@@ -4,7 +4,7 @@ module.exports = {
     show,
     update,
     index,
-    addMood,
+    addRemoveMood,
     create,
     deleteMixtape,
     // getMoods
@@ -25,20 +25,20 @@ async function show(req, res) {
     res.json(mixtape)
 }
 
-// async function getMoods(req, res) {
-//     const mixtape = await Mixtape.findById(req.params.id)
-//     const moods = mixtape.moods.populate("Mood")
-//     res.json(moods)
-// }
 
-async function addMood(req, res) {
+async function addRemoveMood(req, res) {
     try {
         const mixtape = await Mixtape.findById(req.params.id)
         const moodId = req.body.moodId
         if (!mixtape.moods.includes(moodId)) {
-        await mixtape.moods.push(moodId)
+        mixtape.moods.push(moodId)
         await mixtape.save()
-        res.status(200).json("All good - mood added.")
+        res.status(200).json()
+       } else {
+        let index = mixtape.moods.indexOf(moodId);
+        await mixtape.moods.splice(index, 1);
+        await mixtape.save()
+        res.status(200).json()
        }
     } catch(error) {
         res.json(error)
@@ -70,3 +70,14 @@ async function deleteMixtape(req, res) {
     }
   }
 
+async function update(req, res) {
+    try {
+        let mixtape = await Mixtape.findById(req.params.id)
+        mixtape.name = req.body.name
+        mixtape.playlists = [req.body.playlist]
+        mixtape.save()
+        res.status(200).json()
+    } catch(error) {
+        console.log("Error: ", error)
+    }
+}

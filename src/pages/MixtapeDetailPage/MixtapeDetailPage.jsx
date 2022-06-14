@@ -10,7 +10,7 @@ export default function MixtapeDetailPage(props) {
     return (
        <main>
         <Header setUserInState={props.setUserInState} />
-        <MixtapeDetail />
+        <MixtapeDetail user={props.user}/>
       </main>
       
     )
