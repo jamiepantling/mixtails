@@ -3,6 +3,7 @@ import * as cocktailsAPI from "../../../utilities/cocktails-api";
 import { useState } from "react";
 
 export default function CocktailListItem(cocktail) {
+
   // let showDetails = false;
   let [showCocktail, setShowCocktail] = useState(false)
 
@@ -21,4 +22,5 @@ export default function CocktailListItem(cocktail) {
       : <></>}
     </div>
   );
+
 }

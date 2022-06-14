@@ -1,4 +1,5 @@
 import { Component, useState } from "react";
+import CocktailList from "../CocktailList/CocktailList";
 import style from "./FlavourListItem.module.css";
 
 export default class FlavourListItem extends Component {
@@ -17,7 +18,7 @@ export default class FlavourListItem extends Component {
           >
             {this.props.content}
           </h3>
-          {this.state.showCocktails ? <div>Cocktails with said mood</div> : <></>}
+          {this.state.showCocktails ? <CocktailList cocktails={this.props.cocktails}/> : <></>}
         </div>
       </div>
     );

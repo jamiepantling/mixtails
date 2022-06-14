@@ -18,14 +18,6 @@ async function populateDB() {
     { content: "Depressed" },
   ]);
 
-  await Mixtape.deleteMany({});
-  await Mixtape.create([
-    {
-      name: "Happy Mix",
-    },
-    { name: "Sad Mix" },
-  ]);
-
   await Tag.deleteMany({});
   await Tag.create([
     { content: "Sweet" },

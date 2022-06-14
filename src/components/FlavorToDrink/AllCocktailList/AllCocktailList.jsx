@@ -1,12 +1,10 @@
-import "./CocktailList.module.css";
+
+import "./AllCocktailList.module.css";
 import * as cocktailsAPI from "../../../utilities/cocktails-api";
-import CocktailListItem from "../../FlavorToDrink/CocktailListItem/CocktailListItem";
+import CocktailListItem from "../CocktailListItem/CocktailListItem";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function CocktailList(props) {
-
-  const URL = `/cocktails/${props._id}`;
   const [cocktailList, setCocktails] = useState([]);
 
   useEffect(function () {
@@ -21,10 +19,9 @@ export default function CocktailList(props) {
     <CocktailListItem key={cocktail._id} {...cocktail} />
   ));
 
-
   return (
     <>
-      <div>{props.cocktails.map(cocktail => <CocktailListItem cocktail={cocktail} />)}</div>
+      <div>{cocktails}</div>
     </>
   );
 }
