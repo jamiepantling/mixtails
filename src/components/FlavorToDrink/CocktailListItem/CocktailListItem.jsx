@@ -1,5 +1,5 @@
 import "./CocktailListItem.module.css";
-import * as cocktailsAPI from "../../utilities/cocktails-api";
+import * as cocktailsAPI from "../../../utilities/cocktails-api";
 
 export default function CocktailListItem(cocktail) {
   async function deleteCocktail() {

@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
-import * as mixtapeApi from "../../utilities/mixtapes-api"
-import * as moodApi from '../../utilities/moods-api'
+import * as mixtapeApi from "../../../utilities/mixtapes-api"
+import * as moodApi from '../../../utilities/moods-api'
 import { useEffect, useState } from 'react'
 
 export default function MixtapeDetail(props) {

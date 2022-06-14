@@ -1,4 +1,3 @@
-import UserLogOut from "../UserLogOut/UserLogOut";
 import { Link } from 'react-router-dom'
 import style from "./Header.module.css";
 

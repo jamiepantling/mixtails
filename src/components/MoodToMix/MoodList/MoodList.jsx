@@ -1,8 +1,8 @@
 import MoodListItem from "../MoodListItem/MoodListItem";
 import style from "./MoodList.module.css";
 import { useEffect, useState } from "react";
-import * as moodsAPI from "../../utilities/moods-api";
-import * as mixtapesAPI from "../../utilities/mixtapes-api";
+import * as moodsAPI from "../../../utilities/moods-api";
+import * as mixtapesAPI from "../../../utilities/mixtapes-api";
 
 export default function MoodList(props) {
   const [moodList, setMoodList] = useState([]);

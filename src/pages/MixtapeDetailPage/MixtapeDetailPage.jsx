@@ -1,4 +1,4 @@
-import MixtapeDetail from "../../components/MixtapeDetail/MixtapeDetail"
+import MixtapeDetail from "../../components/MoodToMix/MixtapeDetail/MixtapeDetail"
 import Header from "../../components/Header/Header"
 import { useEffect, useState } from "react";
 

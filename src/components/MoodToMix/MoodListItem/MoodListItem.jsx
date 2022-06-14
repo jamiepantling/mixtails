@@ -1,4 +1,5 @@
 import { Component, useState } from "react";
+import MixtapeList from "../MixtapeList/MixtapeList";
 import style from "./MoodListItem.module.css";
 
 export default class MoodListItem extends Component {
@@ -17,7 +18,8 @@ export default class MoodListItem extends Component {
           >
             {this.props.content}
           </h2>
-          {this.state.showMixtapes ? <div>{this.props.mixtapes.map(mixtape => <p>{mixtape.name}</p>)}</div> : <></>}
+          {this.state.showMixtapes ? < MixtapeList mixtapes={this.props.mixtapes} key={this.props.key} />: <></>}
+           {/* <div>{this.props.mixtapes.map(mixtape => <p>{mixtape.name}</p>)}</div> : <></>} */}
         </div>
       </div>
     );

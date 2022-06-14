@@ -1,7 +1,7 @@
 import FlavourListItem from "../FlavourListItem/FlavourListItem"
 import style from "./FlavourList.module.css"
 import { useEffect, useState } from "react";
-import * as tagsApi from "../../utilities/tags-api";
+import * as tagsApi from "../../../utilities/tags-api";
 
 
 export default function FlavourList(props) {

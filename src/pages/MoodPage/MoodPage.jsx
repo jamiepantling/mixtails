@@ -1,8 +1,8 @@
-import MoodList from "../../components/MoodList/MoodList";
+import MoodList from "../../components/MoodToMix/MoodList/MoodList";
 import Header from "../../components/Header/Header";
 import style from "./MoodPage.module.css"
 import { useState } from "react";
-import MixtapeForm from "../../components/MixtapeForm/MixtapeForm"
+import MixtapeForm from "../../components/MoodToMix/MixtapeForm/MixtapeForm"
 
 
 
