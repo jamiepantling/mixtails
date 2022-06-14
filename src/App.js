@@ -5,7 +5,7 @@ import AuthPage from './pages/AuthPage/AuthPage';
 import HomePage from './pages/HomePage/HomePage'
 import UserProfilePage from './pages/UserProfilePage/UserProfilePage';
 // import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
-import CocktailList from './components/FlavorToDrink/CocktailList/CocktailList'
+import AllCocktailList from './components/FlavorToDrink/AllCocktailList/AllCocktailList'
 import MoodPage from './pages/MoodPage/MoodPage';
 import FlavourPage from './pages/FlavourPage/FlavourPage';
 import MixtapeDetailPage from './pages/MixtapeDetailPage/MixtapeDetailPage';
@@ -45,12 +45,12 @@ export default class App extends Component {
           {/* <Route path="/spotify" element={<SpotifyPage />}/> */}
 
           <Route path="/flavours" element={<FlavourPage />} />
-          <Route path="/cocktails" element={<CocktailList />}/>
           <Route path="/moods" element={<MoodPage user={this.state.user}/>}/>
           <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user}/>} />
           <Route path="*" element={<Navigate to="/home" replace />}/>
           {/* DEV PURPOSES */}
           <Route path="/mixtapes" element={< AllMixTapes/>}/>        
+          <Route path="/cocktails" element={<AllCocktailList />}/>
         </Routes>
         : (
         <>

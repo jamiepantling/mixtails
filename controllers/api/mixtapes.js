@@ -1,4 +1,5 @@
 const Mixtape = require('../../models/Mixtape')
+const {inspect} = require('util')
 
 module.exports = {
     show,
@@ -12,6 +13,9 @@ module.exports = {
 
 async function index(req,res) {
     const mixtapes = await Mixtape.find({})
+    .populate("moods").populate("cocktails").exec();
+    // console.log(mixtapes)
+    console.log(inspect(mixtapes, {depth: null}))
     res.json(mixtapes)
 }
 
