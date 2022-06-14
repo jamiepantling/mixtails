@@ -60,6 +60,7 @@ export default class mixtapeForm extends Component {
       console.log("Error! ", error);
       this.setState({ ...this.state, error: "Addition failed 🥴" });
     }
+    this.props.setShowMixtapes(false)
   };
 
   render() {
