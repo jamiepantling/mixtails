@@ -6,7 +6,8 @@ const mixtapesCtrl = require("../../controllers/api/mixtapes");
 router.get("/", mixtapesCtrl.index);
 router.delete('/', mixtapesCtrl.deleteMixtape)
 router.get("/:id", mixtapesCtrl.show);
-router.post("/update/:id", mixtapesCtrl.addMood);
+router.put("/update/:id", mixtapesCtrl.addRemoveMood);
 router.post("/", mixtapesCtrl.create);
+router.put("/:id", mixtapesCtrl.update)
 
 module.exports = router;
