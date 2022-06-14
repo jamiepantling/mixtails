@@ -17,7 +17,7 @@ export default class MoodListItem extends Component {
           >
             {this.props.content}
           </h2>
-          {this.state.showMixtapes ? <div>Mixtapes with said mood</div> : <></>}
+          {this.state.showMixtapes ? <div>{this.props.mixtapes.map(mixtape => <p>{mixtape.name}</p>)}</div> : <></>}
         </div>
       </div>
     );
