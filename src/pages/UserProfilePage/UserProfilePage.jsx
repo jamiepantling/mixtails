@@ -1,7 +1,7 @@
 import { Component } from "react";
-import UpdateUserForm from "../../components/UpdateUserForm/UpdateUserForm";
+import UpdateUserForm from "../../components/Auth/UpdateUserForm/UpdateUserForm";
 import Header from "../../components/Header/Header";
-import UserLogOut from "../../components/UserLogOut/UserLogOut";
+import UserLogOut from "../../components/Auth/UserLogOut/UserLogOut";
 import "./UserProfilePage.css";
 
 export default class UserProfilePage extends Component {

@@ -1,7 +1,7 @@
 import { Component } from "react";
-import styles from "./AuthPage.module.css";
-import LoginForm from "../../components/LoginForm/LoginForm";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import style from "./AuthPage.module.css";
+import LoginForm from "../../components/Auth/LoginForm/LoginForm";
+import SignUpForm from "../../components/Auth/SignUpForm/SignUpForm";
 
 
 export default class AuthPage extends Component {

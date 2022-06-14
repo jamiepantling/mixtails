@@ -1,8 +1,8 @@
 import { Component } from "react";
 import style from "./MixtapeForm.module.css"
-import * as cocktailsAPI from "../../utilities/cocktails-api";
-import * as moodsAPI from "../../utilities/moods-api";
-import * as mixtapesAPI from "../../utilities/mixtapes-api";
+import * as cocktailsAPI from "../../../utilities/cocktails-api";
+import * as moodsAPI from "../../../utilities/moods-api";
+import * as mixtapesAPI from "../../../utilities/mixtapes-api";
 
 export default class mixtapeForm extends Component {
   state = {

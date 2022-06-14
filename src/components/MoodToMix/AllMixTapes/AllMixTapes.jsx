@@ -1,12 +1,11 @@
-import styles from "./MixtapeList.module.css"
+import style from "./AllMixtapeList.module.css"
 import { Link } from 'react-router-dom'
 import MixtapeListItem from "../MixtapeListItem/MixtapeListItem"
 import { useEffect, useState } from "react";
-import * as mixtapesApi from "../../utilities/mixtapes-api";
+import * as mixtapesApi from "../../../utilities/mixtapes-api";
 
 
 export default function MixtapeList(props) {
-
 
     const [mixtapeList, setMixtapeList] = useState([]);
 
