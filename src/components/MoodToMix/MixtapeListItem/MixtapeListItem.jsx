@@ -5,6 +5,7 @@ export default function MixtapeListItem(mixtape) {
   // console.log(mixtape)
   async function deleteMixtape() {
     await mixtapesAPI.deleteMixtape(mixtape._id);
+    mixtape.setMixtapeInState(mixtape)
   }
   
   
