@@ -1,6 +1,11 @@
+import MixtapeListItem from "../MixtapeListItem/MixtapeListItem";
+
 export default function MixtapeList(props) {
 
     return (
-      props.mixtapes.map(mixtape => <p>{mixtape.name}</p>)
+      <div>
+        {props.mixtapes.map(mixtape => <MixtapeListItem mixtape={mixtape}/>)}
+
+      </div>
     )
 }

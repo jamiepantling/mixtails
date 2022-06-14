@@ -16,6 +16,7 @@ export default function MoodList(props) {
     async function fetchMixtapes() {
       const mixtapes = await mixtapesAPI.getMixtapes();
       setMixtapeList(mixtapes);
+      console.log(mixtapes)
     }
     fetchMoods();
     fetchMixtapes();

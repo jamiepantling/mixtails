@@ -12,7 +12,7 @@ export default function Header(props) {
           <Link className={style.dropC} to={"/moods"}>Moods</Link>
           <Link className={style.dropC} to={"/cocktails"}>Ctails</Link>
           <Link className={style.dropC} to={"/flavours"}>Flav</Link>
-          <Link className={style.dropC} to={"/playlists"}>PL</Link>
+          <Link className={style.dropC} to={"/mixtapes"}>MixT</Link>
         </div>
       </nav>
     </div>
