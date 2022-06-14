@@ -1,3 +1,4 @@
+
 import style from  "./MixtapeListItem.module.css";
 
 export default function MixtapeListItem(props) {
@@ -10,4 +11,3 @@ export default function MixtapeListItem(props) {
       <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p>
     </div>
   )
-}

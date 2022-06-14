@@ -6,7 +6,8 @@ module.exports = {
     update,
     index,
     addMood,
-    create
+    create,
+    deleteMixtape,
     // getMoods
 }
 
@@ -63,4 +64,13 @@ async function create(req, res) {
         console.log("Error! ", error)
     }
 }
+
+async function deleteMixtape(req, res) {
+    try {
+        await Mixtape.findByIdAndDelete(req.body.mixtapeId)
+        res.status(200).json()
+    } catch (error) {
+        console.log("Error! ", error)
+    }
+  }
 

@@ -17,7 +17,7 @@ export default function MoodPage(props) {
       <h1 className={style.title}>Feel it out</h1>
       <MoodList />
       <button onClick={()=>setShowMixtapes(!showMixtapes)}>Create your own mixtape!</button>
-      {showMixtapes? <MixtapeForm user={props.user}/> :<></>}
+      {showMixtapes? <MixtapeForm user={props.user} setShowMixtapes={setShowMixtapes}/> :<></>}
       </div>
  
     </main>
