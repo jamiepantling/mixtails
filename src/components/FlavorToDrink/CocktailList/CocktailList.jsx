@@ -4,23 +4,10 @@ import CocktailListItem from "../../FlavorToDrink/CocktailListItem/CocktailListI
 import { useEffect, useState } from "react";
 
 export default function CocktailList(props) {
-  const [cocktailList, setCocktails] = useState([]);
-
-  useEffect(function () {
-    async function fetchCocktails() {
-      const cocktails = await cocktailsAPI.getCocktails();
-      setCocktails(cocktails);
-    }
-    fetchCocktails();
-  }, []);
-
-  const cocktails = cocktailList.map((cocktail) => (
-    <CocktailListItem key={cocktail._id} {...cocktail} />
-  ));
 
   return (
     <>
-      <div>{cocktails}</div>
+      <div>{props.cocktails.map(cocktail => <CocktailListItem cocktail={cocktail} />)}</div>
     </>
   );
 }

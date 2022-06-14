@@ -1,4 +1,4 @@
-import style from "./AllMixtapeList.module.css"
+import styles from "./AllMixtapeList.module.css"
 import { Link } from 'react-router-dom'
 import MixtapeListItem from "../MixtapeListItem/MixtapeListItem"
 import { useEffect, useState } from "react";
@@ -6,6 +6,7 @@ import * as mixtapesApi from "../../../utilities/mixtapes-api";
 
 
 export default function MixtapeList(props) {
+
 
     const [mixtapeList, setMixtapeList] = useState([]);
 
@@ -18,7 +19,10 @@ export default function MixtapeList(props) {
     }, []);
   
     const mixtapes = mixtapeList.map((mixtape) => (
-        <Link to={`/mixtapes/${mixtape._id}`} ><MixtapeListItem key={mixtape._id} {...mixtape} /></Link>
+        // <Link to={`/mixtapes/${mixtape._id}`} ><MixtapeListItem key={mixtape._id} {...mixtape} /></Link>
+        <div>
+          {mixtape.name}
+        </div>
         ));
 
 
