@@ -31,6 +31,27 @@ export async function createMixtape(mixtape) {
   }
 }
 
+export async function deleteMixtape(mixtapeId) {
+  console.log(mixtapeId)
+  const options = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      mixtapeId,
+    }),
+  };
+  try {
+    console.log(options.body)
+    let fetchResponse = await fetch(`${BASE_URL}`, options)
+    console.log("Fetch response ok?", fetchResponse.ok, fetchResponse)
+    if (!fetchResponse.ok) throw new Error("Fetch Failed!");
+  } catch (error) {
+    console.log(("Mixtape Error: ", error));
+  }
+}
+
 export function addMood(moodId, id) {
   const options = {
     method: "POST",
