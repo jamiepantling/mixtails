@@ -20,7 +20,7 @@ export default class SignUpForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-        console.log(this.state.username)
+        
       const fetchResponse = await fetch("/api/users/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

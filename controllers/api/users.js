@@ -55,7 +55,6 @@ async function update(req, res) {
     const token = jwt.sign({ user }, process.env.SECRET, {
       expiresIn: "24h",
     });
-    console.log(token);
     res.status(200).json(token);
   } catch {
     res.status(400).json(`Update failed, try Again`);
