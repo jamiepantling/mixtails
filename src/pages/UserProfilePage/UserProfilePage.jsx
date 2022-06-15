@@ -9,21 +9,18 @@ import MixtapeListItem from "../../components/MoodToMix/MixtapeListItem/MixtapeL
 
 export default class UserProfilePage extends Component {
   state = {
-    // favdrinks: [],
-    // favmixtapes: [],
+    favdrinks: [],
+    favmixtapes: [],
     showEdit: false,
     mixtapes: []
   };
 
   setMixtapeInState = (deletedMixtape) => {
-    // set mixtapes to previous - deleted
     let remainingMixtapes = this.state.mixtapes.filter(mixtape => mixtape._id != deletedMixtape._id)
     this.setState({...this.state, mixtapes: remainingMixtapes})
   }
 
   async componentDidMount() {
-    console.log(this.props)
-    
     try {
       let fetchMixtapes = await mixtapesAPI.getMixtapes();
       let mixtapes = fetchMixtapes.filter(mixtape => this.props.user._id === mixtape.createdBy)
@@ -58,9 +55,11 @@ export default class UserProfilePage extends Component {
           <></>
         )}
         <h2>My mixtapes:</h2>
-        {this.state.mixtapes.map(mixtape=> <MixtapeListItem key={mixtape._id} {...mixtape} setMixtapeInState={this.setMixtapeInState} />)}
+        {this.state.mixtapes.map(mixtape=> <MixtapeListItem key={mixtape._id} name={mixtape.name} {...mixtape}/>)}
         <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
     );
   }
 }
+
+
