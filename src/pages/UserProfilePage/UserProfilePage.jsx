@@ -32,6 +32,7 @@ export default class UserProfilePage extends Component {
       console.error("Error: ", error)
     }
   }
+  mixtapeList = this.state.mixtapes.map(mixtape=> <MixtapeListItem key={mixtape._id} {...mixtape} setMixtapeInState={this.setMixtapeInState} />)
 
   render() {
     return (
@@ -58,7 +59,7 @@ export default class UserProfilePage extends Component {
           <></>
         )}
         <h2>My mixtapes:</h2>
-        {this.state.mixtapes.map(mixtape=> <MixtapeListItem key={mixtape._id} {...mixtape} setMixtapeInState={this.setMixtapeInState} />)}
+        {mixtapeList}
         <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
     );
