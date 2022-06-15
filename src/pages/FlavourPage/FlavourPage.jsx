@@ -6,8 +6,8 @@ export default function FlavourPage(props) {
     return (
         <main>
             <Header setUserInState={props.setUserInState} />
+            <h1>Oral Fixations</h1>
             <FlavourList />
-        
         </main>
     )
 }

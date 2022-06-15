@@ -6,7 +6,8 @@ module.exports = {
 };
 
 async function index(req, res) {
-  const cocktails = await Cocktail.find({});
+  const cocktails = await Cocktail.find({})
+  .populate("tags").exec()
   res.json(cocktails);
 }
 
