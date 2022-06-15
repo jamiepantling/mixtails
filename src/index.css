@@ -4,12 +4,21 @@
   padding: 0;
 }
 
+@font-face {
+font-family: "Robinson";
+src: local("Robinson"),
+ url("./fonts/Robinson-Typeface/Robinson\ Regular.otf") format("truetype");
+font-weight: bold;
+}
+
 :root {
   --rastagreen: rgb(115,95,57);
   --skin: rgb(242,200,162);
   --tanned: rgb(242,156,107);
   --darkchoco: rgb(89,46,30);
   --lipstickred: rgb(191,63,63);
+  --militarygreen: rgb(100,113,60);
+  --lightmilitary: rgb(136,142,96)
 }
 
 body {
