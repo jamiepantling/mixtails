@@ -29,12 +29,14 @@ async function populateDB() {
   ]);
 
   await Tag.deleteMany({});
-  await Tag.create([
+  const tag = await Tag.create([
     { content: "Sweet" },
     { content: "Salty" },
     { content: "Sour" },
-    { content: "Savoury" },
+    { content: "Omommy" },
     { content: "Slanderous" },
+    { content: "Sahara" },
+    { content: "Effervescent"}
   ]);
 
   // mongoose method to delete all documents in the model
@@ -42,27 +44,27 @@ async function populateDB() {
   await Cocktail.create([
     {
       name: "Old-Fashioned",
-      description: "",
-      instruction: "",
+      description: "They say the old is in again",
+      instruction: "Stir and serve",
       ingredients: [
         { name: "Bourbon", qty: 2 },
         { name: "Simple Syrup", qty: 0.25 },
         { name: "Angos", qty: 2 },
       ],
-      // tags: ["Dry", "Sweet-ish"],
+      tags: [tag[0].id, tag[5].id],
       image: "",
     },
     {
       name: "Toronto",
-      description: "",
-      instruction: "",
+      description: "Feel the taste of the city go down your moist gullet",
+      instruction: "Add ingredients and mix with maple syrup coated spoon.",
       ingredients: [
         { name: "Canadian Rye Whiskey", qty: 2 },
         { name: "Fernet Branca", qty: 0.25 },
         { name: "Maple Syrup", qty: 0.25 },
         { name: "Angos", qty: 2 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[0].id],
       image: "",
     },
     {
@@ -74,38 +76,39 @@ async function populateDB() {
         { name: "Lime Juice", qty: 0.75 },
         { name: "Agave Syrup", qty: 0.75 },
       ],
-      // tags: ["Sour", "Sweet"],
+      tags: [tag[2].id, tag[0].id],
       image:
         "https://files.slack.com/files-pri/T0351JZQ0-F03KCG0RT61/image.png",
     },
     {
       name: "Daiquiri",
-      description: "",
+      description: "Like a shot of rum for weak people",
       instruction: "Dirty pour this...",
       ingredients: [
         { name: "White Rum", qty: 2 },
         { name: "Lime Juice", qty: 0.75 },
         { name: "Simple Syrup", qty: 0.75 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[0].id],
       image: "",
     },
     {
       name: "Manhattan",
-      description: "",
-      instruction: "Dirty pour this...",
+      description:
+        "Holds all the bitterness of a New Yorker but the sweetness of its potential.",
+      instruction: "Fold the ingredients together like a pizza",
       ingredients: [
         { name: "Rye Whiskey", qty: 2 },
         { name: "Sweet Vermouth", qty: 0.75 },
         { name: "Angos", qty: 2 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[4].id, tag[0].id],
       image: "",
     },
     {
       name: "Corpse Reviver #2",
-      description: "",
-      instruction: "Dirty pour this...",
+      description: "Benny's Fav, so I mean you can't go wrong.",
+      instruction: "You'll have to find a proper bartender for this",
       ingredients: [
         { name: "Gin", qty: 0.75 },
         { name: "Lillet Blanc", qty: 0.75 },
@@ -113,117 +116,117 @@ async function populateDB() {
         { name: "Lemon Juice", qty: 0.75 },
         { name: "Absinthe or Pernod", qty: 3 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[0].id, tag[2].id],
       image: "",
     },
     {
       name: "Dry Martini",
-      description: "",
+      description: "For people who wanna look fancier than they are.",
       instruction: "Shaken, not stired",
       ingredients: [
         { name: "Gin", qty: 2 },
         { name: "Dry Vermouth", qty: 0.75 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[5].id],
       image: "",
     },
     {
       name: "Between the Sheets",
-      description: "",
-      instruction: "Dirty pour this...",
+      description: "Like a sidecar, but you're mature enough to take it back home",
+      instruction: "Dirty pour",
       ingredients: [
         { name: "Cognac", qty: 1.5 },
         { name: "Curaçao", qty: 0.75 },
         { name: "White Rum", qty: 0.5 },
         { name: "Lemon Juice", qty: 0.5 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[0].id],
       image: "",
     },
     {
       name: "Mint Julep",
-      description: "",
-      instruction: "Dirty pour this...",
+      description: "Cool yourself in the summer sun and be blessed with the minty breeze",
+      instruction: "Crush some mint and mix her up",
       ingredients: [
         { name: "Bourbon", qty: 2 },
         { name: "Simple Syrup", qty: 0.5 },
         { name: "Mint Leaves", qty: 8 },
       ],
-      // tags: [{"", ""}],
+      tags: [tag[0].id, tag[6].id],
       image: "",
     },
-    //   {
-    //     name: "Espresso Martini",
-    //     description: "",
-    //     instruction: "Dirty pour this...",
-    //     ingredients: [
-    //       { name: "Tequila", qty: 2 },
-    //       { name: "Lime", qty: 0.25 },
-    //       { name: "Angos", qty: 2 },
-    //     ],
-    //     // tags: [{"", ""}],
-    //     image: "",
-    //   },
-    //   {
-    //     name: "Gin & Tonic",
-    //     description: "",
-    //     instruction: "Dirty pour this...",
-    //     ingredients: [
-    //       { name: "Tequila", qty: 2 },
-    //       { name: "Lime", qty: 0.25 },
-    //       { name: "Angos", qty: 2 },
-    //     ],
-    //     // tags: [{"", ""}],
-    //     image: "https://files.slack.com/files-pri/T0351JZQ0-F03KCJ29C9K/image.png",
-    //   },
-    //   {
-    //     name: "Parasol",
-    //     description: "",
-    //     instruction: "Dirty pour this...",
-    //     ingredients: [
-    //       { name: "Tequila", qty: 2 },
-    //       { name: "Lime", qty: 0.25 },
-    //       { name: "Angos", qty: 2 },
-    //     ],
-    //     // tags: [{"", ""}],
-    //     image: "",
-    //   },
-    //   {
-    //     name: "White Russian",
-    //     description: "",
-    //     instruction: "Dirty pour this...",
-    //     ingredients: [
-    //       { name: "Tequila", qty: 2 },
-    //       { name: "Lime", qty: 0.25 },
-    //       { name: "Angos", qty: 2 },
-    //     ],
-    //     // tags: [{"", ""}],
-    //     image: "",
-    //   },
-    //   {
-    //     name: "Americano",
-    //     description: "",
-    //     instruction: "Dirty pour this...",
-    //     ingredients: [
-    //       { name: "Tequila", qty: 2 },
-    //       { name: "Lime", qty: 0.25 },
-    //       { name: "Angos", qty: 2 },
-    //     ],
-    //     // tags: [{"", ""}],
-    //     image: "",
-    //   },
-    //   {
-    //     name: "Negroni",
-    //     description: "",
-    //     instruction: "Dirty pour this...",
-    //     ingredients: [
-    //       { name: "Tequila", qty: 2 },
-    //       { name: "Lime", qty: 0.25 },
-    //       { name: "Angos", qty: 2 },
-    //     ],
-    //     // tags: [{"", ""}],
-    //     image: "",
-    //   },
+    {
+      name: "Espresso Martini",
+      description: "The British morning drink of choice after tea.",
+      instruction: "Shake it hard, pour in a glass and drop 3 coffee beans on top",
+      ingredients: [
+        { name: "Tequila", qty: 2 },
+        { name: "Lime", qty: 0.25 },
+        { name: "Angos", qty: 2 },
+      ],
+      tags: [tag[0].id, tag[3].id],
+      image: "",
+    },
+      {
+        name: "Gin & Tonic",
+        description: "Classic",
+        instruction: "Dirty pour this...",
+        ingredients: [
+          { name: "Tequila", qty: 2 },
+          { name: "Lime", qty: 0.25 },
+          { name: "Angos", qty: 2 },
+        ],
+        tags: [tag[4].id, tag[6].id],
+        image: "https://files.slack.com/files-pri/T0351JZQ0-F03KCJ29C9K/image.png",
+      },
+      {
+        name: "Parasol",
+        description: "",
+        instruction: "Dirty pour this...",
+        ingredients: [
+          { name: "Tequila", qty: 2 },
+          { name: "Lime", qty: 0.25 },
+          { name: "Angos", qty: 2 },
+        ],
+        tags: [tag[0].id],
+        image: "",
+      },
+      {
+        name: "White Russian",
+        description: "Lebowski sponsored",
+        instruction: "Dirty pour this...",
+        ingredients: [
+          { name: "Tequila", qty: 2 },
+          { name: "Lime", qty: 0.25 },
+          { name: "Angos", qty: 2 },
+        ],
+        tags: [tag[0].id, tag[3].id],
+        image: "",
+      },
+      {
+        name: "Americano",
+        description: "Fav of the American ex-pats",
+        instruction: "Dirty pour this...",
+        ingredients: [
+          { name: "Tequila", qty: 2 },
+          { name: "Lime", qty: 0.25 },
+          { name: "Angos", qty: 2 },
+        ],
+        tags: [tag[4].id],
+        image: "",
+      },
+      {
+        name: "Negroni",
+        description: "",
+        instruction: "Dirty pour this...",
+        ingredients: [
+          { name: "Tequila", qty: 2 },
+          { name: "Lime", qty: 0.25 },
+          { name: "Angos", qty: 2 },
+        ],
+        tags: [tag[4].id],
+        image: "",
+      },
   ]);
 }
 
