@@ -1,9 +1,7 @@
 .mixtailsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80vw;
-    justify-content: space-evenly;
-    /* border: solid 1px blue; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 20vw;
 }
 
 label {
