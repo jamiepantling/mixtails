@@ -1,3 +1,9 @@
-.content {
-    color: black;
+.moodsContainer {
+    /* background-color: yellow; */
+    /* width:30vw; */
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

@@ -3,10 +3,22 @@
 }
 
 .mood {
-    border: 2px solid black;
-    width: 80vw;
-    height: 100px;
-    margin: auto;
-    line-height: 100px;
-    text-align: center;
+    background-image: url('../../../../public/MixtapeTback.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Permanent Marker', cursive;
+    width: 20vw;
+    height: 20vh;
+    margin: 20px auto;
+    line-height: 10vh;
+    filter: drop-shadow(6px 6px 6px #222);
+    /* border: solid 1px red; */
+
+}
+
+.moodTitle {
+    transform: rotate(-10deg);
+    margin-right: 15px;
+    font-size: 32px;
 }

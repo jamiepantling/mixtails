@@ -10,9 +10,9 @@ export default function Header(props) {
         <div>
           <Link className={style.dropC} to={"/user"}>Profile</Link>
           <Link className={style.dropC} to={"/moods"}>Moods</Link>
-          <Link className={style.dropC} to={"/cocktails"}>Ctails</Link>
-          <Link className={style.dropC} to={"/flavours"}>Flav</Link>
-          <Link className={style.dropC} to={"/mixtapes"}>MixT</Link>
+          <Link className={style.dropC} to={"/cocktails"}>Cocktails</Link>
+          <Link className={style.dropC} to={"/flavours"}>Flavas</Link>
+          <Link className={style.dropC} to={"/mixtapes"}>MixTails</Link>
         </div>
       </nav>
     </div>

@@ -16,6 +16,16 @@ async function populateDB() {
     { content: "Hypocritical" },
     { content: "Insecure" },
     { content: "Depressed" },
+    { content: "Fun" },
+    { content: "Mellow" },
+    { content: "Chill" },
+    { content: "Sexy-time" },
+    { content: "Romantic" },
+    { content: "British" },
+    { content: "Benny-ish" },
+    { content: "Molly" },
+    { content: "Drained" },
+    { content: "Inspired" },
   ]);
 
   await Tag.deleteMany({});
