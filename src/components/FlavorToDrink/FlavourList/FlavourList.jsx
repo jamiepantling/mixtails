@@ -18,19 +18,22 @@ export default function FlavourList(props) {
       async function fetchCocktails() {
         const cocktails = await cocktailsApi.getCocktails();
         setCocktailList(cocktails)
+        console.log(cocktails)
       }
       fetchCocktails();
       fetchTags();
     }, []);
-  
+    
+
     const tags = tagList.map((tag) => (
-    <FlavourListItem key={tag._id} {...tag} cocktails={cocktailList.filter(cocktail => cocktail.tags.includes(tag._id))} />
-    ));
+    <FlavourListItem key={tag._id} {...tag} 
+    cocktails={cocktailList.filter(cocktail => cocktail.tags.find(tags => tags._id === tag._id))} 
+    />
+    ))
 
 
     return (
         <div>
-          <h2>Taste Profiles</h2>
             {tags}
         </div>
     )
