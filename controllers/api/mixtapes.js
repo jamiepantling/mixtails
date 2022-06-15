@@ -26,6 +26,7 @@ async function update(req, res) {
 
 async function show(req, res) {
     const mixtape = await Mixtape.findById(req.params.id)
+    .populate("moods").populate("cocktails").exec()
     res.json(mixtape)
 }
 
