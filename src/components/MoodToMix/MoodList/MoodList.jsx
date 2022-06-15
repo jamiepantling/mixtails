@@ -27,8 +27,6 @@ export default function MoodList(props) {
   const moods = moodList.map((mood) => (
     <MoodListItem setMoodList={setMoodList} key={mood._id} {...mood}
     mixtapes={mixtapeList.filter(mixtape => mixtape.moods[0]._id.includes(mood._id))} 
-    // mixtapes ={mixtapeList} 
-    // mixtapes={filteredMixtapeList}
     />
   ));
 
