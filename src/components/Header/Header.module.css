@@ -4,8 +4,8 @@
 
 .nav {
   overflow: hidden;
-  background-color: #003f4d;
-  box-shadow: 0px 15px 20px #03738C;
+  background-color: var(--lipstickred);
+  
 }
 
 .logo {

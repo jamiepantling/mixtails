@@ -1,10 +1,11 @@
 .content {
- border: 2px solid red;
+ /* border: 1px solid red; */
  height: 100vh;
- margin: 20px;
+ /* margin: 20px; */
 }
 
 .title {
-    font-size: 60px;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive;
     color: black;
 }

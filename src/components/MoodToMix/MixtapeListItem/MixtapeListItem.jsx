@@ -1,10 +1,13 @@
+
 import style from  "./MixtapeListItem.module.css";
 import * as mixtapesAPI from "../../../utilities/mixtapes-api";
 import { Link } from 'react-router-dom'
 
+
 export default function MixtapeListItem(props) {
   
   return (
+
     <div className={style.content}>
       {/* <h3><Link to={`/mixtapes/${props.mixtape._id}`}>{props.mixtape.name}</Link></h3> */}
       <p>Associated Moods:{props.mixtape.moods.map(m => <span>{m.content}</span>)}</p>
