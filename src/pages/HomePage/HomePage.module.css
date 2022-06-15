@@ -28,7 +28,7 @@ body {
   filter: drop-shadow(6px 6px 6px #222);
 }
 
-span {
+.card > span {
   color: whitesmoke;
   font-size: 180px;
   font-family: Robinson;
