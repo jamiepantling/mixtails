@@ -1,0 +1,15 @@
+.li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    margin-left: 6px;
+    height: 20px;
+    width: 20px
+}
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

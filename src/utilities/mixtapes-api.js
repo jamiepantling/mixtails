@@ -52,9 +52,9 @@ export async function deleteMixtape(mixtapeId) {
   }
 }
 
-export function addMood(moodId, id) {
+export function addRemoveMood(moodId, id) {
   const options = {
-    method: "POST",
+    method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       moodId: moodId,
@@ -62,12 +62,13 @@ export function addMood(moodId, id) {
   };
 
   try {
-    let fetchResponse = fetch(`${BASE_URL}/update/${id}`, options);
-    if (!fetchResponse.ok) throw new Error("Fetch failed!");
+  fetch(`${BASE_URL}/update/${id}`, options)
+
   } catch (error) {
     console.log("Add mood error ", error);
   }
 }
+
 
 export function addPlaylist(link) {
   const options = {
@@ -81,4 +82,27 @@ export function addPlaylist(link) {
   };
 
   return fetch(BASE_URL, options).then((res) => res.json());
+}
+
+export async function updateMixtape(id, values) {
+  const options = {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: values.name,
+      playlist: values.playlist
+    }),
+  };
+  try {
+    let fetchResponse = await fetch(`${BASE_URL}/${id}`, options)
+    console.log("Fetch response ok?", fetchResponse.ok, fetchResponse)
+    if (!fetchResponse.ok) throw new Error("Fetch Failed!");
+    else {
+      return true
+    }
+  } catch (error) {
+    console.log(("Mixtape Error: ", error));
+  }
 }
