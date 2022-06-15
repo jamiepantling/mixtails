@@ -7,10 +7,10 @@ export default function HomePage(props) {
     <main>
       <Header setUserInState={props.setUserInState} />
       <Link to="/moods" className={style.card1}>
-          What are you feeling like?
+          WATCHA FEELIN'?
       </Link>
       <Link to="/flavours" className={style.card2}>
-          Savor the Flavour
+          SAVOUR THE FLAVOUR
       </Link>
     </main>
   );
