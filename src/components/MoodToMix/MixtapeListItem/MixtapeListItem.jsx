@@ -25,7 +25,7 @@ export default function MixtapeListItem(props) {
           <span>{c.name}</span>
         ))}
       </p>
-      <p>Playlist: {props.mixtape.playlists}</p>
+      <a href={props.mixtape.playlists} target="_blank">Playlist</a>
       <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p>
       <button onClick={deleteMixtape}>DELETE</button>
     </div>
