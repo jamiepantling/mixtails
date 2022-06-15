@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./UpdateUserForm.css";
+import style from "./UpdateUserForm.css";
 
 export default class UpdateUserForm extends Component {
   state = {
@@ -58,7 +58,7 @@ export default class UpdateUserForm extends Component {
               value={this.state.username}
               onChange={this.handleChange}
             />
-            <label>Bio(Tell us about urself): </label>
+            <label>Bio: </label>
             <textarea
               type="text"
               name="bio"
@@ -66,7 +66,9 @@ export default class UpdateUserForm extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <button type="submit">Update</button>
+            <div className={style.updateProfileButton} type="submit">
+              <span>Update</span>
+            </div>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
