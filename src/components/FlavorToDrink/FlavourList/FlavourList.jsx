@@ -18,7 +18,6 @@ export default function FlavourList(props) {
       async function fetchCocktails() {
         const cocktails = await cocktailsApi.getCocktails();
         setCocktailList(cocktails)
-        console.log(cocktails)
       }
       fetchCocktails();
       fetchTags();

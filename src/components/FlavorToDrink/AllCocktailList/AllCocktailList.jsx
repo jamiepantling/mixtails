@@ -16,7 +16,7 @@ export default function CocktailList(props) {
   }, []);
 
   const cocktails = cocktailList.map((cocktail) => (
-    <CocktailListItem key={cocktail._id} {...cocktail} />
+    <CocktailListItem key={cocktail._id} cocktail={cocktail} />
   ));
 
   return (
