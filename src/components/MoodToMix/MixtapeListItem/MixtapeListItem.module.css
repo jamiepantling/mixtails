@@ -1,7 +1,16 @@
-.content {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    width: 80vw;
-    margin: auto;
+.mixtail {
+    background-image: url('../../../../public/stainednapkin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30vw;
+    /* border: solid 1px black; */
+    margin-bottom: 10px;
+    font-family: 'Kalam', cursive;
+}
+
+.mixtail li {
+    list-style: none;
+    text-align: left;
+    margin-left: 50px;
 }

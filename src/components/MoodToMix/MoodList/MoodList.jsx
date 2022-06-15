@@ -25,12 +25,12 @@ export default function MoodList(props) {
   }, []);
 
   const moods = moodList.map((mood) => (
-    <MoodListItem setMoodList={setMoodList} key={mood._id} {...mood} 
+    <MoodListItem setMoodList={setMoodList} key={mood._id} {...mood}
     mixtapes={mixtapeList.filter(mixtape => mixtape.moods[0]._id.includes(mood._id))} 
     // mixtapes ={mixtapeList} 
     // mixtapes={filteredMixtapeList}
     />
   ));
 
-  return <div className={style.content}>{moods}</div>;
+  return <div className={style.moodsContainer}>{moods}</div>;
 }
