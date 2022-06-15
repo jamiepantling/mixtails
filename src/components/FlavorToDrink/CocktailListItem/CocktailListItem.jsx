@@ -2,21 +2,26 @@ import "./CocktailListItem.module.css";
 import * as cocktailsAPI from "../../../utilities/cocktails-api";
 import { useState } from "react";
 
-export default function CocktailListItem(cocktail) {
+export default function CocktailListItem(props) {
 
-  // let showDetails = false;
   let [showCocktail, setShowCocktail] = useState(false)
 
   return (
     <div className="list">
-      {cocktail.name}
-      <button onClick={() => setShowCocktail(!showCocktail)}>Details</button>
+      <h2>
+        {props.cocktail.name}
+      </h2>
+      <button onClick={() => setShowCocktail(!showCocktail)}>Waz dis?</button>
       {showCocktail ? 
       <div className="details">
-        {/* <p>{cocktail.description}</p> */}
-        <p>{cocktail.instruction}</p>
+        {props.cocktail.image ? <img src={props.cocktail.image} alt="Cocktail pic" /> : <></>}
+        <label>Description</label>
+        <p>{props.cocktail.description}</p>
+        <label>Instructions</label>
+        <p>{props.cocktail.instruction}</p>
+        <label>Ingredients</label>
         <ul>
-          {cocktail.ingredients.map(ingredient => <li key={ingredient._id}>{ingredient.name}</li>)}
+          {props.cocktail.ingredients.map(ingredient => <li key={ingredient._id}>{ingredient.name}</li>)}
         </ul>
       </div> 
       : <></>}
