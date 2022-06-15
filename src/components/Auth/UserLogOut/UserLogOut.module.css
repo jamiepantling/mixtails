@@ -8,7 +8,15 @@
 }
 
 .button {
-  padding: 5px;
-  border-radius: 10px;
-  background-color: aqua;
+  width: 90px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+}
+
+.button > span {
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  filter: drop-shadow(4px 4px 4px #222);
 }
