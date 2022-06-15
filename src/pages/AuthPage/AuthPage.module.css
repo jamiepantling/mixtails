@@ -3,6 +3,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin-top: 15vh 0;
     height: 100vh
 }
+
+.signUpButton {
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: 40px auto ;
+    filter: drop-shadow(4px 4px 4px #222);
+    border: none
+  }
+  
+.signUpButton > span {
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    filter: drop-shadow(2px 2px 2px #222);
+  }

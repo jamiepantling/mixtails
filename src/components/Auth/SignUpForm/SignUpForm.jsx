@@ -1,4 +1,5 @@
 import { Component } from "react";
+import style from './SignUpForm.module.css'
 
 export default class SignUpForm extends Component {
   state = {
@@ -43,10 +44,10 @@ export default class SignUpForm extends Component {
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      <div>
+      <div className="style.signUpContainer">
         <div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
-            <label>Username</label>
+            <label className={style.label}>Username</label>
             <input
               type="text"
               name="username"
@@ -54,7 +55,7 @@ export default class SignUpForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <label>Email</label>
+            <label className={style.label}>Email</label>
             <input
               type="email"
               name="email"
@@ -62,7 +63,7 @@ export default class SignUpForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <label>Password</label>
+            <label className={style.label}>Password</label>
             <input
               type="password"
               name="password"
@@ -70,7 +71,7 @@ export default class SignUpForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <label>Confirm</label>
+            <label className={style.label}>Confirm password</label>
             <input
               type="password"
               name="confirm"
@@ -78,8 +79,8 @@ export default class SignUpForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <button type="submit" disabled={disable}>
-              SIGN UP
+            <button className={style.signUpButton} type="submit" disabled={disable}>
+              <span> SIGN UP</span>
             </button>
           </form>
         </div>
