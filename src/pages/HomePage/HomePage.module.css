@@ -1,34 +1,45 @@
-.card1 {
-    display: block;
-    margin: 0 auto;
-    max-width: 50vw;
-    max-height: 33vh;
-    background-image: url("../../../public/Moods1.png");
-    background-size: contain;
-    border: 2px solid black;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    line-height: 33vh;
-    font-size: 30px;
-    box-shadow: 7px 7px 10px #03738C;
+body {
+  min-height: 100vh;
+  background-color: beige;
 }
 
-.card2 {
-    display: block;
-    margin: 0 auto;
-    max-width: 50vw;
-    max-height: 33vh;
-    background-image: url("../../../public/flavour-profiles2.jpg");
-    border: 2px solid black;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    line-height: 33vh;
-    font-size: 30px;
-    box-shadow: 7px 7px 10px #03738C;
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 80vw;
+  margin: 5% auto;
+  justify-content: space-evenly;
+  /* border: solid 1px red; */
+}
+
+.card {
+  display: flex;
+  max-width: 50vw;
+  max-height: 33vh;
+  width: 80vw;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  text-decoration: none;
+  filter: drop-shadow(6px 6px 6px #222);
+}
+
+span {
+  color: whitesmoke;
+  font-size: 180px;
+  font-family: Robinson;
+  margin: auto;
+  filter: drop-shadow(4px 4px 4px #222);
+}
+
+.one {
+  background-image: url("../../../public/flavour-profiles2.jpg");
+}
+
+.two {
+  background-image: url("../../../public/tropical-postcard.jpeg");
 }

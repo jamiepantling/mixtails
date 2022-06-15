@@ -5,7 +5,8 @@
 }
 
 .title {
-    font-size: 50px;
-    font-family: 'Permanent Marker', cursive;
-    color: black;
+    font-size: 100px;
+    font-family: Robinson;
+    color: white;
+  filter: drop-shadow(3px 3px 3px #222);
 }
