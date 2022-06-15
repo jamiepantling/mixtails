@@ -13,22 +13,25 @@ export default function MoodList(props) {
     async function fetchMoods() {
       const moods = await moodsAPI.getMoods();
       setMoodList(moods);
-      console.log(moods)
     }
     async function fetchMixtapes() {
       const mixtapes = await mixtapesAPI.getMixtapes();
       setMixtapeList(mixtapes);
-      console.log(mixtapes)
     }
     fetchMoods();
     fetchMixtapes();
   }, []);
 
   const moods = moodList.map((mood) => (
-    <MoodListItem setMoodList={setMoodList} key={mood._id} {...mood}
-    // For the first mood only
-    // mixtapes={mixtapeList.filter(mixtape => mixtape.moods[0]._id.includes(mood._id))} 
-    mixtapes={mixtapeList.filter(mixtape => mixtape.moods.find(moods => moods._id === mood._id))}
+    <MoodListItem
+      setMoodList={setMoodList}
+      key={mood._id}
+      {...mood}
+      // For the first mood only
+      // mixtapes={mixtapeList.filter(mixtape => mixtape.moods[0]._id.includes(mood._id))}
+      mixtapes={mixtapeList.filter((mixtape) =>
+        mixtape.moods.find((moods) => moods._id === mood._id)
+      )}
     />
   ));
 
