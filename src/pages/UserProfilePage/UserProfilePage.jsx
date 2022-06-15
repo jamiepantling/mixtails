@@ -34,18 +34,18 @@ export default class UserProfilePage extends Component {
     return (
       <main>
         <Header setUserInState={this.props.setUserInState}/>
-        <div className="style.ProfileC">
+        <div className={style.profileInfoContainer}>
           <h1>Welcome {this.props.user.username}</h1>
           <div>Email: {this.props.user.email}</div>
           <div>Bio: {this.props.user.bio}</div>
           <div>Fav Drinks: {this.props.user.favdrinks}</div>
           <div>Fav Mixtapes: {this.props.favmixtapes}</div>
         </div>
-        <button
+        <div className={style.editProfileButton}
           onClick={() => this.setState({ showEdit: !this.state.showEdit })}
         >
-          Edit
-        </button>
+          <span>Edit</span>
+        </div>
         {this.state.showEdit ? (
           <UpdateUserForm
             user={this.props.user}

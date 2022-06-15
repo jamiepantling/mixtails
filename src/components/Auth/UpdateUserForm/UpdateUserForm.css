@@ -1,5 +1,22 @@
-.updateform input, textarea{
+/* .updateform input, textarea{
     text-align: center;
     margin: 0 auto;
     display: block;
-}
+} */
+
+.updateProfileButton {
+    cursor: pointer;
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: auto;
+    filter: drop-shadow(4px 4px 4px #222);
+  }
+  
+  .updateProfileButton > span {
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    filter: drop-shadow(2px 2px 2px #222);
+  }

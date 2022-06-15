@@ -10,8 +10,8 @@ class UserLogOut extends Component {
   
   render() {
   return (
-      <div className={style.logout}>
-        <button className={style.button} onClick={this.handleLogout}><span>LOGOUT</span></button>
+      <div>
+        <div className={style.logoutButton} onClick={this.handleLogout}><span>LOGOUT</span></div>
       </div>
   );
   }
