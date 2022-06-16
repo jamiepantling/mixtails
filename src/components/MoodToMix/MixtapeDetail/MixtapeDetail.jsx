@@ -3,7 +3,7 @@ import * as mixtapeApi from "../../../utilities/mixtapes-api";
 import * as moodApi from "../../../utilities/moods-api";
 import { useEffect, useState } from "react";
 import style from "./MixtapeDetail.module.css";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function MixtapeDetail(props) {
   const params = useParams();
@@ -24,9 +24,7 @@ export default function MixtapeDetail(props) {
     }
     getMoods();
     getMixtape(params.id);
-    
   }, []);
-
 
   async function getMixtape(id) {
     let res = await mixtapeApi.getMixtapeById(id);
@@ -34,7 +32,6 @@ export default function MixtapeDetail(props) {
     setName(res.name);
     setPlaylist(res.playlists[0]);
   }
-
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
@@ -50,7 +47,7 @@ export default function MixtapeDetail(props) {
       if (fetchResponse) setSuccess("Saved.");
       getMixtape(params.id);
     } catch (error) {
-      console.log("Error: ", error)
+      console.log("Error: ", error);
     }
   };
 
@@ -67,10 +64,10 @@ export default function MixtapeDetail(props) {
   };
 
   return (
-    <div>
+    <div className={style.content}>
       <h1>Mixtape: {mixtape.name}</h1>
       <div>
-      {/* <div className={style.content}>
+        {/* <div className={style.content}>
       <p>
         Associated Moods:
         {mixtape.moods.map((m) => (
@@ -103,7 +100,10 @@ export default function MixtapeDetail(props) {
             value={playlist}
             onChange={(e) => setPlaylist(e.target.value)}
           ></input>
-          <button className={style.button}><span>Save</span></button>
+          <br />
+          <button className={style.button}>
+            <span>Save</span>
+          </button>
           {success ? <p>{success}</p> : <></>}
         </form>
       </div>
@@ -126,15 +126,15 @@ export default function MixtapeDetail(props) {
           <div>
             <h2>Add moods to {mixtape.name}:</h2>
             <ul>
-              {
-                moods
-                  .filter((mood) => !mixtape.moods.some(curr => curr._id === mood._id))
-                  .map((mood) => (
-                    <button id={mood._id} onClick={() => handleMoodClick(mood)}>
-                      {mood.content}
-                    </button>
-                  ))
-              }
+              {moods
+                .filter(
+                  (mood) => !mixtape.moods.some((curr) => curr._id === mood._id)
+                )
+                .map((mood) => (
+                  <button id={mood._id} onClick={() => handleMoodClick(mood)}>
+                    {mood.content}
+                  </button>
+                ))}
             </ul>
           </div>
         </div>

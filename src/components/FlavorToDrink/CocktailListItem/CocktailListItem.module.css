@@ -21,11 +21,12 @@
     padding-bottom: 30px;
 }
 
-.body :last-child {
-    border-bottom: 1px solid black;
+.body {
+    border-bottom: 2px solid black;
     
 }
 
 .body button {
     padding: 1px;
 }
+

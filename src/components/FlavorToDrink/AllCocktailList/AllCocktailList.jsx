@@ -1,8 +1,9 @@
 
-import "./AllCocktailList.module.css";
+import style from "./AllCocktailList.module.css";
 import * as cocktailsAPI from "../../../utilities/cocktails-api";
 import CocktailListItem from "../CocktailListItem/CocktailListItem";
 import { useEffect, useState } from "react";
+import Header from "../../Header/Header";
 
 export default function CocktailList(props) {
   const [cocktailList, setCocktails] = useState([]);
@@ -21,7 +22,10 @@ export default function CocktailList(props) {
 
   return (
     <>
-      <div>{cocktails}</div>
+    <Header />
+      <div  className={style.c}>
+        {cocktails}
+      </div>
     </>
   );
 }

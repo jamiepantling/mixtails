@@ -3,9 +3,9 @@ import UpdateUserForm from "../../components/Auth/UpdateUserForm/UpdateUserForm"
 import Header from "../../components/Header/Header";
 import UserLogOut from "../../components/Auth/UserLogOut/UserLogOut";
 import style from "./UserProfilePage.module.css";
-import MixtapeList from "../../components/MoodToMix/MixtapeList/MixtapeList";
 import * as mixtapesAPI from "../../utilities/mixtapes-api"
 import MixtapeListItem from "../../components/MoodToMix/MixtapeListItem/MixtapeListItem";
+import UserMixtapeListItem from "../../components/MoodToMix/MixtapeListItem/UserMixtapeListItem"
 
 export default class UserProfilePage extends Component {
   state = {
@@ -56,7 +56,7 @@ export default class UserProfilePage extends Component {
           <></>
         )}
         <h2>My mixtapes</h2>
-        {this.state.mixtapes.map(mixtape=> <MixtapeListItem key={mixtape._id} mixtape={mixtape}/>)}
+        {this.state.mixtapes.map(mixtape=> <UserMixtapeListItem key={mixtape._id} mixtape={mixtape}/>)}
         <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
     );

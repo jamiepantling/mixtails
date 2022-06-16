@@ -8,7 +8,6 @@ export default function CocktailListItem(props) {
 
   return (
     <div className={style.body}>
-      <div className={style.spacer}></div>
       <h2>
         {props.cocktail.name}
       </h2>

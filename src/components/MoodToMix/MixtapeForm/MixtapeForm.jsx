@@ -68,11 +68,12 @@ export default class mixtapeForm extends Component {
       <div className={style.container}>
         <h3>Create mixtape:</h3>
         <div onSubmit={this.handleSubmit}>
-          <form autoComplete="off">
+          <form className={style.form} autoComplete="off">
             <label>Name your Mixtail</label>
             <input
               type="text"
               name="name"
+              placeholder="What's it called?"
               onChange={this.handleChange}
               value={this.state.name}
             />
@@ -110,9 +111,11 @@ export default class mixtapeForm extends Component {
             <input
               type="text"
               name="playlist"
+              placeholder="Where this track at?"
               onChange={this.handleChange}
               value={this.state.playlist}
             />
+            <br/>
             <button type="submit">Submit</button>
           </form>
         </div>
