@@ -7,9 +7,7 @@ export default function Header(props) {
     <div className={style.header}>
       <nav id="navbar" className={style.nav}>
         <Link to="/home" className={style.logo} alt="Mixtails Logo"><span>MixTails</span></Link>
-        <div className='linksContainer'>
-          
-          
+        <div className={style.dropdown}>
           <Link className={style.navLink} to={"/cocktails"}>All cocktails</Link>
           <Link className={style.navLink} to={"/mixtapes"}>All mixtails</Link>
           <Link className={style.navLink} to={"/user"}>Profile</Link>
