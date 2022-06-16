@@ -127,17 +127,8 @@ export default function MixtapeDetail(props) {
             <h2>Add moods to {mixtape.name}:</h2>
             <ul>
               {
-                // moods.filter(mood => mixtape.moods.forEach(
-                //   mixtape.mood._id === mood._id ? true : false
-                // ))
-                // moods.map(mood => forEach(mood => {
-                //     mixtape.moods.forEach(mixtapeMood => {
-                //       if (mixtapeMood._id != mood._id)
-                      
-                // })
-
                 moods
-                  .filter((mood) => !mixtape.moods.includes(mood))
+                  .filter((mood) => !mixtape.moods.some(curr => curr._id === mood._id))
                   .map((mood) => (
                     <button id={mood._id} onClick={() => handleMoodClick(mood)}>
                       {mood.content}
@@ -153,9 +144,3 @@ export default function MixtapeDetail(props) {
     </div>
   );
 }
-
-// useEffect( () => {
-//     if (mixtape.moods) setMixtapeMoods(mixtape.moods.map(mood => moods.find(x=>x._id === mood).content))
-// }, [mixtape])
-
-// if (mixtape.moods) setMixtapeMoods(mixtape.moods.map(mood => moods.find(x=>x._id === mood).content))
