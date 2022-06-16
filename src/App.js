@@ -48,8 +48,7 @@ export default class App extends Component {
           <Route path="/moods" element={<MoodPage user={this.state.user}/>}/>
           <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user}/>} />
           <Route path="*" element={<Navigate to="/home" replace />}/>
-          {/* DEV PURPOSES */}
-          <Route path="/mixtapes" element={< AllMixTapes/>}/>        
+          {/* DEV PURPOSES */}       
           <Route path="/cocktails" element={<AllCocktailList />}/>
         </Routes>
         : (

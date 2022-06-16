@@ -40,3 +40,11 @@
   filter: var(--dropShadow);
 }
 
+.navLinkMobile {
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Robinson;
+  filter: var(--dropShadow);
+}
