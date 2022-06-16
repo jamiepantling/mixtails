@@ -29,3 +29,34 @@
     border-left: 10px solid var(--darkchoco);
     background-color: rgb(225,194,210);
 }
+
+.flavourMobile:hover {
+    cursor: pointer;
+}
+
+.flavourMobile {
+    position: relative;
+    width: 355px;
+    height: 33.5vh;
+    margin: 0px auto;
+    line-height: 100px;
+    text-align: center;
+    background-image: url('../../../../public/FlavLabel.png');
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: 35px;
+    font-family: 'Permanent Marker', cursive;
+    line-height: 35vh;
+    z-index: 99;
+}
+
+.fillerMobile {
+    width: 315px;
+    height: 200px;
+    margin: -100px auto;
+    border-right: 10px solid var(--darkchoco);
+    border-left: 10px solid var(--darkchoco);
+    background-color: rgb(225,194,210);
+}
