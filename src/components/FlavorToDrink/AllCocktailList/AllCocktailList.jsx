@@ -16,7 +16,7 @@ export default function CocktailList(props) {
     fetchCocktails();
   }, []);
 
-  const cocktails = cocktailList.map((cocktail) => (
+  const cocktails = cocktailList.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map((cocktail) => (
     <CocktailListItem key={cocktail._id} cocktail={cocktail} />
   ));
 
