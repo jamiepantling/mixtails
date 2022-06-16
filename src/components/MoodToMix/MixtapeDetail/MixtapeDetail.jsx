@@ -3,7 +3,7 @@ import * as mixtapeApi from "../../../utilities/mixtapes-api";
 import * as moodApi from "../../../utilities/moods-api";
 import { useEffect, useState } from "react";
 import style from "./MixtapeDetail.module.css";
-import { Link } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 
 export default function MixtapeDetail(props) {
   const params = useParams();
@@ -15,6 +15,8 @@ export default function MixtapeDetail(props) {
   let [error, setError] = useState("");
   let [success, setSuccess] = useState("");
 
+  const isMobile = useMediaQuery({ maxWidth: 800 })
+  const isBigScreen = useMediaQuery({ minWidth: 801 })
   // mixtape.moods.map(mood => moods.find(x=>x._id === mood))
 
   useEffect(() => {
@@ -64,26 +66,27 @@ export default function MixtapeDetail(props) {
   };
 
   return (
-    <div className={style.content}>
+    <div>
       <h1>Mixtape: {mixtape.name}</h1>
-      <div>
+
         <div className={style.content}>
-      <p>
-        Associated Moods:
-        {mixtape.moods && mixtape.moods.map((m) => (
-          <span>{m.content}</span>
-        ))}
-      </p>
-      <p>
-        Cocktails:
-        {mixtape.cocktails && mixtape.cocktails.map((c) => (
-          <span>{c.name}</span>
-        ))}
-      </p>
-      <a href={mixtape.playlists} target="_blank">Playlist</a>
-      <p>Shared?: {mixtape.shared ? "Public" : "Private"} </p>
-      {/* <button onClick={deleteMixtape}>DELETE</button> */}
-    </div>
+          <h3 className={style.h3}>Cocktails:</h3>
+          <div className={style.detailsList}>
+            {mixtape.cocktails && mixtape.cocktails.map((c) => (
+              <span>{c.name}</span>
+            ))}
+          </div>
+          <h3 className={style.detailsList}>
+            <a href={mixtape.playlists}  target="_blank">Playlist</a>
+          </h3>
+          <h3 className={style.detailsList}>Shared: </h3>
+          <div className={style.detailsList}> {mixtape.shared ? "Public" : "Private"} </div>
+          {/* <button onClick={deleteMixtape}>DELETE</button> */}
+        </div>
+        {mixtape.createdBy === props.user._id ? (
+        <div>
+        <div>
+        <h1>Update</h1>
         <form onSubmit={handleSubmit}>
           <label className={style.label}>Update name:</label>
           <input
@@ -106,13 +109,12 @@ export default function MixtapeDetail(props) {
           </button>
           {success ? <p>{success}</p> : <></>}
         </form>
-      </div>
-      {mixtape.createdBy === props.user._id ? (
-        <div>
+        </div>
+
           <div className={style.moodButtonSection}>
             <h2>{mixtape.name}'s moods:</h2>
-            <div className={style.moodButtonContainer}>
-              {mixtape.moods.map((mood) => (
+            {isBigScreen && <div className={`${style.moodButtonContainer} ${style.moodButtonContainerBigScreen}`}>
+              {mixtape.moods.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
                 <div className={style.moodButton}>
                   {mood.content}
 
@@ -122,26 +124,54 @@ export default function MixtapeDetail(props) {
 
                 </div>
               ))}
-            </div>
+            </div>}
+            {isMobile && <div className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}>
+              {mixtape.moods.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
+                <div className={style.moodButton}>
+                  {mood.content}
+
+                      <div className={style.xButton} id={mood._id} onClick={() => handleMoodClick(mood)}>
+                        X
+                      </div>
+
+                </div>
+              ))}
+            </div>}
         </div>
           <div className={style.moodButtonSection}>
             <h2>Add moods to {mixtape.name}:</h2>
-            <div className={style.moodButtonContainer}>
+            {isMobile && 
+            <div className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}>
               {moods
                 .filter(
                   (mood) => !mixtape.moods.some((curr) => curr._id === mood._id)
                 )
-                .map((mood) => (
+                .sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
                   <div className={`${style.moodButton} ${style.addMoodButton}`} id={mood._id} onClick={() => handleMoodClick(mood)}>
                     {mood.content}
                   </div>
                 ))}
             </div>
+            }
+            {isBigScreen && 
+            <div className={`${style.moodButtonContainer} ${style.moodButtonContainerBigScreen}`}>
+              {moods
+                .filter(
+                  (mood) => !mixtape.moods.some((curr) => curr._id === mood._id)
+                )
+                .sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
+                  <div className={`${style.moodButton} ${style.addMoodButton}`} id={mood._id} onClick={() => handleMoodClick(mood)}>
+                    {mood.content}
+                  </div>
+                ))}
+            </div>
+            }
           </div>
         </div>
       ) : 
         <></>
       }
     </div>
+
   );
 }
