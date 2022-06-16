@@ -88,7 +88,7 @@ export default class mixtapeForm extends Component {
               <option value="DEFAULT" disabled>
                 Choose a cocktail...
               </option>
-              {this.state.allCocktails.map((cocktail) => (
+              {this.state.allCocktails.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map((cocktail) => (
                 <option key={cocktail._id} value={cocktail._id}>
                   {cocktail.name}
                 </option>
@@ -103,7 +103,7 @@ export default class mixtapeForm extends Component {
               <option value="DEFAULT" disabled>
                 Choose a mood...
               </option>
-              {this.state.allMoods.map((mood) => (
+              {this.state.allMoods.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
                 <option key={mood._id} value={mood._id}>
                   {mood.content}
                 </option>
