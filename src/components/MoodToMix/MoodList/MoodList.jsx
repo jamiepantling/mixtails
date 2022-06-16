@@ -4,7 +4,7 @@ import style from "./MoodList.module.css";
 
 export default function MoodList(props) {
 
-  const moods = props.moodsList.map((mood) => (
+  const moods = props.moodsList.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
     <MoodListItem
       key={mood._id}
       {...mood}
