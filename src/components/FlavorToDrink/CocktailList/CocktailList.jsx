@@ -10,7 +10,7 @@ export default function CocktailList(props) {
     <>
       <div>
         <ul>
-          {props.cocktails.map(cocktail => <li><CocktailListItem cocktail={cocktail} /></li>)}
+          {props.cocktails.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map(cocktail => <li><CocktailListItem cocktail={cocktail} /></li>)}
         </ul>
       </div>
     </>
