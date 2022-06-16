@@ -53,10 +53,11 @@ export default function CocktailListItem(props) {
         {showCocktail ? (
           <div className={style.detailsMobile}>
             {props.cocktail.image ? (
-              <img src={props.cocktail.image} alt="Cocktail pic" />
+              <img src={props.cocktail.image} alt="Cocktail pic"/>
             ) : (
               <></>
             )}
+            <br />
             <label>Description</label>
             <p>{props.cocktail.description}</p>
             <label>Instructions</label>

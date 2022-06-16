@@ -5,8 +5,13 @@
     border-right: 10px solid var(--darkchoco);
     border-left: 10px solid var(--darkchoco);
 }
-.details{
-    margin: 0px;
+.details img {
+    display: block;
+    min-height: 324px;
+    max-height: 324px;
+    min-width: 250px;
+    max-width: 250px;
+    margin: 0 auto;
 }
 .body ul {
     list-style: none;
@@ -39,8 +44,12 @@
     border-right: 10px solid var(--darkchoco);
     border-left: 10px solid var(--darkchoco);
 }
-.detailsMobile{
-    margin: 0px;
+.detailsMobile img {
+    min-height: 324px;
+    max-height: 324px;
+    min-width: 250px;
+    max-width: 250px;
+    margin: 0 auto;
 }
 .bodyMobile ul {
     list-style: none;
@@ -62,9 +71,4 @@
 
 .bodyMobile button {
     padding: 1px;
-}
-
-img {
-    height: 300px;
-    width: 236px;
 }
