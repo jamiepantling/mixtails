@@ -12,7 +12,6 @@ body {
   height: 70vh;
   margin: 5% auto;
   justify-content: space-evenly;
-  /* border: 1px solid red */
   }
 
 .card {
@@ -26,7 +25,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 10px;
   text-decoration: none;
-  filter: drop-shadow(6px 6px 6px #222);
+  filter: var(--dropShadow);
   text-overflow: none;
   
 }
@@ -41,7 +40,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 10px;
   text-decoration: none;
-  filter: drop-shadow(6px 6px 6px #222);
+  filter: var(--dropShadow);
   text-overflow: none;
   
 }
@@ -50,14 +49,14 @@ body {
   font-size: 10vw;
   font-family: Robinson;
   margin: auto;
-  filter: drop-shadow(4px 4px 4px #222);
+  filter: var(--dropShadow);
 }
 .cardMobile > span {
   color: whitesmoke;
   font-size: 10vw;
   font-family: Robinson;
   margin: auto;
-  filter: drop-shadow(4px 4px 4px #222);
+  filter: var(--dropShadow);
 }
 .one {
   background-image: url("../../../public/flavour-profiles2.jpg");
