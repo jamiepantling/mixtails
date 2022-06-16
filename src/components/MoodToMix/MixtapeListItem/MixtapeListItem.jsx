@@ -1,14 +1,7 @@
 import style from "./MixtapeListItem.module.css";
-import * as mixtapesAPI from "../../../utilities/mixtapes-api";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function MixtapeListItem(props) {
-  async function deleteMixtape() {
-    await mixtapesAPI.deleteMixtape(props.mixtape._id);
-    props.mixtape.setMixtapeInState(props.mixtape);
-  }
-
   return (
     <div className={style.mixtapeInfoContainer}>
       <h3>
