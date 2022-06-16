@@ -40,13 +40,14 @@ export default class mixtapeForm extends Component {
     evt.preventDefault();
     try {
       // send states to be created in DB
-      await mixtapesAPI.createMixtape({
+      const newMixtape = await mixtapesAPI.createMixtape({
         name: this.state.name,
         cocktails: this.state.cocktails,
         moods: this.state.moods,
         playlist: this.state.playlist,
         createdBy: this.props.user._id,
       });
+      
       // reset states to previous values
       this.setState({
         allCocktails: this.state.allCocktails,
@@ -60,7 +61,8 @@ export default class mixtapeForm extends Component {
       console.log("Error! ", error);
       this.setState({ ...this.state, error: "Addition failed 🥴" });
     }
-    this.props.setShowMixtapes(false)
+    this.props.setShowMixtapeForm(false)
+    this.props.fetchMixtapes()
   };
 
   render() {

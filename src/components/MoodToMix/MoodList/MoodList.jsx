@@ -1,35 +1,14 @@
 import MoodListItem from "../MoodListItem/MoodListItem";
 import style from "./MoodList.module.css";
-import { useEffect, useState } from "react";
-import * as moodsAPI from "../../../utilities/moods-api";
-import * as mixtapesAPI from "../../../utilities/mixtapes-api";
+
 
 export default function MoodList(props) {
-  const [moodList, setMoodList] = useState([]);
-  const [mixtapeList, setMixtapeList] = useState([]);
-  const [filteredMixtapeList, setFilteredMixtapeList] = useState([]);
 
-  useEffect(function () {
-    async function fetchMoods() {
-      const moods = await moodsAPI.getMoods();
-      setMoodList(moods);
-    }
-    async function fetchMixtapes() {
-      const mixtapes = await mixtapesAPI.getMixtapes();
-      setMixtapeList(mixtapes);
-    }
-    fetchMoods();
-    fetchMixtapes();
-  }, []);
-
-  const moods = moodList.map((mood) => (
+  const moods = props.moodsList.map((mood) => (
     <MoodListItem
-      setMoodList={setMoodList}
       key={mood._id}
       {...mood}
-      // For the first mood only
-      // mixtapes={mixtapeList.filter(mixtape => mixtape.moods[0]._id.includes(mood._id))}
-      mixtapes={mixtapeList.filter((mixtape) =>
+      mixtapesList={props.mixtapesList.filter((mixtape) =>
         mixtape.moods.find((moods) => moods._id === mood._id)
       )}
     />
