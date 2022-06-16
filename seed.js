@@ -179,11 +179,10 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[4].id, tag[6].id],
-      image:
-        "https://files.slack.com/files-pri/T0351JZQ0-F03KCJ29C9K/image.png",
+      image: "https://www.telegraph.co.uk/content/dam/luxury/2019/07/17/DSC8022_IG_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.JPG",
     },
     {
-      name: "Parasol",
+      name: "Pisco Punch",
       description: "",
       instruction: "Dirty pour this...",
       ingredients: [
@@ -192,7 +191,7 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[0].id],
-      image: "",
+      image: "https://i.pinimg.com/564x/6a/bd/29/6abd29d17559c00634e95ed4ab86d2d1.jpg",
     },
     {
       name: "White Russian",
@@ -219,7 +218,7 @@ async function populateDB() {
       image: "",
     },
     {
-      name: "Negroni",
+      name: "I'm on Fire",
       description: "",
       instruction: "Dirty pour this...",
       ingredients: [
@@ -228,7 +227,7 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[4].id],
-      image: "",
+      image: "https://i.pinimg.com/236x/b4/97/7b/b4977bdb2fee16462136b2269fe984c3.jpg",
     },
   ]);
 
