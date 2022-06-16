@@ -24,7 +24,7 @@ export default function FlavourList(props) {
     }, []);
     
 
-    const tags = tagList.map((tag) => (
+    const tags = tagList.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((tag) => (
     <FlavourListItem key={tag._id} {...tag} 
     cocktails={cocktailList.filter(cocktail => cocktail.tags.find(tags => tags._id === tag._id))} 
     />
