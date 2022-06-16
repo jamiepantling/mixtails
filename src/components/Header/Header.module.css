@@ -8,29 +8,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5px;
-  margin-bottom: 20px;
+  padding: 15px;
 }
 
 .logo {
-  position: relative;
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 15px;
-  margin-left: 10px;
+  
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  width: 60px;
-  height: 60px;
-  background-image: url("/public/Cocktaillogo.png");
+  width: 70px;
+  height: 70px;
+  background-image: url("/public/cocktailLogo.png");
   background-size: cover;
 }
-.logo span {
-  position: absolute;
-  font-size: 30px;
-  margin: 10px 10px 10px 20px;
-}
+
 .navLink {
   padding: 15px;
   color: white;
@@ -38,6 +27,10 @@
   text-decoration: none;
   font-family: Robinson;
   filter: var(--dropShadow);
+}
+
+.navLink > span {
+  margin-left: 60px;
 }
 
 .navLinkMobile {
