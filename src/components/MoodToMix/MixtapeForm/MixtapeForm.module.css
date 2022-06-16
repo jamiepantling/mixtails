@@ -5,7 +5,8 @@
     width: 355px;
     margin: 0px auto;
     border: 3px solid var(--darkchoco);
-    filter: var(--dropShadow);
+    /* filter: var(--dropShadow); */
+    font-size: x-large;
 }
 
 .form label {
@@ -14,7 +15,7 @@
     text-decoration: underline;
 }
 
-.form button {
+.button {
     width: 90px;
     padding: 5px;
     border-radius: 5px;
@@ -23,3 +24,10 @@
     filter: var(--dropShadow);
     border: none
 }
+
+.button > span {
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    filter: var(--dropShadow);
+  }

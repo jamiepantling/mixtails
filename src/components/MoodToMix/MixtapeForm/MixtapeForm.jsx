@@ -68,7 +68,7 @@ export default class mixtapeForm extends Component {
   render() {
     return (
       <div className={style.container}>
-        <h3>Create mixtape:</h3>
+        <h3>Create mixtail:</h3>
         <div onSubmit={this.handleSubmit}>
           <form className={style.form} autoComplete="off">
             <label>Name your Mixtail</label>
@@ -118,7 +118,7 @@ export default class mixtapeForm extends Component {
               value={this.state.playlist}
             />
             <br/>
-            <button type="submit">Submit</button>
+            <button className={style.button} type="submit"><span>Submit</span></button>
           </form>
         </div>
       </div>
