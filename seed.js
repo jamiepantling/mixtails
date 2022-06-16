@@ -16,16 +16,15 @@ async function populateDB() {
     { content: "Hypocritical" }, // 2
     { content: "Insecure" }, // 3
     { content: "Depressed" }, // 4
-    { content: "Fun" }, // 5
+    { content: "Dark" }, // 5
     { content: "Mellow" }, // 6
     { content: "Chill" }, // 7
     { content: "Sexy-time" }, // 8
     { content: "Romantic" }, // 9
-    { content: "British" }, // 10
-    { content: "Benny-ish" }, // 11
-    { content: "Molly" }, // 12
-    { content: "Drained" }, // 13
-    { content: "Inspired" }, // 14
+    { content: "Cocky" }, // 10
+    { content: "Tipsy" }, // 11
+    { content: "Drained" }, // 12
+    { content: "Inspired" }, // 13
   ]);
 
   await Tag.deleteMany({});
@@ -133,7 +132,7 @@ async function populateDB() {
       ],
       tags: [tag[5].id],
       image:
-        "https://imbibemagazine.com/wp-content/uploads/2018/10/death-and-co-ideal-martini-horizontal-crdt-dylan-and-jeni.jpg",
+        "https://i.pinimg.com/originals/d3/dd/22/d3dd223c600de1e8e5ba5e2d5ea26f51.jpg",
     },
     {
       name: "Between the Sheets", // 7
