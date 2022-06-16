@@ -70,7 +70,7 @@ async function populateDB() {
     },
     {
       name: "Tommy's Margarita", // 2
-      description: "",
+      description: "A regular margarita, but Tommy's a bit picky",
       instruction: "Dirty pour this...",
       ingredients: [
         { name: "Tequila", qty: 2 },
@@ -191,9 +191,9 @@ async function populateDB() {
         "https://www.telegraph.co.uk/content/dam/luxury/2019/07/17/DSC8022_IG_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.JPG",
     },
     {
-      name: "Pisco Punch",
-      description: "",
-      instruction: "Dirty pour this...",
+      name: "Parasol",
+      description: "When you wanna get smashed on fruit punch",
+      instruction: "Stick an umbrella on it",
       ingredients: [
         { name: "Pisco", qty: 2 },
         { name: "Lime", qty: 0.25 },
@@ -230,7 +230,7 @@ async function populateDB() {
         "https://imbibemagazine.com/wp-content/uploads/2020/07/kold-brew-americano-master.jpg",
     },
     {
-      name: "I'm on Fire",
+      name: "Negroni",
       description: "",
       instruction: "Dirty pour this...",
       ingredients: [
@@ -239,6 +239,7 @@ async function populateDB() {
         { name: "Agave Syrup", qty: 0.5 },
       ],
       tags: [tag[4].id],
+
       image:
         "https://i.pinimg.com/236x/b4/97/7b/b4977bdb2fee16462136b2269fe984c3.jpg",
     },

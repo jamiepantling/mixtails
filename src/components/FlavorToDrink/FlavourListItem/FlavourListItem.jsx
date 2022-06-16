@@ -3,29 +3,7 @@ import CocktailList from "../CocktailList/CocktailList";
 import { useMediaQuery } from "react-responsive";
 import style from "./FlavourListItem.module.css";
 
-// export default class FlavourListItem extends Component {
-//   state = {
-//     showCocktails: false,
-//   };
-//   render() {
-//     return (
-//       <div>
-//         <div>
-//           <h3
-//             className={style.flavour}
-//             onClick={() =>
-//               this.setState({ showCocktails: !this.state.showCocktails })
-//             }
-//           >
-//             {this.props.content}
-//           </h3>
-//           <div className={style.filler}></div>
-//           {this.state.showCocktails ? <CocktailList cocktails={this.props.cocktails}/> : <></>}
-//         </div>
-//       </div>
-//     );
-//   }
-// }
+
 export default function FlavourListItem(props) {
   const [showCocktails, setShowCocktails] = useState(false);
 
