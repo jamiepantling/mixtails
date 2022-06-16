@@ -10,3 +10,35 @@
     color: white;
     filter: var(--dropShadow);
 }
+
+.mood:hover {
+    cursor: pointer;
+}
+
+.mood {
+    display: flex;
+    justify-content: center;
+    background-image: url('/public/MixtapeTback.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Permanent Marker', cursive;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    line-height: 10vh;
+    filter: var(--dropShadow);
+}
+
+.moodTitle {
+    position: absolute;
+    line-height: 20px;
+    height: 30px;
+    transform: rotate(-10deg);
+    margin-right: 15px;
+    margin-top: 44px;
+    font-size: 32px;
+    color: white;
+    filter: var(--dropShadow);
+ 
+}
