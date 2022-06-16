@@ -51,7 +51,8 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[0].id, tag[5].id],
-      image: "",
+      image:
+        "https://assets.bonappetit.com/photos/58409ff731e0aa8a6cd383f8/5:7/w_648,h_908,c_limit/bas-best-old-fashioned.jpg",
     },
     {
       name: "Toronto", // 1
@@ -64,7 +65,8 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[0].id],
-      image: "",
+      image:
+        "https://assets-prd.punchdrink.com/wp-content/uploads/2021/10/15102845/Article-Fernet-Branca-Cocktail-Recipe-Toronto.jpg",
     },
     {
       name: "Tommy's Margarita", // 2
@@ -77,7 +79,7 @@ async function populateDB() {
       ],
       tags: [tag[2].id, tag[0].id],
       image:
-        "https://files.slack.com/files-pri/T0351JZQ0-F03KCG0RT61/image.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07UCAAXZdpGLd7UYV0AkPXrxdU5o7jiv2lw&usqp=CAU",
     },
     {
       name: "Daiquiri", // 3
@@ -89,7 +91,8 @@ async function populateDB() {
         { name: "Simple Syrup", qty: 0.75 },
       ],
       tags: [tag[0].id],
-      image: "",
+      image:
+        "https://www.liquor.com/thmb/kU5L4WsnCEJY9wyui7cPGSuyvuA=/720x720/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__04__23143458__daiquiri-720x720-recipe-09f1d5665a794eddbbfb997876736136.jpg",
     },
     {
       name: "Manhattan", // 4
@@ -102,7 +105,8 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[4].id, tag[0].id],
-      image: "",
+      image:
+        "https://vintageamericancocktails.com/wp-content/uploads/2021/03/Manhattan-1900s.jpg",
     },
     {
       name: "Corpse Reviver #2", // 5
@@ -116,7 +120,8 @@ async function populateDB() {
         { name: "Absinthe or Pernod", qty: 3 },
       ],
       tags: [tag[0].id, tag[2].id],
-      image: "",
+      image:
+        "https://www.supergoldenbakes.com/wordpress/wp-content/uploads/2019/12/Corpse_Reviver_No2.jpg",
     },
     {
       name: "Dry Martini", // 6
@@ -127,7 +132,8 @@ async function populateDB() {
         { name: "Dry Vermouth", qty: 0.75 },
       ],
       tags: [tag[5].id],
-      image: "",
+      image:
+        "https://imbibemagazine.com/wp-content/uploads/2018/10/death-and-co-ideal-martini-horizontal-crdt-dylan-and-jeni.jpg",
     },
     {
       name: "Between the Sheets", // 7
@@ -141,7 +147,8 @@ async function populateDB() {
         { name: "Lemon Juice", qty: 0.5 },
       ],
       tags: [tag[0].id],
-      image: "",
+      image:
+        "https://www.acouplecooks.com/wp-content/uploads/2020/05/Between-the-Sheets-Cocktail-006.jpg",
     },
     {
       name: "Mint Julep", // 8
@@ -154,7 +161,8 @@ async function populateDB() {
         { name: "Mint Leaves", qty: 8 },
       ],
       tags: [tag[0].id, tag[6].id],
-      image: "",
+      image:
+        "https://www.liquor.com/thmb/I4TMQxCzojbuBMu3znFVWb84ZgY=/735x0/mint-julep-720x720-primary-5e2063b906384479b345687201992bd0.jpg",
     },
     {
       name: "Espresso Martini",
@@ -162,61 +170,64 @@ async function populateDB() {
       instruction:
         "Shake it hard, pour in a glass and drop 3 coffee beans on top",
       ingredients: [
-        { name: "Tequila", qty: 2 },
-        { name: "Lime", qty: 0.25 },
-        { name: "Angos", qty: 2 },
+        { name: "Vodka", qty: 2 },
+        { name: "Coffee Liqueur", qty: 1 },
+        { name: "Simple Syrup", qty: 0.5 },
       ],
       tags: [tag[0].id, tag[3].id],
-      image: "",
+      image:
+        "https://assets-global.website-files.com/60c0fbd82efb7bdbe7192d01/61789397a19f8b31f74dff7a_Main-Recipe-Image-Expresso-Martini.jpg",
     },
     {
       name: "Gin & Tonic",
       description: "Classic",
       instruction: "Dirty pour this...",
       ingredients: [
-        { name: "Tequila", qty: 2 },
-        { name: "Lime", qty: 0.25 },
-        { name: "Angos", qty: 2 },
+        { name: "gin", qty: 1.5 },
+        { name: "Tonic Water", qty: 3 },
       ],
       tags: [tag[4].id, tag[6].id],
       image:
-        "https://files.slack.com/files-pri/T0351JZQ0-F03KCJ29C9K/image.png",
+        "https://www.telegraph.co.uk/content/dam/luxury/2019/07/17/DSC8022_IG_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.JPG",
     },
     {
       name: "Parasol",
       description: "When you wanna get smashed on fruit punch",
       instruction: "Stick an umbrella on it",
       ingredients: [
-        { name: "Tequila", qty: 2 },
+        { name: "Pisco", qty: 2 },
         { name: "Lime", qty: 0.25 },
-        { name: "Angos", qty: 2 },
+        { name: "Red Juice", qty: 2 },
       ],
       tags: [tag[0].id],
-      image: "",
+      image:
+        "https://i.pinimg.com/564x/6a/bd/29/6abd29d17559c00634e95ed4ab86d2d1.jpg",
     },
     {
       name: "White Russian",
       description: "Lebowski sponsored",
       instruction: "Dirty pour this...",
       ingredients: [
-        { name: "Tequila", qty: 2 },
-        { name: "Lime", qty: 0.25 },
-        { name: "Angos", qty: 2 },
+        { name: "Vodka", qty: 2 },
+        { name: "Coffee Liqueur", qty: 1 },
+        { name: "Heavy Cream", qty: 0.5 },
       ],
       tags: [tag[0].id, tag[3].id],
-      image: "",
+      image:
+        "https://www.marketingdirecto.com/wp-content/uploads/2014/09/Jeff-Bridges-300x300.jpg",
     },
     {
       name: "Americano",
       description: "Fav of the American ex-pats",
       instruction: "Dirty pour this...",
       ingredients: [
-        { name: "Tequila", qty: 2 },
-        { name: "Lime", qty: 0.25 },
-        { name: "Angos", qty: 2 },
+        { name: "Campari", qty: 1.5 },
+        { name: "Sweet Vermouth", qty: 1.5 },
+        { name: "Soda Water", qty: 1 },
       ],
       tags: [tag[4].id],
-      image: "",
+      image:
+        "https://imbibemagazine.com/wp-content/uploads/2020/07/kold-brew-americano-master.jpg",
     },
     {
       name: "Negroni",
@@ -224,11 +235,13 @@ async function populateDB() {
       instruction: "Dirty pour this...",
       ingredients: [
         { name: "Tequila", qty: 2 },
-        { name: "Lime", qty: 0.25 },
-        { name: "Angos", qty: 2 },
+        { name: "Lime", qty: 1 },
+        { name: "Agave Syrup", qty: 0.5 },
       ],
       tags: [tag[4].id],
-      image: "",
+
+      image:
+        "https://i.pinimg.com/236x/b4/97/7b/b4977bdb2fee16462136b2269fe984c3.jpg",
     },
   ]);
 
