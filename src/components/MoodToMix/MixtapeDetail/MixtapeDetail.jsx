@@ -67,23 +67,23 @@ export default function MixtapeDetail(props) {
     <div className={style.content}>
       <h1>Mixtape: {mixtape.name}</h1>
       <div>
-        {/* <div className={style.content}>
+        <div className={style.content}>
       <p>
         Associated Moods:
-        {mixtape.moods.map((m) => (
+        {mixtape.moods && mixtape.moods.map((m) => (
           <span>{m.content}</span>
         ))}
       </p>
       <p>
         Cocktails:
-        {mixtape.cocktails.map((c) => (
+        {mixtape.cocktails && mixtape.cocktails.map((c) => (
           <span>{c.name}</span>
         ))}
       </p>
       <a href={mixtape.playlists} target="_blank">Playlist</a>
       <p>Shared?: {mixtape.shared ? "Public" : "Private"} </p>
-      <button onClick={deleteMixtape}>DELETE</button>
-    </div> */}
+      {/* <button onClick={deleteMixtape}>DELETE</button> */}
+    </div>
         <form onSubmit={handleSubmit}>
           <label className={style.label}>Update name:</label>
           <input
@@ -109,33 +109,34 @@ export default function MixtapeDetail(props) {
       </div>
       {mixtape.createdBy === props.user._id ? (
         <div>
-          <h2>{mixtape.name}'s moods:</h2>
-          <ul>
-            {mixtape.moods.map((mood) => (
-              <div className={style.div}>
-                <div>{mood.content}</div>
-                <div>
-                  <button id={mood._id} onClick={() => handleMoodClick(mood)}>
-                    X
-                  </button>
-                </div>
-              </div>
-            ))}
-          </ul>
+          <div className={style.moodButtonSection}>
+            <h2>{mixtape.name}'s moods:</h2>
+            <div className={style.moodButtonContainer}>
+              {mixtape.moods.map((mood) => (
+                <div className={style.moodButton}>
+                  {mood.content}
 
-          <div>
+                      <div className={style.xButton} id={mood._id} onClick={() => handleMoodClick(mood)}>
+                        X
+                      </div>
+
+                </div>
+              ))}
+            </div>
+        </div>
+          <div className={style.moodButtonSection}>
             <h2>Add moods to {mixtape.name}:</h2>
-            <ul>
+            <div className={style.moodButtonContainer}>
               {moods
                 .filter(
                   (mood) => !mixtape.moods.some((curr) => curr._id === mood._id)
                 )
                 .map((mood) => (
-                  <button id={mood._id} onClick={() => handleMoodClick(mood)}>
+                  <div className={`${style.moodButton} ${style.addMoodButton}`} id={mood._id} onClick={() => handleMoodClick(mood)}>
                     {mood.content}
-                  </button>
+                  </div>
                 ))}
-            </ul>
+            </div>
           </div>
         </div>
       ) : 
