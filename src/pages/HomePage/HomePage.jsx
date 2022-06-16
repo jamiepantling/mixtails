@@ -5,24 +5,35 @@ import { useMediaQuery } from 'react-responsive'
 
 export default function HomePage(props) {
   const isMobile = useMediaQuery({ maxWidth: 800 })
+  const isMedium = useMediaQuery({ minWidth: 800, maxWidth: 1100 })
+  const isBigScreen = useMediaQuery({ minWidth: 1100 })
 
     return (
     <main>
       <Header setUserInState={props.setUserInState} />
       
       {isMobile && <div className={style.cardContainer}>
-        <Link to="/moods" className={`${style.cardMobile} ${style.one}`}>
+        <Link to="/moods" className={`${style.cardMobile} ${style.one} ${style.card}`}>
           <span>WATCHA FEELIN'?</span>
         </Link>
-        <Link to="/flavours" className={`${style.cardMobile} ${style.two}`}>
+        <Link to="/flavours" className={`${style.cardMobile} ${style.card} ${style.two}`}>
         <span>SAVOUR THE FLAVOUR</span>
         </Link>
       </div>}
-      {!isMobile && <div className={style.cardContainer}>
-        <Link to="/moods" className={`${style.card} ${style.one}`}>
+
+      {isMedium && <div className={style.cardContainer}>
+        <Link to="/moods" className={`${style.card} ${style.cardMedium} ${style.one}`}>
           <span>WATCHA FEELIN'?</span>
         </Link>
-        <Link to="/flavours" className={`${style.card} ${style.two}`}>
+        <Link to="/flavours" className={`${style.card} ${style.cardMedium} ${style.two}`}>
+        <span>SAVOUR THE FLAVOUR</span>
+        </Link>
+      </div>}
+      {isBigScreen && <div className={style.cardContainer}>
+        <Link to="/moods" className={`${style.card} ${style.cardBig} ${style.one}`}>
+          <span>WATCHA FEELIN'?</span>
+        </Link>
+        <Link to="/flavours" className={`${style.card} ${style.cardBig} ${style.two}`}>
         <span>SAVOUR THE FLAVOUR</span>
         </Link>
       </div>}
