@@ -9,25 +9,25 @@ export default function MixtapeListItem(props) {
   }
 
   return (
-    <div className={style.content}>
+    <div className={style.mixtapeInfoContainer}>
       <h3>
         <Link to={`/mixtapes/${props.mixtape._id}`}>{props.mixtape.name}</Link>
       </h3>
-      <p>
-        Associated Moods:
+      {/* <p>
+        Moods:
         {props.mixtape.moods.map((m) => (
           <span>{m.content}</span>
         ))}
-      </p>
+      </p> */}
       <p>
-        Cocktails:{" "}
+        {/* Cocktails:{" "} */}
         {props.mixtape.cocktails.map((c) => (
           <span>{c.name}</span>
         ))}
       </p>
       <a href={props.mixtape.playlists} target="_blank">Playlist</a>
-      <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p>
-      <button onClick={deleteMixtape}>DELETE</button>
+      {/* <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p> */}
+      {/* <button onClick={deleteMixtape}>DELETE</button> */}
     </div>
   );
 }
