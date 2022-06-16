@@ -14,21 +14,15 @@ export default function MixtapeListItem(props) {
       <h3>
         <Link to={`/mixtapes/${props.mixtape._id}`}>{props.mixtape.name}</Link>
       </h3>
-      {/* <p>
-        Moods:
-        {props.mixtape.moods.map((m) => (
-          <span>{m.content}</span>
-        ))}
-      </p> */}
       <p>
         {/* Cocktails:{" "} */}
-        {props.mixtape.cocktails.map((c) => (
-          <span>{c.name}</span>
+        {props.mixtape.cocktails.map((cocktail) => (
+          <span>{cocktail.name}</span>
         ))}
       </p>
-      <a href={props.mixtape.playlists} target="_blank">Playlist</a>
-      {/* <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p> */}
-      {/* <button onClick={deleteMixtape}>DELETE</button> */}
+      <a href={props.mixtape.playlists} target="_blank">
+        Playlist
+      </a>
     </div>
   );
 }

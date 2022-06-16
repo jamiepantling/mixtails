@@ -25,6 +25,7 @@ export async function createMixtape(mixtape) {
   try {
     let fetchResponse = await fetch(`${BASE_URL}`, options)
     if (!fetchResponse.ok) throw new Error("Fetch Failed!");
+    return fetchResponse.json()
   } catch (error) {
     console.log(("Mixtape Error: ", error));
   }

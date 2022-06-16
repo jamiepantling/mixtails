@@ -56,7 +56,7 @@ async function create(req, res) {
       playlists: [req.body.playlist],
       createdBy: req.body.createdBy,
     });
-    res.status(200).json();
+    res.json(mixtape);
   } catch (error) {
     console.log("Error! ", error);
   }
