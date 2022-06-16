@@ -1,3 +1,7 @@
+.content {
+    letter-spacing: 0.3px;
+    font-size: x-large;
+}
 .li {
     display: flex;
     justify-content: center;
@@ -33,4 +37,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.moodButton {
+    margin: 4px;
+    background: rgb(243, 206, 128);
+    padding: 4px 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: large;
+    width: 150px;
+    box-shadow: 3px 3px 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.moodButtonContainer {
+    display: grid;
+    margin-bottom: 50px;
+}
+.moodButtonContainerMobile {
+    grid-template-columns: 1fr 1fr;
+}
+.moodButtonContainerBigScreen {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.moodButtonSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+.xButton {
+    background-color: none;
+    color: rgb(224, 63, 43);
+    cursor: pointer;
+}
+.addMoodButton {
+    cursor: pointer
+}
+.detailsList{
+    margin-bottom: 10px;
+  }
+
+.h3 {
+    font-size: xx-large;
 }
