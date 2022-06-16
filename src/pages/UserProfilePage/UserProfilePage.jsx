@@ -4,7 +4,6 @@ import Header from "../../components/Header/Header";
 import UserLogOut from "../../components/Auth/UserLogOut/UserLogOut";
 import style from "./UserProfilePage.module.css";
 import * as mixtapesAPI from "../../utilities/mixtapes-api"
-import MixtapeListItem from "../../components/MoodToMix/MixtapeListItem/MixtapeListItem";
 import UserMixtapeListItem from "../../components/MoodToMix/MixtapeListItem/UserMixtapeListItem"
 
 export default class UserProfilePage extends Component {
@@ -29,6 +28,10 @@ export default class UserProfilePage extends Component {
     } catch (error) {
       console.error("Error: ", error)
     }
+  }
+
+  componentDidUpdate() {
+    console.log("ComponentDidUpdate: ", this.state.mixtapes)
   }
 
   render() {
@@ -56,7 +59,7 @@ export default class UserProfilePage extends Component {
           <></>
         )}
         <h2>My mixtapes</h2>
-        {this.state.mixtapes.map(mixtape=> <UserMixtapeListItem user={this.props.user} key={mixtape._id} mixtape={mixtape}/>)}
+        {this.state.mixtapes.map(mixtape=> <UserMixtapeListItem user={this.props.user} setMixtapeInState={this.setMixtapeInState} key={mixtape._id} mixtape={mixtape}/>)}
         <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
     );

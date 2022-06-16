@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function MixtapeListItem(props) {
   async function deleteMixtape() {
     await mixtapesAPI.deleteMixtape(props.mixtape._id);
-    props.mixtape.setMixtapeInState(props.mixtape);
+    props.setMixtapeInState(props.mixtape);
   }
 
   return (
@@ -27,9 +27,11 @@ export default function MixtapeListItem(props) {
         ))}
       </p>
       <a href={props.mixtape.playlists} target="_blank">Playlist</a>
-      <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p>
-      <button><Link className={style.link} to={`/mixtapes/${props.mixtape._id}`}>Edit</Link></button>
-      <button onClick={deleteMixtape}>DELETE</button>
+      <p>Shared: {props.mixtape.shared ? "Public" : "Private"} </p>
+      <div className={style.buttonContainer}>
+        <div className={style.editButton}><Link className={style.link} to={`/mixtapes/${props.mixtape._id}`}><span>Edit</span></Link></div>
+        <div className={style.deleteButton} onClick={deleteMixtape}><span>DELETE</span></div>
+      </div>
     </div>
   );
 }
