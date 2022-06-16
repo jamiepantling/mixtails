@@ -30,3 +30,36 @@
     padding: 1px;
 }
 
+/*  */
+
+.bodyMobile {
+    background-color: rgb(225,194,210);
+    width: 315px;
+    margin: 0px auto;
+    border-right: 10px solid var(--darkchoco);
+    border-left: 10px solid var(--darkchoco);
+}
+.detailsMobile{
+    margin: 0px;
+}
+.bodyMobile ul {
+    list-style: none;
+}
+
+.bodyMobile label {
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+.bodyMobile ul :last-child {
+    padding-bottom: 30px;
+}
+
+.bodyMobile {
+    border-bottom: 2px solid black;
+    
+}
+
+.bodyMobile button {
+    padding: 1px;
+}
