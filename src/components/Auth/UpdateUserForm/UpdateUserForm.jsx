@@ -1,5 +1,5 @@
 import { Component } from "react";
-import style from "./UpdateUserForm.css";
+import style from "./UpdateUserForm.module.css";
 
 export default class UpdateUserForm extends Component {
   state = {
@@ -48,8 +48,8 @@ export default class UpdateUserForm extends Component {
 
   render() {
     return (
-      <div>
-        <div className="form-container updateform" onSubmit={this.handleSubmit}>
+      <div className={style.formbody}>
+        <div className={style.updateform} onSubmit={this.handleSubmit}>
           <form autoComplete="off">
             <label>Username</label>
             <input
@@ -58,7 +58,7 @@ export default class UpdateUserForm extends Component {
               value={this.state.username}
               onChange={this.handleChange}
             />
-            <label>Bio: </label>
+            <label>Bio</label>
             <textarea
               type="text"
               name="bio"
@@ -66,9 +66,9 @@ export default class UpdateUserForm extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <div className={style.updateProfileButton} type="submit">
-              <span>Update</span>
-            </div>
+            <button className={style.updateProfileButton} type="submit">
+              Update
+            </button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>

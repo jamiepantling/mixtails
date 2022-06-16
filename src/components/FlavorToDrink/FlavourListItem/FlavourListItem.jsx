@@ -18,6 +18,7 @@ export default class FlavourListItem extends Component {
           >
             {this.props.content}
           </h3>
+          <div className={style.filler}></div>
           {this.state.showCocktails ? <CocktailList cocktails={this.props.cocktails}/> : <></>}
         </div>
       </div>

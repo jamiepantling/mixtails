@@ -1,4 +1,4 @@
-import style from "./MixtapeListItem.module.css";
+import style from "./UserMixtapeListItem.module.css";
 import * as mixtapesAPI from "../../../utilities/mixtapes-api";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -12,14 +12,14 @@ export default function MixtapeListItem(props) {
   return (
     <div className={style.mixtapeInfoContainer}>
       <h3>
-        <Link to={`/mixtapes/${props.mixtape._id}`}>{props.mixtape.name}</Link>
+        {props.mixtape.name}
       </h3>
-      {/* <p>
+      <p>
         Moods:
         {props.mixtape.moods.map((m) => (
-          <span>{m.content}</span>
+          <span>  {m.content} </span>
         ))}
-      </p> */}
+      </p>
       <p>
         {/* Cocktails:{" "} */}
         {props.mixtape.cocktails.map((c) => (
@@ -27,8 +27,9 @@ export default function MixtapeListItem(props) {
         ))}
       </p>
       <a href={props.mixtape.playlists} target="_blank">Playlist</a>
-      {/* <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p> */}
-      {/* <button onClick={deleteMixtape}>DELETE</button> */}
+      <p>Shared?: {props.mixtape.shared ? "Public" : "Private"} </p>
+      <button><Link className={style.link} to={`/mixtapes/${props.mixtape._id}`}>Edit</Link></button>
+      <button onClick={deleteMixtape}>DELETE</button>
     </div>
   );
 }

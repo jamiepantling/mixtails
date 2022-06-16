@@ -1,15 +1,25 @@
 .container {
     display: flex;
+    scroll-behavior: smooth;
     flex-direction: column;
-    border: solid 1px black;
+    width: 355px;
+    margin: 0px auto;
+    border: 3px solid var(--darkchoco);
+    box-shadow: 5px 5px 5px var(--darkchoco);
 }
 
-label {
+.form label {
     display: block;
-    margin: 10px auto;
+    margin: 5px auto;
+    text-decoration: underline;
 }
 
-button {
-    display: block;
-    margin: 10px auto;
+.form button {
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: 15px auto ;
+    filter: drop-shadow(4px 4px 4px #222);
+    border: none
 }

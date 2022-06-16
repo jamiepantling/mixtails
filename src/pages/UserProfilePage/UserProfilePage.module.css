@@ -1,6 +1,10 @@
 .profileInfoContainer {
     font-size: 40px;
-    margin-top: 50px; 
+    margin: 0 auto; 
+    margin-top: 50px;
+    border: 2px solid black;
+    width: 355px;
+    box-shadow: 5px 5px var(--darkchoco);
 }
 
 .editProfileButton {
@@ -9,13 +13,18 @@
     padding: 5px;
     border-radius: 5px;
     background-color: var(--militarygreen);
-    margin: auto;
-    filter: drop-shadow(4px 4px 4px #222);
-  }
+    margin: 20px auto;
+    filter: drop-shadow(4px 4px 4px #222); 
+}
   
-  .editProfileButton > span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    filter: drop-shadow(2px 2px 2px #222);
-  }
+.editProfileButton > span {
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  filter: drop-shadow(2px 2px 2px #222);
+}
+
+.userPbody h2 {
+  text-decoration: underline;
+  margin-bottom: 5px;
+}

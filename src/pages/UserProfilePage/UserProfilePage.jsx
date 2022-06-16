@@ -3,15 +3,16 @@ import UpdateUserForm from "../../components/Auth/UpdateUserForm/UpdateUserForm"
 import Header from "../../components/Header/Header";
 import UserLogOut from "../../components/Auth/UserLogOut/UserLogOut";
 import style from "./UserProfilePage.module.css";
-import MixtapeList from "../../components/MoodToMix/MixtapeList/MixtapeList";
 import * as mixtapesAPI from "../../utilities/mixtapes-api"
 import MixtapeListItem from "../../components/MoodToMix/MixtapeListItem/MixtapeListItem";
+import UserMixtapeListItem from "../../components/MoodToMix/MixtapeListItem/UserMixtapeListItem"
 
 export default class UserProfilePage extends Component {
   state = {
     favdrinks: [],
     favmixtapes: [],
     showEdit: false,
+    itemdeleted:"",
     mixtapes: []
   };
 
@@ -32,19 +33,19 @@ export default class UserProfilePage extends Component {
 
   render() {
     return (
-      <main>
+      <main className={style.userPbody}>
         <Header setUserInState={this.props.setUserInState}/>
         <div className={style.profileInfoContainer}>
           <h1>Welcome {this.props.user.username}</h1>
           <div>Email: {this.props.user.email}</div>
           <div>Bio: {this.props.user.bio}</div>
-          <div>Fav Drinks: {this.props.user.favdrinks}</div>
-          <div>Fav Mixtapes: {this.props.favmixtapes}</div>
+          {/* <div>Fav Drinks: {this.props.user.favdrinks}</div>
+          <div>Fav Mixtapes: {this.props.favmixtapes}</div> */}
         </div>
         <div className={style.editProfileButton}
           onClick={() => this.setState({ showEdit: !this.state.showEdit })}
         >
-          <span>Edit</span>
+          {this.state.showEdit ? <span>Collapse</span> : <span>Edit</span>}
         </div>
         {this.state.showEdit ? (
           <UpdateUserForm
@@ -54,8 +55,8 @@ export default class UserProfilePage extends Component {
         ) : (
           <></>
         )}
-        <h2>My mixtapes:</h2>
-        {this.state.mixtapes.map(mixtape=> <MixtapeListItem key={mixtape._id} mixtape={mixtape}/>)}
+        <h2>My mixtapes</h2>
+        {this.state.mixtapes.map(mixtape=> <UserMixtapeListItem key={mixtape._id} mixtape={mixtape}/>)}
         <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
     );
