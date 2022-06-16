@@ -1,22 +1,30 @@
-/* .updateform input, textarea{
+.formbody {
+  border: 2px solid black;
+  width: 355px;
+  margin: 10px auto;
+  box-shadow: 5px 5px var(--darkchoco);
+}
+
+.updateform input, textarea{
     text-align: center;
-    margin: 0 auto;
+    margin: auto;
     display: block;
-} */
+    border: 2px solid black;
+}
+
+.updateform form label {
+  font-size: 30px;
+  text-decoration: underline;
+}
 
 .updateProfileButton {
-    cursor: pointer;
     width: 90px;
     padding: 5px;
     border-radius: 5px;
     background-color: var(--militarygreen);
     margin: auto;
     filter: drop-shadow(4px 4px 4px #222);
-  }
-  
-  .updateProfileButton > span {
     color: white;
     font-family: Robinson;
     font-size: 25px;
-    filter: drop-shadow(2px 2px 2px #222);
-  }
+}

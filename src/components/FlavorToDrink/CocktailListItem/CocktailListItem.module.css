@@ -1,0 +1,32 @@
+.body {
+    background-color: rgb(225,194,210);
+    width: 355px;
+    margin: 0px auto;
+    border-right: 10px solid var(--darkchoco);
+    border-left: 10px solid var(--darkchoco);
+}
+.details{
+    margin: 0px;
+}
+.body ul {
+    list-style: none;
+}
+
+.body label {
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+.body ul :last-child {
+    padding-bottom: 30px;
+}
+
+.body {
+    border-bottom: 2px solid black;
+    
+}
+
+.body button {
+    padding: 1px;
+}
+

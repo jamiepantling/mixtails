@@ -32,7 +32,7 @@ export default function FlavourList(props) {
 
 
     return (
-        <div>
+        <div className={style.body}>
             {tags}
         </div>
     )
