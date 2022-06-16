@@ -79,8 +79,7 @@ export default function MixtapeDetail(props) {
           <h3 className={style.detailsList}>
             <a href={mixtape.playlists}  target="_blank">Playlist</a>
           </h3>
-          <h3 className={style.detailsList}>Shared: </h3>
-          <div className={style.detailsList}> {mixtape.shared ? "Public" : "Private"} </div>
+         
           {/* <button onClick={deleteMixtape}>DELETE</button> */}
         </div>
         {mixtape.createdBy === props.user._id ? (
@@ -169,7 +168,23 @@ export default function MixtapeDetail(props) {
           </div>
         </div>
       ) : 
-        <></>
+        <><div className={style.moodButtonSection}>
+        <h2>{mixtape.name}'s moods:</h2>
+        {isBigScreen && <div className={`${style.moodButtonContainer} ${style.moodButtonContainerBigScreen}`}>
+          {mixtape.moods && mixtape.moods.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
+            <div className={style.moodButton}>
+              {mood.content}
+            </div>
+          ))}
+        </div>}
+        {isMobile && <div className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}>
+          {mixtape.moods && mixtape.moods.sort((a,b) => (a.content > b.content) ? 1 : ((b.content > a.content) ? -1 : 0)).map((mood) => (
+            <div className={style.moodButton}>
+              {mood.content}
+            </div>
+          ))}
+        </div>}
+    </div></>
       }
     </div>
 
