@@ -68,7 +68,7 @@ async function populateDB() {
     },
     {
       name: "Tommy's Margarita", // 2
-      description: "",
+      description: "A regular margarita, but Tommy's a bit picky",
       instruction: "Dirty pour this...",
       ingredients: [
         { name: "Tequila", qty: 2 },
@@ -179,19 +179,20 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[4].id, tag[6].id],
-      image: "https://www.telegraph.co.uk/content/dam/luxury/2019/07/17/DSC8022_IG_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.JPG",
+      image:
+        "https://files.slack.com/files-pri/T0351JZQ0-F03KCJ29C9K/image.png",
     },
     {
-      name: "Pisco Punch",
-      description: "",
-      instruction: "Dirty pour this...",
+      name: "Parasol",
+      description: "When you wanna get smashed on fruit punch",
+      instruction: "Stick an umbrella on it",
       ingredients: [
         { name: "Tequila", qty: 2 },
         { name: "Lime", qty: 0.25 },
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[0].id],
-      image: "https://i.pinimg.com/564x/6a/bd/29/6abd29d17559c00634e95ed4ab86d2d1.jpg",
+      image: "",
     },
     {
       name: "White Russian",
@@ -218,7 +219,7 @@ async function populateDB() {
       image: "",
     },
     {
-      name: "I'm on Fire",
+      name: "Negroni",
       description: "",
       instruction: "Dirty pour this...",
       ingredients: [
@@ -227,7 +228,7 @@ async function populateDB() {
         { name: "Angos", qty: 2 },
       ],
       tags: [tag[4].id],
-      image: "https://i.pinimg.com/236x/b4/97/7b/b4977bdb2fee16462136b2269fe984c3.jpg",
+      image: "",
     },
   ]);
 
