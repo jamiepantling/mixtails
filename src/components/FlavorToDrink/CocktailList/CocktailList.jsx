@@ -8,7 +8,11 @@ export default function CocktailList(props) {
 
   return (
     <>
-      <div>{props.cocktails.map(cocktail => <CocktailListItem cocktail={cocktail} />)}</div>
+      <div>
+        <ul>
+          {props.cocktails.map(cocktail => <li><CocktailListItem cocktail={cocktail} /></li>)}
+        </ul>
+      </div>
     </>
   );
 }
