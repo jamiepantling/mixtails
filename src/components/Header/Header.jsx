@@ -6,7 +6,7 @@ export default function Header(props) {
   return (
     <div className={style.header}>
       <nav id="navbar" className={style.nav}>
-        <Link to="/home" className={style.logo} alt="Mixtails Logo"></Link>
+        <Link to="/home" className={style.logo} alt="Mixtails Logo"><span>MixTails</span></Link>
         <div className='linksContainer'>
           
           
