@@ -13,7 +13,7 @@
     border-radius: 5px;
     background-color: var(--militarygreen);
     margin: 40px auto ;
-    filter: drop-shadow(4px 4px 4px #222);
+    filter: var(--dropShadow);
     border: none
   }
   
@@ -21,5 +21,5 @@
     color: white;
     font-family: Robinson;
     font-size: 25px;
-    filter: drop-shadow(2px 2px 2px #222);
+    filter: var(--dropShadow);
   }

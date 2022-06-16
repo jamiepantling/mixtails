@@ -4,7 +4,6 @@
     margin-top: 50px;
     border: 2px solid black;
     width: 355px;
-    box-shadow: 5px 5px var(--darkchoco);
 }
 
 .editProfileButton {
@@ -14,14 +13,14 @@
     border-radius: 5px;
     background-color: var(--militarygreen);
     margin: 20px auto;
-    filter: drop-shadow(4px 4px 4px #222); 
+    filter: var(--dropShadow);
 }
   
 .editProfileButton > span {
   color: white;
   font-family: Robinson;
   font-size: 25px;
-  filter: drop-shadow(2px 2px 2px #222);
+  filter: var(--dropShadow);
 }
 
 .userPbody h2 {

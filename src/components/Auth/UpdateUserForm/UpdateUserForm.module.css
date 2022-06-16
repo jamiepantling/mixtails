@@ -2,7 +2,6 @@
   border: 2px solid black;
   width: 355px;
   margin: 10px auto;
-  box-shadow: 5px 5px var(--darkchoco);
 }
 
 .updateform input, textarea{
@@ -23,7 +22,7 @@
     border-radius: 5px;
     background-color: var(--militarygreen);
     margin: auto;
-    filter: drop-shadow(4px 4px 4px #222);
+    filter: var(--dropShadow);
     color: white;
     font-family: Robinson;
     font-size: 25px;
