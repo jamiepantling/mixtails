@@ -138,9 +138,9 @@ export default function MixtapeDetail(props) {
             </ul>
           </div>
         </div>
-      ) : (
+      ) : 
         <></>
-      )}
+      }
     </div>
   );
 }
