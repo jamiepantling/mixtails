@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import style from "./LoginForm.module.css"
 
 export default class SignUpForm extends Component {
   state = {
@@ -41,17 +42,17 @@ export default class SignUpForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className={style.loginContainer}>
         <div className="form-container" onSubmit={this.handleSubmit}>
           <form autoComplete="off" >
-            <label>Email</label>
+            <label className={style.label}>Email</label>
             <input type="text" name="email" value={this.state.email} onChange={this.handleChange} required />
-            <label>Password</label>
+            <label className={style.label}> Password</label>
             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-            <button type="submit">LOG IN</button>
+            <button className={style.logInButton} type="submit"><span>LOG IN</span></button>
           </form>
+          <p className="error-message">&nbsp;{this.state.error}</p>
         </div>
-        <p className="error-message">&nbsp;{this.state.error}</p>
       </div>
     );
   }

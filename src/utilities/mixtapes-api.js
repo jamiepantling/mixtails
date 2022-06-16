@@ -24,7 +24,6 @@ export async function createMixtape(mixtape) {
   };
   try {
     let fetchResponse = await fetch(`${BASE_URL}`, options)
-    console.log("Fetch response ok?", fetchResponse.ok, fetchResponse)
     if (!fetchResponse.ok) throw new Error("Fetch Failed!");
   } catch (error) {
     console.log(("Mixtape Error: ", error));
@@ -32,7 +31,6 @@ export async function createMixtape(mixtape) {
 }
 
 export async function deleteMixtape(mixtapeId) {
-  console.log(mixtapeId)
   const options = {
     method: "DELETE",
     headers: {
@@ -43,9 +41,8 @@ export async function deleteMixtape(mixtapeId) {
     }),
   };
   try {
-    console.log(options.body)
     let fetchResponse = await fetch(`${BASE_URL}`, options)
-    console.log("Fetch response ok?", fetchResponse.ok, fetchResponse)
+  
     if (!fetchResponse.ok) throw new Error("Fetch Failed!");
   } catch (error) {
     console.log(("Mixtape Error: ", error));
@@ -97,7 +94,6 @@ export async function updateMixtape(id, values) {
   };
   try {
     let fetchResponse = await fetch(`${BASE_URL}/${id}`, options)
-    console.log("Fetch response ok?", fetchResponse.ok, fetchResponse)
     if (!fetchResponse.ok) throw new Error("Fetch Failed!");
     else {
       return true

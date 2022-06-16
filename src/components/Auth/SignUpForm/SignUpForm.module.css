@@ -1,0 +1,29 @@
+.signUpContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpButton {
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: 20px auto;
+    filter: drop-shadow(4px 4px 4px #222);
+    border: none
+}
+  
+.signUpButton > span {
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    filter: drop-shadow(2px 2px 2px #222);
+}
+
+.label {
+    font-size: 23px;
+    margin-bottom: 0
+}
+

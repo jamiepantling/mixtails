@@ -11,7 +11,7 @@ export default class AuthPage extends Component {
 
   render() {
     return (
-        <main className="styles.AuthPage" >
+        <main className={style.AuthPage} >
         
             {this.state.showLogin ? (
             <LoginForm setUserInState={this.props.setUserInState} />
@@ -20,9 +20,9 @@ export default class AuthPage extends Component {
             )}
             <div>
   
-                <button
+                <button className={style.signUpButton}
                     onClick={() => this.setState({ showLogin: !this.state.showLogin })}>
-                    {this.state.showLogin ? "Go to SIGN UP" : "Go to LOG IN"}
+                    {this.state.showLogin ? <span>SIGN UP</span> : <span>Go to LOG IN</span>}
                 </button>
             </div>
         </main>

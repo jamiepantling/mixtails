@@ -4,10 +4,28 @@
     align-items: center;
 }
 .button {
-    margin-left: 6px;
-    height: 20px;
-    width: 20px
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: 20px auto;
+    filter: drop-shadow(4px 4px 4px #222);
+    border: none
+  }
+  
+.button > span {
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    filter: drop-shadow(2px 2px 2px #222);
+  }
+
+  
+.label {
+    font-size: 23px;
+    margin-bottom: 0
 }
+
 .div {
     display: flex;
     justify-content: center;

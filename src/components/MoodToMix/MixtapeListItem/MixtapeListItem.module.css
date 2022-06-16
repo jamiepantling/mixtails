@@ -1,16 +1,19 @@
-.mixtail {
-    background-image: url('../../../../public/stainednapkin.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 30vw;
-    /* border: solid 1px black; */
-    margin-bottom: 10px;
-    font-family: 'Kalam', cursive;
+.mixtapeInfoContainer {
+    text-align: left;
+    font-size: 30px;
+    padding: 15px;
 }
 
-.mixtail li {
-    list-style: none;
-    text-align: left;
-    margin-left: 50px;
+.mixtapeInfoContainer > h3 > a {
+    color: black;
 }
+
+.mixtapeInfoContainer > a {
+    text-decoration: none;
+    color: black;
+}
+
+.mixtapeInfoContainer a:hover {
+    color: var(--lipstickred);
+}
+
