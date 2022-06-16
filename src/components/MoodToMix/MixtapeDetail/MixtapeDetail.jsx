@@ -3,6 +3,7 @@ import * as mixtapeApi from "../../../utilities/mixtapes-api";
 import * as moodApi from "../../../utilities/moods-api";
 import { useEffect, useState } from "react";
 import style from "./MixtapeDetail.module.css";
+import { Link } from 'react-router-dom'
 
 export default function MixtapeDetail(props) {
   const params = useParams();
@@ -24,18 +25,8 @@ export default function MixtapeDetail(props) {
     getMoods();
     getMixtape(params.id);
     
-    // if (mixtape.moods) {
-    //     
-    //     if(moods) {
-    //         
-    //         // creates new array with those moods associated with this mixtape
-    //         let thisMixtapeMoods = mixtape.moods.map(mood => moods.find(x=>x._id === mood))
-    //         // sets this in state
-    //         
-    //         setMixtapeMoods(thisMixtapeMoods)
-    //     }
-    // }
   }, []);
+
 
   async function getMixtape(id) {
     let res = await mixtapeApi.getMixtapeById(id);
@@ -44,21 +35,6 @@ export default function MixtapeDetail(props) {
     setPlaylist(res.playlists[0]);
   }
 
-  // useEffect( () => {
-  //    
-  //     if (mixtape.moods) {
-  //         
-  //         if(moods) {
-  //             
-  //             // creates new array with those moods associated with this mixtape
-  //             let thisMixtapeMoods = mixtape.moods.map(mood => moods.find(x=>x._id === mood))
-  //             // sets this in state
-  //             
-  //             setMixtapeMoods(thisMixtapeMoods)
-
-  //         }
-  //     }
-  // }, [])
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
@@ -80,36 +56,39 @@ export default function MixtapeDetail(props) {
 
   const handleMoodClick = (mood) => {
     mixtapeApi.addRemoveMood(mood._id, params.id);
-    // getMixtape(params.id)
-    // let tempVar = mixtapeMoods
     let tempMoods = [...mixtape.moods];
     if (mixtape.moods.includes(mood)) {
       let idx = tempMoods.indexOf(mood);
-      // tempVar.splice(idx, 1)
       tempMoods.splice(idx, 1);
     } else {
-      // tempVar = [...tempVar, mood]
       tempMoods = [...tempMoods, mood];
     }
-    // setMixtapeMoods(tempVar)
     setMixtape({ ...mixtape, moods: tempMoods });
   };
-
-  //     moodsButtons = mixtapeMoods.map(mood => (<div className={style.div}>
-  //         <div>{mood.content}</div>
-  //         <div><button id={mood._id} onClick={() => handleMoodClick(mood._id)}>X</button></div>
-  //         </div>
-  //         ) )
-  // moods.filter(mood => !mixtapeMoods.includes(mood)).map(mood => (
-  //         <button id={mood._id} onClick={() => handleMoodClick(mood._id)}>{mood.content}</button>
-  //         ))
 
   return (
     <div>
       <h1>Mixtape: {mixtape.name}</h1>
       <div>
+      {/* <div className={style.content}>
+      <p>
+        Associated Moods:
+        {mixtape.moods.map((m) => (
+          <span>{m.content}</span>
+        ))}
+      </p>
+      <p>
+        Cocktails:
+        {mixtape.cocktails.map((c) => (
+          <span>{c.name}</span>
+        ))}
+      </p>
+      <a href={mixtape.playlists} target="_blank">Playlist</a>
+      <p>Shared?: {mixtape.shared ? "Public" : "Private"} </p>
+      <button onClick={deleteMixtape}>DELETE</button>
+    </div> */}
         <form onSubmit={handleSubmit}>
-          <label>Update name:</label>
+          <label className={style.label}>Update name:</label>
           <input
             type="text"
             name="name"
@@ -117,14 +96,14 @@ export default function MixtapeDetail(props) {
             onChange={(e) => setName(e.target.value)}
           ></input>
           {error ? <p>{error}</p> : <></>}
-          <label>Update playlist:</label>
+          <label className={style.label}>Update playlist:</label>
           <input
             type="text"
             name="playlist"
             value={playlist}
             onChange={(e) => setPlaylist(e.target.value)}
           ></input>
-          <button>Save</button>
+          <button className={style.button}><span>Save</span></button>
           {success ? <p>{success}</p> : <></>}
         </form>
       </div>
@@ -148,14 +127,17 @@ export default function MixtapeDetail(props) {
             <h2>Add moods to {mixtape.name}:</h2>
             <ul>
               {
-                // moods.forEach(mood => {
-                //     mixtape.moods.forEach(mixtapeMood => mixtapeMood._id != mood._id ? <button id={mood._id} onClick={() => handleMoodClick(mood)}>{mood.content}</button> : <></> )
+                // moods.filter(mood => mixtape.moods.forEach(
+                //   mixtape.mood._id === mood._id ? true : false
+                // ))
+                // moods.map(mood => forEach(mood => {
+                //     mixtape.moods.forEach(mixtapeMood => {
+                //       if (mixtapeMood._id != mood._id)
+                      
                 // })
 
                 moods
-                  .filter((mood) => {
-                    return !mixtape.moods.includes(mood);
-                  })
+                  .filter((mood) => !mixtape.moods.includes(mood))
                   .map((mood) => (
                     <button id={mood._id} onClick={() => handleMoodClick(mood)}>
                       {mood.content}
