@@ -15,9 +15,9 @@ export default function CocktailListItem(props) {
       {isDesktop && (
         <div className={style.body}>
           <h2>{props.cocktail.name}</h2>
-          <button onClick={() => setShowCocktail(!showCocktail)}>
+          <div className={style.cocktailButton} onClick={() => setShowCocktail(!showCocktail)}>
             {showCocktail ? "Hide" : "What is it?"}
-          </button>
+          </div>
           {showCocktail ? (
             <div className={style.details}>
               {props.cocktail.image ? (

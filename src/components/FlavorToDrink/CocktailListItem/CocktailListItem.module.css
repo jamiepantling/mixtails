@@ -72,3 +72,16 @@
 .bodyMobile button {
     padding: 1px;
 }
+
+.cocktailButton {
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: 2px auto 10px auto;
+    filter: var(--dropShadow);
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    cursor: pointer;
+}

@@ -22,7 +22,8 @@
     background-color: var(--militarygreen);
     margin: 15px auto ;
     filter: var(--dropShadow);
-    border: none
+    border: none;
+    cursor: pointer;
 }
 
 .button > span {

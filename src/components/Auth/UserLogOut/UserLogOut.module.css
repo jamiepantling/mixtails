@@ -5,6 +5,7 @@
   background-color: var(--militarygreen);
   margin: auto;
   filter: var(--dropShadow);
+  cursor: pointer
 }
 
 .logoutButton > span {
