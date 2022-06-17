@@ -41,7 +41,7 @@ export default class UserProfilePage extends Component {
         <div className={style.profileInfoContainer}>
           <h1>Welcome {this.props.user.username}</h1>
           <div>Email: {this.props.user.email}</div>
-          <div>Bio: {this.props.user.bio}</div>
+          {this.props.user.bio && <div>Bio: {this.props.user.bio}</div>}
           {/* <div>Fav Drinks: {this.props.user.favdrinks}</div>
           <div>Fav Mixtapes: {this.props.favmixtapes}</div> */}
         </div>
@@ -59,6 +59,7 @@ export default class UserProfilePage extends Component {
           <></>
         )}
         <h2>My mixtapes</h2>
+       {this.state.mixtapes.length || <div className={style.noMixtapes}>No mixtapes yet </div>}
         {this.state.mixtapes.map(mixtape=> <UserMixtapeListItem user={this.props.user} setMixtapeInState={this.setMixtapeInState} key={mixtape._id} mixtape={mixtape}/>)}
         <UserLogOut setUserInState={this.props.setUserInState} />
       </main>
