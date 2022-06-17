@@ -277,10 +277,52 @@ async function populateDB() {
       moods: [moods[0].id],
     },
     {
+      name: "Sad Mix",
+      cocktails: [cocktail[2].id],
+      playlists: ["https://open.spotify.com/playlist/37i9dQZF1DWV7EzJMK2FUI?si=ad67346f55c74cb3"],
+      moods: [moods[1].id],
+    },
+    {
       name: "Happy Mix Tape #2",
-      cocktails: [cocktail[9].id],
+      cocktails: [cocktail[1].id],
       playlists: ["https://open.spotify.com/playlist/1Io2vGf0wVNvrm5SuS0e1b"],
-      moods: [moods[0].id],
+      moods: [moods[2].id],
+    },
+    {
+      name: "Jesus Christ",
+      cocktails: [cocktail[7].id],
+      playlists: ["https://open.spotify.com/playlist/30wdzfOKmW7JmLPiQI0BGC?si=bad5def2540b4666"],
+      moods: [moods[3].id],
+    },
+    {
+      name: "Dumpster Dive",
+      cocktails: [cocktail[9].id],
+      playlists: ["https://open.spotify.com/artist/0BWetxjlZPivD9FOmFrirz?si=TlNP7F_0RkORF5N1DlMEFg"],
+      moods: [moods[5].id],
+    },
+    {
+      name: "Filler",
+      cocktails: [cocktail[4].id],
+      playlists: ["https://open.spotify.com/artist/0BWetxjlZPivD9FOmFrirz?si=TlNP7F_0RkORF5N1DlMEFg"],
+      moods: [moods[4].id],
+    },
+    {
+      name: "Killer",
+      cocktails: [cocktail[10].id],
+      playlists: ["https://open.spotify.com/artist/0BWetxjlZPivD9FOmFrirz?si=TlNP7F_0RkORF5N1DlMEFg"],
+      moods: [moods[6].id],
+    },
+    {
+      name: "Chiller",
+      cocktails: [cocktail[4].id],
+      playlists: ["https://open.spotify.com/artist/0BWetxjlZPivD9FOmFrirz?si=TlNP7F_0RkORF5N1DlMEFg"],
+      moods: [moods[7].id],
+    },
+    {
+      name: "Pooper",
+      cocktails: [cocktail[7].id],
+      playlists: ["https://open.spotify.com/artist/0BWetxjlZPivD9FOmFrirz?si=TlNP7F_0RkORF5N1DlMEFg"],
+      moods: [moods[12].id],
     },
   ]);
 }
