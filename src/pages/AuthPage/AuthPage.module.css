@@ -23,3 +23,16 @@
     font-size: 25px;
     filter: var(--dropShadow);
   }
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mixtailsTitle {
+  font-size: 100px;
+}
+.logo {
+  margin-left: 10px;
+  max-height: 200px
+}

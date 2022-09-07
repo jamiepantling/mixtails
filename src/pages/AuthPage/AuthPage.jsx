@@ -12,7 +12,14 @@ export default class AuthPage extends Component {
   render() {
     return (
         <main className={style.AuthPage} >
-        
+          <div className={style.logoContainer}>
+            <div className={style.logo}>
+              <img className={style.logo} src="/cocktailLogo.png" alt=""/>
+            </div>
+            <div className={style.mixtailsTitle}>
+            Mixtails
+            </div>
+          </div>
             {this.state.showLogin ? (
             <LoginForm setUserInState={this.props.setUserInState} />
             ) : (
