@@ -17,7 +17,7 @@ export default function HomePage(props) {
           <span>WATCHA FEELIN'?</span>
         </Link>
         <Link to="/flavours" className={`${style.cardMobile} ${style.card} ${style.two}`}>
-        <span>SAVOUR THE FLAVOUR</span>
+        <span>WHAT'S YOUR FLAVOUR?</span>
         </Link>
       </div>}
 
@@ -26,7 +26,7 @@ export default function HomePage(props) {
           <span>WATCHA FEELIN'?</span>
         </Link>
         <Link to="/flavours" className={`${style.card} ${style.cardMedium} ${style.two}`}>
-        <span>SAVOUR THE FLAVOUR</span>
+        <span>WHAT'S YOUR FLAVOUR?</span>
         </Link>
       </div>}
       {isBigScreen && <div className={style.cardContainer}>
@@ -34,7 +34,7 @@ export default function HomePage(props) {
           <span>WATCHA FEELIN'?</span>
         </Link>
         <Link to="/flavours" className={`${style.card} ${style.cardBig} ${style.two}`}>
-        <span>SAVOUR THE FLAVOUR</span>
+        <span>WHAT'S YOUR FLAVOUR?</span>
         </Link>
       </div>}
     </main>
