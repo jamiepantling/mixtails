@@ -10,11 +10,19 @@ export default function Header(props) {
     <div className={style.header}>
       {isDesktop && (
         <nav id="navbar" className={style.nav}>
-          <Link to="/home" className={style.logo} alt="Mixtails Logo">
-            <div className={style.navLink}>
-              <span>MixTails</span>
-            </div>
-          </Link>
+          <div className={style.logoTitleContainer}>
+            <Link to="/home">
+              <img
+                src="/cocktailLogo.png"
+                className={style.logo}
+                alt="Mixtails Logo"
+              />
+            </Link>
+            <Link className={style.navLink} to="/home">
+              MixTails
+            </Link>
+          </div>
+
           <div className={style.links}>
             <Link className={style.navLink} to={"/cocktails"}>
               Cocktails
@@ -27,7 +35,18 @@ export default function Header(props) {
       )}
       {isMobile && (
         <nav id="navbar" className={style.nav}>
-          <Link to="/home" className={style.logo} alt="Mixtails Logo"></Link>
+          <div className={style.logoTitleContainer}>
+            <Link to="/home">
+              <img
+                src="/cocktailLogo.png"
+                className={style.logo}
+                alt="Mixtails Logo"
+              />
+            </Link>
+            <Link className={style.navLinkMobile} to="/home">
+              MixTails
+            </Link>
+          </div>
           <div className={style.links}>
             <Link className={style.navLinkMobile} to={"/cocktails"}>
               cocktails
