@@ -1,20 +1,9 @@
-# ___Project Proposal___
+# ___Mixtails___
 
-<!-- ## Project Proposal -->
+Mixtails helps you set the mood of your evening - combine a playlist of songs with a selection of cocktails into a 'mixtail'. Users can log in, create mixtails, browse others and share their own.
 
-You ever feel like you can't choose what to drink?
+Here's a link to [the deployed app](https://mixtails.herokuapp.com/).
 
-### __Welcome to Mixtails__
-#### By: <u>___Fetch 75___</u>
-![Team](./public/Screen%20Shot%202022-06-09%20at%206.42.35%20PM.png)
-
-# App name: Mixtails
-
-# Getting Started
-### <u>Trello</u>
-[Link](https://trello.com/b/Qon5Qeby/project-4)
-
-### App <u>[Here](https://mixtails.herokuapp.com/home)</u>
 ## <u>Technologies Used:</u>
 * React
 * Express
@@ -22,7 +11,7 @@ You ever feel like you can't choose what to drink?
 * Mongodb 
 * HTML/CSS 
 
-## <u>Screenshots of our app in the wild</u>
+## <u>Screenshots of Mixtails in the wild</u>
 ### Home Page
 ![shot1](./public/Screenshot1.png)
 ### Moods Page
