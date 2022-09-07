@@ -6,9 +6,6 @@ You ever feel like you can't choose what to drink?
 
 ### __Welcome to Mixtails__
 #### By: <u>___Fetch 75___</u>
-![Team](./public/Screen%20Shot%202022-06-09%20at%206.42.35%20PM.png)
-
-# App name: Mixtails
 
 # Getting Started
 ### <u>Trello</u>
@@ -22,7 +19,7 @@ You ever feel like you can't choose what to drink?
 * Mongodb 
 * HTML/CSS 
 
-## <u>Screenshots of our app in the wild</u>
+## <u>Screenshots of Mixtails in the wild</u>
 ### Home Page
 ![shot1](./public/Screenshot1.png)
 ### Moods Page
