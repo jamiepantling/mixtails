@@ -1,9 +1,14 @@
 .profileInfoContainer {
     font-size: 40px;
     margin: 0 auto; 
-    margin-top: 50px;
-    border: 2px solid black;
-    width: 355px;
+    max-width: 400px;
+    color: var(--tanned)
+}
+.profileInfoContainer h1 {
+  font-size: 100px;
+  margin: 0 auto; 
+  width: 355px;
+  color: var(--tanned)
 }
 
 .editProfileButton {
@@ -27,6 +32,21 @@
   text-decoration: underline;
   margin-bottom: 5px;
 }
-.noMixtapes {
-  margin: 4px
+.noMixtapes, .mixtailsCount {
+  margin: 4px;
+  font-size: 25px
+}
+.myMixtailsContainer {
+  color: var(--tanned);
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto auto;
+}
+.logOutButton {
+  position: absolute;
+  top: 80px;
+  right: 10px
 }

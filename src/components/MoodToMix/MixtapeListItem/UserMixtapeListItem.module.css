@@ -1,80 +1,87 @@
 .mixtapeInfoContainer {
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mixtapeInfoContainer button {
-    display: inline-block;
-    text-decoration: none;
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 5px ;
-    color: white;
+  display: inline-block;
+  text-decoration: none;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+  margin: 5px;
+  color: white;
 }
 .link {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .mixtapeInfoContainer > h3 > a {
-    color: black;
+  color: black;
 }
 
 .mixtapeInfoContainer > a {
-    text-decoration: none;
-    color: black;
-
-
+  text-decoration: none;
+  color: black;
 }
 
 .mixtapeInfoContainer a:hover {
-    color: var(--lipstickred);
+  color: var(--lipstickred);
 }
 
 .editButton {
-    cursor: pointer;
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 20px auto;
-    filter: var(--dropShadow);
+  cursor: pointer;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+  margin: 20px auto;
+  filter: var(--dropShadow);
 }
 
 .editButton span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    filter: var(--dropShadow);
-  }
-  .deleteButton {
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  filter: var(--dropShadow);
+}
+.deleteButton {
+  cursor: pointer;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--lipstickred);
+  margin: 20px auto;
+  filter: var(--dropShadow);
+}
+
+.deleteButton span {
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  filter: var(--dropShadow);
+}
+.buttonContainer {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.playlistButton {
     cursor: pointer;
     width: 90px;
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--lipstickred);
+    background-color: var(--tanned);
     margin: 20px auto;
     filter: var(--dropShadow);
+    color: white
 }
-
-.deleteButton span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    filter: var(--dropShadow);
-  }
-  .buttonContainer {
-    display: flex;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-
-  }

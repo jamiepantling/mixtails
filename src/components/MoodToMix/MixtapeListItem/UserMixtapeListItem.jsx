@@ -26,7 +26,7 @@ export default function MixtapeListItem(props) {
           <span>{c.name}</span>
         ))}
       </p>
-      <a href={props.mixtape.playlists} target="_blank">Playlist</a>
+      <a href={props.mixtape.playlists} target="_blank"><div className={style.playlistButton}> Playlist</div></a>
       <p>Shared: {props.mixtape.shared ? "Public" : "Private"} </p>
       <div className={style.buttonContainer}>
         <div className={style.editButton}><Link className={style.link} to={`/mixtapes/${props.mixtape._id}`}><span>Edit</span></Link></div>

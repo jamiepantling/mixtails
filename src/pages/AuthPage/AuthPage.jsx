@@ -29,7 +29,7 @@ export default class AuthPage extends Component {
   
                 <button className={style.signUpButton}
                     onClick={() => this.setState({ showLogin: !this.state.showLogin })}>
-                    {this.state.showLogin ? <span>SIGN UP</span> : <span>Go to LOG IN</span>}
+                    {this.state.showLogin ? <span>SIGN UP</span> : <span>LOG IN</span>}
                 </button>
             </div>
         </main>

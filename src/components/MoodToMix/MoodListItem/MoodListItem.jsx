@@ -20,7 +20,10 @@ export default class MoodListItem extends Component {
             <p className={style.moodTitle}>{this.props.content}</p>
           </h2>
           {this.state.showMixtapes ? (
-            <MixtapeList mixtapes={this.props.mixtapesList} setMixtapeList={this.props.setMixtapeList} />
+            <MixtapeList
+              mixtapes={this.props.mixtapesList}
+              setMixtapeList={this.props.setMixtapeList}
+            />
           ) : (
             <></>
           )}
