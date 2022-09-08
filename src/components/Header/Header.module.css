@@ -3,8 +3,7 @@
   overflow: hidden;
   background-color: var(--militarygreen);
   box-shadow: 0px 2px 2px #222;
-  height: 9vh;
-  min-height: 40px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
