@@ -17,7 +17,7 @@ export default class AuthPage extends Component {
               <img className={style.logo} src="/cocktailLogo.png" alt=""/>
             </div>
             <div className={style.mixtailsTitle}>
-            Mixtails
+            mixtails
             </div>
           </div>
             {this.state.showLogin ? (

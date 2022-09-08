@@ -18,8 +18,8 @@ export default function Header(props) {
                 alt="Mixtails Logo"
               />
             </Link>
-            <Link className={style.navLink} to="/home">
-              MixTails
+            <Link className={style.titleLink} to="/home">
+              mixtails
             </Link>
           </div>
 
@@ -43,7 +43,7 @@ export default function Header(props) {
                 alt="Mixtails Logo"
               />
             </Link>
-            <Link className={style.navLinkMobile} to="/home">
+            <Link className={style.titleLinkMobile} to="/home">
               MixTails
             </Link>
           </div>

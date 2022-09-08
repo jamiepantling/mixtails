@@ -58,7 +58,7 @@ export default class UserProfilePage extends Component {
         ) : (
           <></>
         )}
-        <h2>My mixtapes</h2>
+        <h2>My mixtails</h2>
        {this.state.mixtapes.length || <div className={style.noMixtapes}>No mixtapes yet </div>}
         {this.state.mixtapes.map(mixtape=> <UserMixtapeListItem user={this.props.user} setMixtapeInState={this.setMixtapeInState} key={mixtape._id} mixtape={mixtape}/>)}
         <UserLogOut setUserInState={this.props.setUserInState} />
