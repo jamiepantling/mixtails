@@ -7,7 +7,7 @@ export default function Header(props) {
   const isDesktop = useMediaQuery({ minWidth: 800 });
 
   return (
-    <div className={style.header}>
+    <div>
       {isDesktop && (
         <nav id="navbar" className={style.nav}>
           <div className={style.logoTitleContainer}>

@@ -7,11 +7,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
-  width: 80vw;
-  height: 70vh;
-  margin: 100px auto;
+  gap: 20px;
+  margin: 30px auto 30px auto;
   justify-content: space-evenly;
+  height: 80vh
   }
 
 .card {
@@ -25,27 +24,25 @@ body {
   text-overflow: none;
 }
 .cardMobile {
-  max-width: 90vw;
-  max-height: 33vh;
-  width: 100%;
-  height: 40%;
-  gap: 40px;
+  width: 90%;
+  max-width: 700px;
+  height:200px;
   font-size: 50px
 }
-.cardBig {
-  max-width: 1200px;
-  min-height: 200px;
-  width: 100%;
-  height: 40%;  
-  font-size: 70px;
-}
+
 
 .cardMedium {
-  max-width: 90vw;
-  min-height: 300px;
+  width: 90%;
+  max-width: 800px;
+  height: 250px;
+  font-size: 60px
+}
+
+.cardBig {
   width: 100%;
-  height: 40%;
-  font-size: 90px
+  max-width: 1000px;
+  height: 250px;
+  font-size: 70px;
 }
 
 .card > span {
