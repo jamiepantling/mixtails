@@ -44,7 +44,7 @@ export default class UserProfilePage extends Component {
         <Header setUserInState={this.props.setUserInState} />
         <div className={style.profileInfoContainer}>
           <h1>{this.props.user.username}</h1>
-          <div>Email: {this.props.user.email}</div>
+          <div>{this.props.user.email}</div>
           {this.props.user.bio && <div>Bio: {this.props.user.bio}</div>}
           {/* <div>Fav Drinks: {this.props.user.favdrinks}</div>
           <div>Fav Mixtapes: {this.props.favmixtapes}</div> */}
@@ -53,7 +53,7 @@ export default class UserProfilePage extends Component {
           className={style.editProfileButton}
           onClick={() => this.setState({ showEdit: !this.state.showEdit })}
         >
-          {this.state.showEdit ? <span>Collapse</span> : <span>Edit</span>}
+          {this.state.showEdit ? <span>Collapse</span> : <span>Edit profile info</span>}
         </div>
         {this.state.showEdit ? (
           <UpdateUserForm
@@ -65,9 +65,13 @@ export default class UserProfilePage extends Component {
         )}
         <div className={style.myMixtailsContainer}>
           <h2>My mixtails</h2>
-          {(this.state.mixtapes.length && <div className={style.mixtailsCount}> {this.state.mixtapes.length} {this.state.mixtapes.length > 1 ? 'mixtails': 'mixtail' }</div>)|| (
-            <div className={style.noMixtapes}>No mixtapes yet </div>
-          )}
+          {(this.state.mixtapes.length && (
+            <div className={style.mixtailsCount}>
+              {" "}
+              {this.state.mixtapes.length}{" "}
+              {this.state.mixtapes.length > 1 ? "mixtails" : "mixtail"}
+            </div>
+          )) || <div className={style.noMixtapes}>No mixtails yet </div>}
           {this.state.mixtapes.map((mixtape) => (
             <UserMixtapeListItem
               user={this.props.user}
@@ -78,7 +82,7 @@ export default class UserProfilePage extends Component {
           ))}
         </div>
         <div className={style.logOutButton}>
-        <UserLogOut setUserInState={this.props.setUserInState} />
+          <UserLogOut setUserInState={this.props.setUserInState} />
         </div>
       </main>
     );

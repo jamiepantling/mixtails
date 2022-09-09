@@ -11,8 +11,9 @@ export default function MixtapeListItem(props) {
 
   return (
     <div className={style.mixtapeInfoContainer}>
-      <h3>
-        {props.mixtape.name}
+      <h3 className={style.mood}>
+        <span className={props.mixtape.name.length < 34 ? style.moodTitle : style.moodTitleLong}>
+        {props.mixtape.name}</span>
       </h3>
       <p>
         Moods:

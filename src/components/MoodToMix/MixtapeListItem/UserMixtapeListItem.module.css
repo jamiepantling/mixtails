@@ -6,6 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
+  filter: var(--dropShadow);
+  border-radius: 5px;
 }
 
 .mixtapeInfoContainer button {
@@ -84,4 +87,46 @@
     margin: 20px auto;
     filter: var(--dropShadow);
     color: white
+}
+
+.mood {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../../public/MixtapeTback.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Permanent Marker', cursive;
+    width: 250px;
+    height: 195px;
+    margin: 0 auto 10px auto;
+    line-height: 10vh;
+    filter: var(--dropShadow);
+}
+
+.moodTitle {
+    position: absolute;
+    line-height: 20px;
+    height: 30px;
+    transform: rotate(-10deg);
+    margin-right: 15px;
+    margin-top: 35px;
+    font-size: 32px;
+    color: beige;
+    filter: var(--dropShadow);
+    line-height: 30px;
+    padding: 0 15px
+}
+.moodTitleLong {
+    position: absolute;
+    line-height: 20px;
+    height: 30px;
+    transform: rotate(-10deg);
+    margin-right: 15px;
+    margin-top: 35px;
+    font-size: 20px;
+    color: beige;
+    filter: var(--dropShadow);
+    line-height: 30px;
+    padding: 0 15px
 }

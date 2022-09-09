@@ -36,14 +36,12 @@ export default function MoodPage(props) {
         >
           <span className={style.moodTitle}>Create your own mixtail!</span>
         </div>
-        {showMixtapeForm ? (
+        {showMixtapeForm && (
           <MixtapeForm
             user={props.user}
             fetchMixtapes={fetchMixtapes}
             setShowMixtapeForm={setShowMixtapeForm}
           />
-        ) : (
-          <></>
         )}
         <MoodList
           moodsList={moodsList}
