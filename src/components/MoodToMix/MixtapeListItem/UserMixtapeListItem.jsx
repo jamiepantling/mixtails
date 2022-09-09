@@ -12,26 +12,46 @@ export default function MixtapeListItem(props) {
   return (
     <div className={style.mixtapeInfoContainer}>
       <h3 className={style.mood}>
-        <span className={props.mixtape.name.length < 34 ? style.moodTitle : style.moodTitleLong}>
-        {props.mixtape.name}</span>
+        <span
+          className={
+            props.mixtape.name.length < 34
+              ? style.moodTitle
+              : style.moodTitleLong
+          }
+        >
+          {props.mixtape.name}
+        </span>
       </h3>
-      <p>
+      <p className={style.subtitle}>
         Moods:
-        {props.mixtape.moods.map((m) => (
-          <span>  {m.content} </span>
-        ))}
+        <div className={style.moodsContainer}>
+          {props.mixtape.moods.map((m) => (
+            <div className={style.moodButton}> {m.content} </div>
+          ))}
+        </div>
       </p>
-      <p>
-        {/* Cocktails:{" "} */}
-        {props.mixtape.cocktails.map((c) => (
-          <span>{c.name}</span>
-        ))}
+
+      <p className={style.subtitle}>
+        Cocktails:
+        <div className={style.cocktailsContainer}>
+          {props.mixtape.cocktails.map((c) => (
+            <div className={style.cocktailButton}>{c.name}</div>
+          ))}
+        </div>
       </p>
-      <a href={props.mixtape.playlists} target="_blank"><div className={style.playlistButton}> Playlist</div></a>
-      <p>Shared: {props.mixtape.shared ? "Public" : "Private"} </p>
+      <a href={props.mixtape.playlists} target="_blank">
+        <div className={style.playlistButton}> Playlist</div>
+      </a>
+      {/* <p>Shared: {props.mixtape.shared ? "Public" : "Private"} </p> */}
       <div className={style.buttonContainer}>
-        <div className={style.editButton}><Link className={style.link} to={`/mixtapes/${props.mixtape._id}`}><span>Edit</span></Link></div>
-        <div className={style.deleteButton} onClick={deleteMixtape}><span>DELETE</span></div>
+        <div className={style.editButton}>
+          <Link className={style.link} to={`/mixtapes/${props.mixtape._id}`}>
+            <span>Edit</span>
+          </Link>
+        </div>
+        <div className={style.deleteButton} onClick={deleteMixtape}>
+          <span>DELETE</span>
+        </div>
       </div>
     </div>
   );

@@ -40,7 +40,7 @@
 }
 .moodButton {
     margin: 4px;
-    background: rgb(243, 206, 128);
+    background: var(--mixtapeYellow);
     padding: 4px 8px;
     border: 2px solid black;
     border-radius: 5px;
