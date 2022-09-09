@@ -83,17 +83,21 @@
 }
 .playlistButton {
   cursor: pointer;
-  width: 90px;
+  width: 100px;
   padding: 5px;
   border-radius: 5px;
   /* background-color: var(--tanned); */
   margin: 20px auto;
   /* filter: var(--dropShadow); */
   color: black;
-  border: 2px solid black;
+  border: 1px solid black;
   box-shadow: 1px 1px;
+  display: flex;
+  justify-content: space-around;
 }
-
+.spotify {
+    color: rgb(24, 182, 80)
+}
 .mood {
   display: flex;
   justify-content: center;

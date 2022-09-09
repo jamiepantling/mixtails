@@ -2,6 +2,8 @@ import style from "./UserMixtapeListItem.module.css";
 import * as mixtapesAPI from "../../../utilities/mixtapes-api";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function MixtapeListItem(props) {
   async function deleteMixtape() {
@@ -40,7 +42,7 @@ export default function MixtapeListItem(props) {
         </div>
       </p>
       <a href={props.mixtape.playlists} target="_blank">
-        <div className={style.playlistButton}> Playlist</div>
+        <div className={style.playlistButton}> <div className={style.spotify}><FontAwesomeIcon icon={brands('spotify')} /></div> <div>Playlist</div></div>
       </a>
       {/* <p>Shared: {props.mixtape.shared ? "Public" : "Private"} </p> */}
       <div className={style.buttonContainer}>
