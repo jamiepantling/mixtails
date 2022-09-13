@@ -34,9 +34,9 @@ export default class UserProfilePage extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log("ComponentDidUpdate: ", this.state.mixtapes);
-  }
+  // componentDidUpdate() {
+  //   console.log("ComponentDidUpdate: ", this.state.mixtapes);
+  // }
 
   render() {
     return (
