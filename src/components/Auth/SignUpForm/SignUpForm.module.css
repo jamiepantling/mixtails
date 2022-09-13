@@ -11,7 +11,7 @@
     padding: 5px;
     border-radius: 5px;
     background-color: var(--tanned);
-    margin: 20px auto 10px auto;
+    margin: 0 auto 20px auto;
     filter: var(--dropShadow);
     border: none;
     cursor: pointer;
@@ -55,3 +55,23 @@
         max-width: 300px;
     }
 }
+
+.continueButton {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--tanned);
+    margin: 0 auto 10px auto;
+    filter: var(--dropShadow);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .continueButton > span {
+    color: white;
+    font-family: Robinson;
+    font-size: 25px;
+    filter: var(--dropShadow);
+  }
+  

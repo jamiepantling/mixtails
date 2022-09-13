@@ -1,6 +1,6 @@
 import { Component } from "react";
 import style from "./SignUpForm.module.css";
-
+import { Link } from "react-router-dom";
 export default class SignUpForm extends Component {
   state = {
     username: "",
@@ -104,7 +104,10 @@ export default class SignUpForm extends Component {
             </button>
           </form>
         </div>
-        <p className="error-message">&nbsp;{this.state.error}</p>
+        {this.state.error.length ? <p className="error-message">&nbsp;{this.state.error}</p> : <></> }
+          <Link className={style.continueButton} to={"/home"}>
+              <span>Continue without signing up</span>
+            </Link>
       </div>
     );
   }

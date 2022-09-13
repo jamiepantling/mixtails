@@ -5,32 +5,30 @@ import SignUpForm from "../../components/Auth/SignUpForm/SignUpForm";
 import { useState, useEffect } from "react";
 
 export default function AuthPage(props) {
-  
-  const [showLogin, setShowLogin] = useState(props.login)
-  console.log(props.login)
-  console.log(showLogin)
-    return (
-      <main className={style.AuthPage}>
-        <div className={style.logoContainer}>
-          <div className={style.logo}>
-            <img className={style.logo} src="/cocktailLogo.png" alt="" />
-          </div>
-          <div className={style.mixtailsTitle}>mixtails</div>
+  const [showLogin, setShowLogin] = useState(props.login);
+  console.log(props.login);
+  console.log(showLogin);
+  return (
+    <main className={style.AuthPage}>
+      <div className={style.logoContainer}>
+        <div className={style.logo}>
+          <img className={style.logo} src="/cocktailLogo.png" alt="" />
         </div>
-        {showLogin ? (
-          <LoginForm setUserInState={props.setUserInState} />
-        ) : (
-          <SignUpForm setUserInState={props.setUserInState} />
-        )}
-        <div>
-          <button
-            className={style.signUpButton}
-            onClick={() => setShowLogin(!showLogin )}
-          >
-            {showLogin ? <span>SIGN UP</span> : <span>LOG IN</span>}
-          </button>
-        </div>
-      </main>
-    );
-  
+        <div className={style.mixtailsTitle}>mixtails</div>
+      </div>
+      {showLogin ? (
+        <LoginForm setUserInState={props.setUserInState} />
+      ) : (
+        <SignUpForm setUserInState={props.setUserInState} />
+      )}
+      <div>
+        <button
+          className={style.signUpButton}
+          onClick={() => setShowLogin(!showLogin)}
+        >
+          {showLogin ? <span>SIGN UP</span> : <span>LOG IN</span>}
+        </button>
+      </div>
+    </main>
+  );
 }
