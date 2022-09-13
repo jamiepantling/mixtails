@@ -1,6 +1,10 @@
 .content {
  /* border: 1px solid red; */
  height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ /* justify-content: center; */
  /* margin: 20px; */
 }
 
@@ -41,4 +45,9 @@
     color: beige;
     filter: var(--dropShadow);
  
+}
+.publicIntro {
+    color: var(--tanned);
+    font-size: 30px;
+    max-width: 500px;
 }

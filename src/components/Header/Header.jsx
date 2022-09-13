@@ -25,11 +25,22 @@ export default function Header(props) {
 
           <div className={style.links}>
             <Link className={style.navLink} to={"/cocktails"}>
-              Cocktails
+              Cocktail list
             </Link>
-            <Link className={style.navLink} to={"/user"}>
-              Profile
-            </Link>
+            {props.public ? (
+              <div className={style.authLinksContainer}>
+                <Link className={style.authLink} to={"/login"}>
+                  Log in
+                </Link>
+                <Link className={style.authLink} to={"/signup"}>
+                  Sign up
+                </Link>
+              </div>
+            ) : (
+              <Link className={style.navLink} to={"/user"}>
+                Profile
+              </Link>
+            )}
           </div>
         </nav>
       )}
@@ -51,9 +62,20 @@ export default function Header(props) {
             <Link className={style.navLinkMobile} to={"/cocktails"}>
               cocktails
             </Link>
-            <Link className={style.navLinkMobile} to={"/user"}>
-              Profile
-            </Link>
+            {props.public ? (
+              <div className={style.authLinksContainer}>
+                <Link className={style.authLinkMobile} to={"/login"}>
+                  Log in
+                </Link>
+                <Link className={style.authLinkMobile} to={"/signup"}>
+                  Sign up
+                </Link>
+              </div>
+            ) : (
+              <Link className={style.navLinkMobile} to={"/user"}>
+                Profile
+              </Link>
+            )}
           </div>
         </nav>
       )}

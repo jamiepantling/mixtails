@@ -4,12 +4,10 @@ import './App.css'
 import AuthPage from './pages/AuthPage/AuthPage';
 import HomePage from './pages/HomePage/HomePage'
 import UserProfilePage from './pages/UserProfilePage/UserProfilePage';
-// import SpotifyPage from './pages/SpotifyPage/SpotifyPage'
 import AllCocktailList from './components/FlavorToDrink/AllCocktailList/AllCocktailList'
 import MoodPage from './pages/MoodPage/MoodPage';
 import FlavourPage from './pages/FlavourPage/FlavourPage';
 import MixtapeDetailPage from './pages/MixtapeDetailPage/MixtapeDetailPage';
-import AllMixTapes from './components/MoodToMix/AllMixTapes/AllMixTapes'
 
 export default class App extends Component {
 
@@ -40,20 +38,28 @@ export default class App extends Component {
       <div className="App">
         {this.state.user ?
         <Routes>
-          <Route path="/home" element={<HomePage setUserInState={this.setUserInState} user ={this.state.user}/>}/>
+          <Route path="/home" element={<HomePage setUserInState={this.setUserInState} public={false} user ={this.state.user}/>}/>
           <Route path="/user" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />          
-          {/* <Route path="/spotify" element={<SpotifyPage />}/> */}
-
           <Route path="/flavours" element={<FlavourPage />} />
           <Route path="/moods" element={<MoodPage user={this.state.user}/>}/>
           <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user}/>} />
           <Route path="*" element={<Navigate to="/home" replace />}/>
-          {/* DEV PURPOSES */}       
           <Route path="/cocktails" element={<AllCocktailList />}/>
         </Routes>
         : (
         <>
-          <AuthPage setUserInState={this.setUserInState} />
+        <Routes>
+          <Route path="/home" element={<HomePage setUserInState={this.setUserInState} public={true}/>}/>
+          <Route path="/user" element={<AuthPage setUserInState={this.setUserInState} login={true} />} />          
+          <Route path="/flavours" element={<FlavourPage />} />
+          <Route path="/moods" element={<MoodPage user={this.state.user} public={true}/> }/>
+          <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user}/>} />
+          <Route path="*" element={<Navigate to="/home" replace />}/>
+          <Route path="/cocktails" element={<AllCocktailList />}/>
+          <Route path="/login" element={<AuthPage setUserInState={this.setUserInState} login={true} />}/>
+          <Route path="/signup" element={<AuthPage setUserInState={this.setUserInState} login={false} />}/>
+        </Routes>
+        {/* // <AuthPage setUserInState={this.setUserInState} /> */}
         </>
         )
         }
