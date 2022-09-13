@@ -59,9 +59,7 @@ export default function Header(props) {
             </Link>
           </div>
           <div className={style.links}>
-            <Link className={style.navLinkMobile} to={"/cocktails"}>
-              cocktails
-            </Link>
+           
             {props.public ? (
               <div className={style.authLinksContainer}>
                 <Link className={style.authLinkMobile} to={"/login"}>
