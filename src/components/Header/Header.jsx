@@ -44,7 +44,7 @@ export default function Header(props) {
               />
             </Link>
             <Link className={style.titleLinkMobile} to="/home">
-              MixTails
+              mixtails
             </Link>
           </div>
           <div className={style.links}>

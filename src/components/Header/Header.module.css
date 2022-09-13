@@ -12,7 +12,7 @@
   display: flex;
   text-decoration: none;
   align-items: center;
-  
+  margin-left: 10px
 }
 .logo {
   text-decoration: none;
@@ -43,19 +43,15 @@
 }
 
 .titleLink {
-  padding: 15px;
+  padding: 15px 0 20px 15px;
   font-size: 35px;
   text-decoration: none;
   color: var(--skin);
   font-family: Permanent Marker;
 }
 
-.titleLink > span {
-  margin-left: 60px;
-}
-
 .titleLinkMobile {
-  padding: 5px;
+  padding: 15px 0 20px 10px;
   font-size: 30px;
   text-decoration: none;
   color: var(--skin);
