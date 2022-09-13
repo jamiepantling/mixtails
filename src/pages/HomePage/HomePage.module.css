@@ -14,7 +14,6 @@ body {
   }
 
 .card {
-  display: flex;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,14 +21,19 @@ body {
   text-decoration: none;
   filter: var(--dropShadow);
   text-overflow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 5px
+;
 }
+
 .cardMobile {
   width: 90%;
   max-width: 700px;
   height:200px;
-  font-size: 50px
+  font-size: 45px;
 }
-
 
 .cardMedium {
   width: 90%;
@@ -45,11 +49,18 @@ body {
   font-size: 70px;
 }
 
-.card > span {
-  color: rgb(243, 243, 234);
+.mainPanel {
+  color: var(--offwhite);
   font-family: Permanent Marker;
-  margin: auto;
   filter: var(--dropShadow);
+  margin-bottom: 10px;
+}
+
+.subPanel
+{
+color: var(--offwhite);
+filter: var(--dropShadow);
+padding: 5px 0
 }
 
 .one {
@@ -58,4 +69,10 @@ body {
 
 .two {
   background-image: url("../../../public/tropical-postcard.jpeg");
+}
+
+.intro {
+  color: var(--tanned);
+  font-size: 40px;
+  width: 90%
 }

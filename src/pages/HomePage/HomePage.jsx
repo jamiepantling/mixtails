@@ -15,51 +15,60 @@ export default function HomePage(props) {
 
       {isMobile && (
         <div className={style.cardContainer}>
+          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktails.</div>
           <Link
             to="/moods"
             className={`${style.cardMobile} ${style.one} ${style.card}`}
           >
-            <span>WATCHA FEELIN'?</span>
+            <div className={style.mainPanel}>WATCHA FEELIN'?</div>
+            <div className={style.subPanel}>Mixtails by mood</div>
           </Link>
           <Link
             to="/flavours"
             className={`${style.cardMobile} ${style.card} ${style.two}`}
           >
-            <span>WHAT'S YOUR FLAVOUR?</span>
+            <div className={style.mainPanel}>Savour the flavour</div>
+            <div className={style.subPanel}>Cocktails by flavour profile</div>
           </Link>
         </div>
       )}
 
       {isMedium && (
         <div className={style.cardContainer}>
+          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktails.</div>
           <Link
             to="/moods"
-            className={`${style.card} ${style.cardMedium} ${style.one}`}
+            className={`${style.cardMobile} ${style.one} ${style.card}`}
           >
-            <span>WATCHA FEELIN'?</span>
+            <div className={style.mainPanel}>WATCHA FEELIN'?</div>
+            <div className={style.subPanel}>Mixtails by mood</div>
           </Link>
           <Link
             to="/flavours"
-            className={`${style.card} ${style.cardMedium} ${style.two}`}
+            className={`${style.cardMobile} ${style.card} ${style.two}`}
           >
-            <span>WHAT'S YOUR FLAVOUR?</span>
+            <div className={style.mainPanel}>Savour the flavour</div>
+            <div className={style.subPanel}>Cocktails by flavour profile</div>
           </Link>
         </div>
       )}
 
       {isBigScreen && (
         <div className={style.cardContainer}>
+          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktails.</div>
           <Link
             to="/moods"
-            className={`${style.card} ${style.cardBig} ${style.one}`}
+            className={`${style.cardMobile} ${style.one} ${style.card}`}
           >
-            <span>WATCHA FEELIN'?</span>
+            <div className={style.mainPanel}>WATCHA FEELIN'?</div>
+            <div className={style.subPanel}>Mixtails by mood</div>
           </Link>
           <Link
             to="/flavours"
-            className={`${style.card} ${style.cardBig} ${style.two}`}
+            className={`${style.cardMobile} ${style.card} ${style.two}`}
           >
-            <span>WHAT'S YOUR FLAVOUR?</span>
+            <div className={style.mainPanel}>Savour the flavour</div>
+            <div className={style.subPanel}>Cocktails by flavour profile</div>
           </Link>
         </div>
       )}
