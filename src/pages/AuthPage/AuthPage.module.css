@@ -1,10 +1,12 @@
 .AuthPage {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    justify-content: center;
     margin-top: 15vh 0;
-    height: 100vh
+    height: 100vh;
+    /* padding-top: 30px; */
 }
 
 .signUpButton {
@@ -17,7 +19,8 @@
     border: none;
     position: absolute;
     top: 10px;
-    right: 10px
+    right: 10px;
+    cursor: pointer;
   }
   
 .signUpButton > span {
@@ -31,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 .mixtailsTitle {
   font-size: 100px;
@@ -42,4 +45,9 @@
 .logo {
   margin-left: 10px;
   max-height: 200px
+}
+@media (max-width: 300px) {
+  .mixtailsTitle {
+    font-size: 70px;
+  }
 }

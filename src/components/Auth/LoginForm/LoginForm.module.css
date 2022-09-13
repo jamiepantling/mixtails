@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--tanned)
+    color: var(--tanned);
+    min-height: 135px;
 }
 
 .logInButton {
@@ -13,7 +14,8 @@
     background-color: var(--tanned);
     margin: 20px auto 10px auto;
     filter: var(--dropShadow);
-    border: none
+    border: none;
+    cursor: pointer;
   }
   
 .logInButton > span {
@@ -32,4 +34,12 @@
   margin-bottom: 8px;
   margin-top: 2px;
   padding: 3px
+}
+.loginFormInputsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--tanned);
+  min-height: 135px;
 }
