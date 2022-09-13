@@ -51,11 +51,11 @@ export default class App extends Component {
         <Routes>
           <Route path="/home" element={<HomePage setUserInState={this.setUserInState} public={true}/>}/>
           <Route path="/user" element={<AuthPage setUserInState={this.setUserInState} login={true} />} />          
-          <Route path="/flavours" element={<FlavourPage />} />
+          <Route path="/flavours" element={<FlavourPage public={true} />} />
           <Route path="/moods" element={<MoodPage user={this.state.user} public={true}/> }/>
-          <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user}/>} />
+          <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user} public={true}/>} />
           <Route path="*" element={<Navigate to="/login" replace />}/>
-          <Route path="/cocktails" element={<AllCocktailList />}/>
+          <Route path="/cocktails" element={<AllCocktailList public={true}/>}/>
           <Route path="/login" element={<AuthPage setUserInState={this.setUserInState} login={true} />}/>
           <Route path="/signup" element={<AuthPage setUserInState={this.setUserInState} login={false} />}/>
         </Routes>

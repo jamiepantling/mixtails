@@ -22,7 +22,7 @@ export default function CocktailList(props) {
 
   return (
     <>
-    <Header />
+    <Header setUserInState={props.setUserInState} public={props.public}/>
       <div  className={style.c}>
         {cocktails}
       </div>
