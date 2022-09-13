@@ -68,7 +68,7 @@ export default class mixtapeForm extends Component {
   render() {
     return (
       <div className={style.container}>
-        <h3>Create mixtail:</h3>
+        <h2>New mixtail</h2>
         <div onSubmit={this.handleSubmit}>
           <form className={style.form} autoComplete="off">
             <label>Name your Mixtail</label>
@@ -79,7 +79,7 @@ export default class mixtapeForm extends Component {
               onChange={this.handleChange}
               value={this.state.name}
             />
-            <label>Add Cocktails</label>
+            <label>Add a cocktail</label>
             <select
               name="cocktails"
               defaultValue={"DEFAULT"}
@@ -94,7 +94,7 @@ export default class mixtapeForm extends Component {
                 </option>
               ))}
             </select>
-            <label>Add Moods</label>
+            <label>Add a mood</label>
             <select
               name="moods"
               defaultValue={"DEFAULT"}
@@ -113,7 +113,7 @@ export default class mixtapeForm extends Component {
             <input
               type="text"
               name="playlist"
-              placeholder="Where this track at?"
+              placeholder="https://..."
               onChange={this.handleChange}
               value={this.state.playlist}
             />

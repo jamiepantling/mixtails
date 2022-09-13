@@ -1,80 +1,183 @@
 .mixtapeInfoContainer {
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  filter: var(--dropShadow);
+  border-radius: 5px;
+  width: 400px;
+  margin-bottom: 15px
+  /* border: 1px solid lightgrey */
 }
 
 .mixtapeInfoContainer button {
-    display: inline-block;
-    text-decoration: none;
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 5px ;
-    color: white;
+  display: inline-block;
+  text-decoration: none;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+  margin: 5px;
+  color: white;
 }
 .link {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .mixtapeInfoContainer > h3 > a {
-    color: black;
+  color: black;
 }
 
 .mixtapeInfoContainer > a {
-    text-decoration: none;
-    color: black;
-
-
+  text-decoration: none;
+  color: black;
 }
 
 .mixtapeInfoContainer a:hover {
-    color: var(--lipstickred);
+  color: var(--lipstickred);
 }
 
 .editButton {
-    cursor: pointer;
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 20px auto;
-    filter: var(--dropShadow);
+  cursor: pointer;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+  margin: 20px auto;
+  filter: var(--dropShadow);
 }
 
 .editButton span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    filter: var(--dropShadow);
-  }
-  .deleteButton {
-    cursor: pointer;
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--lipstickred);
-    margin: 20px auto;
-    filter: var(--dropShadow);
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  filter: var(--dropShadow);
+}
+.deleteButton {
+  cursor: pointer;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--lipstickred);
+  margin: 20px auto;
+  filter: var(--dropShadow);
 }
 
 .deleteButton span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    filter: var(--dropShadow);
-  }
-  .buttonContainer {
-    display: flex;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  filter: var(--dropShadow);
+}
+.buttonContainer {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.playlistButton {
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  /* background-color: var(--tanned); */
+  margin: 20px auto;
+  /* filter: var(--dropShadow); */
+  color: black;
+  border: 1px solid black;
+  box-shadow: 1px 1px;
+  display: flex;
+  justify-content: space-around;
+}
+.spotify {
+    color: rgb(24, 182, 80)
+}
+.mood {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../../../public/MixtapeTback.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Permanent Marker", cursive;
+  width: 250px;
+  height: 195px;
+  margin: 0 auto 10px auto;
+  line-height: 10vh;
+  filter: var(--dropShadow);
+}
 
-  }
+.moodTitle {
+  position: absolute;
+  line-height: 20px;
+  height: 30px;
+  transform: rotate(-10deg);
+  margin-right: 15px;
+  margin-top: 35px;
+  font-size: 32px;
+  color: beige;
+  filter: var(--dropShadow);
+  line-height: 30px;
+  padding: 0 15px;
+}
+.moodTitleLong {
+  position: absolute;
+  line-height: 20px;
+  height: 30px;
+  transform: rotate(-10deg);
+  margin-right: 15px;
+  margin-top: 35px;
+  font-size: 20px;
+  color: beige;
+  filter: var(--dropShadow);
+  line-height: 30px;
+  padding: 0 15px;
+}
+.moodsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  row-gap: 5px;
+  margin-bottom: 10px;
+  width: 350px;
+}
+.cocktailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+.moodButton {
+  margin: 4px 0;
+  background: rgb(243, 206, 128);
+  padding: 4px 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: "Permanent Marker", cursive;
+  font-size: large;
+  width: 100px;
+  box-shadow: 3px 3px 1px black;
+  color: black;
+}
+.cocktailButton {
+  margin: 4px 0;
+  background: var(--mixtapeYellow);
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 2xl;
+  /* height: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  box-shadow: 3px 3px 1px black;
+  color: black;
+}
+.subtitle {
+  font-size: 30px;
+}

@@ -3,16 +3,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: var(--tanned)
 }
 
 .signUpButton {
     width: 90px;
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 20px auto;
+    background-color: var(--tanned);
+    margin: 20px auto 10px auto;
     filter: var(--dropShadow);
-    border: none
+    border: none;
+    cursor: pointer;
 }
   
 .signUpButton > span {
@@ -22,8 +24,34 @@
     filter: var(--dropShadow);
 }
 
-.label {
-    font-size: 23px;
-    margin-bottom: 0
+.signUpContainer input {
+    margin-bottom: 8px;
+    margin-top: 2px;
+    padding: 3px;
+    width: 100%;
 }
 
+.label {
+    font-size: 23px;
+    /* margin-right: 20px; */
+}
+.inputContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 400px;
+    min-height: 135px;
+}
+.inputContainer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: aqua; */
+}
+@media screen and (max-width: 500px) {
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+}

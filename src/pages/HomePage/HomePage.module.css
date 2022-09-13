@@ -46,7 +46,7 @@ body {
 }
 
 .card > span {
-  color: whitesmoke;
+  color: rgb(243, 243, 234);
   font-family: Permanent Marker;
   margin: auto;
   filter: var(--dropShadow);

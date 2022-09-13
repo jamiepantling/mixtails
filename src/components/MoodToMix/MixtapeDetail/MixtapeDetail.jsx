@@ -17,8 +17,7 @@ export default function MixtapeDetail(props) {
 
   const isMobile = useMediaQuery({ maxWidth: 800 })
   const isBigScreen = useMediaQuery({ minWidth: 801 })
-  // mixtape.moods.map(mood => moods.find(x=>x._id === mood))
-
+  
   useEffect(() => {
     async function getMoods() {
       let res = await moodApi.getMoods();
@@ -80,7 +79,6 @@ export default function MixtapeDetail(props) {
             <a href={mixtape.playlists}  target="_blank">Playlist</a>
           </h3>
          
-          {/* <button onClick={deleteMixtape}>DELETE</button> */}
         </div>
         {mixtape.createdBy === props.user._id ? (
         <div>

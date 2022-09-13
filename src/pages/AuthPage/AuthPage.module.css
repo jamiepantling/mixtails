@@ -1,10 +1,12 @@
 .AuthPage {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    justify-content: center;
     margin-top: 15vh 0;
-    height: 100vh
+    height: 100vh;
+    /* padding-top: 30px; */
 }
 
 .signUpButton {
@@ -12,27 +14,40 @@
     padding: 5px;
     border-radius: 5px;
     background-color: var(--militarygreen);
-    margin: 40px auto ;
+    margin: 0 auto 40px auto ;
     filter: var(--dropShadow);
-    border: none
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
   
 .signUpButton > span {
     color: white;
     font-family: Robinson;
     font-size: 25px;
-    filter: var(--dropShadow);
+    text-shadow: 2px 2px rgb(136, 136, 136)
   }
 .logoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* margin-top: 80px; */
 }
 .mixtailsTitle {
   font-size: 100px;
+  color: var(--tanned);
+  /* text-shadow: 1px 1px rgb(151, 151, 151); */
+  font-family: Permanent Marker;
 }
 .logo {
   margin-left: 10px;
   max-height: 200px
+}
+@media (max-width: 300px) {
+  .mixtailsTitle {
+    font-size: 70px;
+  }
 }
