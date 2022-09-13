@@ -64,7 +64,7 @@
 .authLink {
   padding: 15px 0;
   margin-right: 15px;
-  color: white;
+  color: var(--offwhite);
   font-size: 35px;
   text-decoration: none;
   font-family: Robinson;
@@ -73,7 +73,7 @@
 
 .authLinkMobile {
   padding: 5px;
-  color: white;
+  color: var(--offwhite);
   font-size: 30px;
   text-decoration: none;
   font-family: Robinson;
