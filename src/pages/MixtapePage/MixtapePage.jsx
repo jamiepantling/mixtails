@@ -9,7 +9,7 @@ render() {
   
   return (
     <main>
-      <Header setUserInState={this.props.setUserInState} />
+      <Header setUserInState={props.setUserInState} public={props.public}/>
       <MixtapeList />
       
     </main>

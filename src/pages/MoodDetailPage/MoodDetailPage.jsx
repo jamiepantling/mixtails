@@ -8,7 +8,7 @@ export default function MoodDetailPage(props) {
 
     return (
       <main>
-        <Header setUserInState={props.setUserInState} />
+        <Header setUserInState={props.setUserInState} public={props.public}/>
         <MoodDetail />
       </main>
       
