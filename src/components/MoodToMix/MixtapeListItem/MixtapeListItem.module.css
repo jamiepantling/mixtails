@@ -1,19 +1,78 @@
 .mixtapeInfoContainer {
-    text-align: left;
-    font-size: 30px;
-    padding: 15px;
+  text-align: left;
+  font-size: 30px;
+  padding: 15px;
+  letter-spacing: 0.3px;
+  background-color: antiquewhite;
+  filter: var(--dropShadow);
+  border-radius: 5px;
+  margin: 4px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
 }
 
 .mixtapeInfoContainer > h3 > a {
-    color: black;
+  color: var(--tanned);
+  font-family: Permanent Marker;
+  font-size: x-large;
+  text-decoration: none;
 }
 
 .mixtapeInfoContainer > a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: var(--tanned);
 }
 
 .mixtapeInfoContainer a:hover {
-    color: var(--lipstickred);
+  color: var(--lipstickred);
 }
 
+.cocktailsList {
+    line-height: 30px;
+}
+
+.spotify {
+  color: rgb(24, 182, 80);
+}
+
+.playlistButton {
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  /* margin: 20px auto 0 auto; */
+  color: black;
+  border: 1px solid black;
+  box-shadow: 1px 1px;
+  display: flex;
+  justify-content: space-around;
+  font-size: x-large;
+}
+.spotifyAnchor {
+  text-decoration: none;
+  margin-top: 10px
+}
+
+.cocktailButton {
+    margin: 4px 0;
+    background: var(--mixtapeYellow);
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 2xl;
+    /* height: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    box-shadow: 3px 3px 1px black;
+    color: black;
+  }
+  
+  .cocktailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
