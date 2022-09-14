@@ -12,7 +12,7 @@
     font-size: 100px;
     font-family: Robinson;
     color: var(--tanned);
-
+    
 }
 
 .mood:hover {
@@ -33,6 +33,21 @@
     line-height: 10vh;
     filter: var(--dropShadow);
 }
+.createMood {
+    display: flex;
+    justify-content: center;
+    background-image: url('/public/MixtapeTback.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Permanent Marker', cursive;
+    width: 180px;
+    height: 130px;
+    margin: 0 auto;
+    line-height: 10vh;
+    filter: var(--dropShadow);
+    cursor: pointer;
+}
 
 .moodTitle {
     position: absolute;
@@ -40,7 +55,7 @@
     height: 30px;
     transform: rotate(-10deg);
     margin-right: 15px;
-    margin-top: 44px;
+    margin-top: 20px;
     font-size: 32px;
     color: beige;
     filter: var(--dropShadow);
@@ -50,4 +65,5 @@
     color: var(--tanned);
     font-size: 30px;
     max-width: 500px;
+    margin-bottom: 15px
 }

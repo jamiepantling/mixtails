@@ -30,21 +30,30 @@ export default function MoodPage(props) {
       <Header setUserInState={props.setUserInState} public={props.public} />
       <div className={style.content}>
         <h1 className={style.title}> pick a mixtail</h1>
-        { props.public? <div className={style.publicIntro}>Log in to create your own mixtail,<br/> or browse through the moods below:</div>:<div>
-        <div
-          className={style.mood}
-          onClick={() => setShowMixtapeForm(!showMixtapeForm)}
-        >
-          <span className={style.moodTitle}>Create your own mixtail!</span>
-        </div>
-        {showMixtapeForm && (
-          <MixtapeForm
-            user={props.user}
-            fetchMixtapes={fetchMixtapes}
-            setShowMixtapeForm={setShowMixtapeForm}
-          />
-        )}</div>
-        }
+
+        {props.public ? (
+          <div className={style.publicIntro}>
+            Log in to create your own mixtail,
+            <br /> or browse through the moods below:
+          </div>
+        ) : (
+          <div>
+             <div className={style.publicIntro}>Pick a mixtail from the moods below or create your own</div>
+            <div
+              className={style.createMood}
+              onClick={() => setShowMixtapeForm(!showMixtapeForm)}
+            >
+              <span className={style.moodTitle}>Create your own mixtail!</span>
+            </div>
+            {showMixtapeForm && (
+              <MixtapeForm
+                user={props.user}
+                fetchMixtapes={fetchMixtapes}
+                setShowMixtapeForm={setShowMixtapeForm}
+              />
+            )}
+          </div>
+        )}
         <MoodList
           moodsList={moodsList}
           setMoodList={setMoodList}
