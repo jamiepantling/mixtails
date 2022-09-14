@@ -5,7 +5,7 @@ import CocktailListItem from "../CocktailListItem/CocktailListItem";
 import { useEffect, useState } from "react";
 import Header from "../../Header/Header";
 
-export default function CocktailList(props) {
+export default function AllCocktailList(props) {
   const [cocktailList, setCocktails] = useState([]);
 
   useEffect(function () {
@@ -22,7 +22,6 @@ export default function CocktailList(props) {
 
   return (
     <>
-    <Header setUserInState={props.setUserInState} public={props.public}/>
       <div  className={style.c}>
         {cocktails}
       </div>
