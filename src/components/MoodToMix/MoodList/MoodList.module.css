@@ -6,4 +6,9 @@
     display: flex;    
     justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 300px
+}
+
+.moodsContainer > div {
+    width: 100%
 }

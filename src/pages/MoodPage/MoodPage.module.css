@@ -32,6 +32,7 @@
     margin: 20px auto;
     line-height: 10vh;
     filter: var(--dropShadow);
+    background-color: red;
 }
 .createMood {
     display: flex;
@@ -65,5 +66,6 @@
     color: var(--tanned);
     font-size: 30px;
     max-width: 500px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    max-width: 250px;
 }
