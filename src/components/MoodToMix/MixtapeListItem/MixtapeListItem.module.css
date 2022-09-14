@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 200px;
+  max-width: 150px;
 }
 
 .mixtapeInfoContainer > h3 > a {

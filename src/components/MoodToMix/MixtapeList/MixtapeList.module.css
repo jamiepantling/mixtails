@@ -1,7 +1,7 @@
 .mixtailsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 20vw;
+    /* width: 20vw; */
 }
 
 label {
