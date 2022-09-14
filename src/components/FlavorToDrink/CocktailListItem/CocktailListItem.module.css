@@ -1,87 +1,85 @@
 .body {
-    background-color: rgb(225,194,210);
-    width: 355px;
-    margin: 0px auto;
-    border-right: 10px solid var(--darkchoco);
-    border-left: 10px solid var(--darkchoco);
+  /* background-color: rgb(225, 194, 210); */
+  background-color: var(--militarygreen);
+  width: 355px;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
 }
+
+.details {
+    width: 280px;
+    padding: 15px;
+    margin: 5px 0 10px 0;
+    color: black;
+    background-color: var(--mixtapeYellow);
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px black;
+    border: 1px solid black
+}
+
 .details img {
-    display: block;
-    min-height: 324px;
-    max-height: 324px;
-    min-width: 250px;
-    max-width: 250px;
-    margin: 0 auto;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
 }
+
 .body ul {
-    list-style: none;
+  list-style: none;
 }
 
 .body label {
-    text-decoration: underline;
-    font-size: 28px;
+  font-size: 35px;
 }
-
-.body ul :last-child {
-    padding-bottom: 30px;
-}
-
-.body {
-    border-bottom: 2px solid black;
-    
-}
-
-.body button {
-    padding: 1px;
-}
-
-/*  */
 
 .bodyMobile {
-    background-color: rgb(225,194,210);
-    width: 315px;
-    margin: 0px auto;
-    border-right: 10px solid var(--darkchoco);
-    border-left: 10px solid var(--darkchoco);
+  background-color: rgb(225, 194, 210);
+  width: 315px;
+  margin: 0 auto;
+  border-right: 10px solid var(--darkchoco);
+  border-left: 10px solid var(--darkchoco);
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.detailsMobile img {
-    min-height: 324px;
-    max-height: 324px;
-    min-width: 250px;
-    max-width: 250px;
-    margin: 0 auto;
-}
+
 .bodyMobile ul {
-    list-style: none;
+  list-style: none;
 }
 
 .bodyMobile label {
-    text-decoration: underline;
-    font-size: 28px;
-}
-
-.bodyMobile ul :last-child {
-    padding-bottom: 30px;
-}
-
-.bodyMobile {
-    border-bottom: 2px solid black;
-    
-}
-
-.bodyMobile button {
-    padding: 1px;
+  text-decoration: underline;
+  font-size: 28px;
 }
 
 .cocktailButton {
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 2px auto 10px auto;
-    filter: var(--dropShadow);
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    cursor: pointer;
+  background: var(--mixtapeYellow);
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 2xl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 1px black;
+  color: black;
+  width: 190px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+
+.cocktailText {
+    margin-top: 10px;
+    font-size: x-large;
+}
+.cocktailText ul {
+    text-align: left;
+    width: fit-content;
+    margin: auto auto
 }
