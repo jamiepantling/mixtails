@@ -15,7 +15,7 @@ export default function HomePage(props) {
 
       {isMobile && (
         <div className={style.cardContainer}>
-          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktails.</div>
+          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktail</div>
           <Link
             to="/moods"
             className={`${style.cardMobile} ${style.one} ${style.card}`}
@@ -35,7 +35,7 @@ export default function HomePage(props) {
 
       {isMedium && (
         <div className={style.cardContainer}>
-          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktails.</div>
+          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktail</div>
           <Link
             to="/moods"
             className={`${style.cardMobile} ${style.one} ${style.card}`}
@@ -55,7 +55,7 @@ export default function HomePage(props) {
 
       {isBigScreen && (
         <div className={style.cardContainer}>
-          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktails.</div>
+          <div className={style.intro}>A mixtail is a combination of a playlist and your favourite cocktail</div>
           <Link
             to="/moods"
             className={`${style.cardMobile} ${style.one} ${style.card}`}
