@@ -41,7 +41,7 @@ export default class App extends Component {
         <Routes>
           <Route path="/home" element={<HomePage setUserInState={this.setUserInState} public={false} user ={this.state.user}/>}/>
           <Route path="/user" element={<UserProfilePage user={this.state.user} setUserInState={this.setUserInState}/>} />          
-          <Route path="/flavours" element={<FlavourPage />} />
+          <Route path="/flavours" element={<FlavourPage user={this.state.user} />} />
           <Route path="/moods" element={<MoodPage user={this.state.user}/>}/>
           <Route path="/mixtapes/:id" element={<MixtapeDetailPage user={this.state.user}/>} />
           <Route path="*" element={<Navigate to="/home" replace />}/>
