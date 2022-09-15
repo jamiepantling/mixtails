@@ -1,62 +1,42 @@
-.flavour:hover {
-    cursor: pointer;
+.flavourOuter {
+    width: fit-content;
+    border: 10px solid var(--militarygreen);
+    margin: 10px auto;
+    box-sizing: content-box;
+    border-radius: 3px;
+
+}
+
+.flavourContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    width: 355px;
+    border: 4px solid white;
+    box-sizing: content-box;
+    border-radius: 3px;
 }
 
 .flavour {
-    /* border: 2px solid black; */
     position: relative;
-    width: 777px;
-    height: 33.5vh;
-    margin: 0px auto;
-    line-height: 100px;
+    height: 100%;
     text-align: center;
-    background-image: url('../../../../public/FlavLabel.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--militarygreen);
+    width: 100%;
     color: white;
     font-size: 35px;
-    font-family: 'Permanent Marker', cursive;
-    line-height: 35vh;
-    z-index: 99;
-}
-
-.filler {
-    width: 355px;
-    height: 200px;
-    margin: -100px auto;
-    border-right: 10px solid var(--darkchoco);
-    border-left: 10px solid var(--darkchoco);
-    background-color: rgb(225,194,210);
-}
-
-.flavourMobile:hover {
+    height: 100px;
     cursor: pointer;
 }
 
-.flavourMobile {
+.cocktailsContainer {
+    background-color: var(--militarygreen);
+    width: fit-content;
     position: relative;
-    width: 355px;
-    height: 33.5vh;
-    margin: 0px auto;
-    line-height: 100px;
-    text-align: center;
-    background-image: url('../../../../public/FlavLabel.png');
-    background-size: 95%;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    font-size: 35px;
-    font-family: 'Permanent Marker', cursive;
-    line-height: 35vh;
-    z-index: 99;
-}
-
-.fillerMobile {
-    width: 315px;
-    height: 200px;
-    margin: -100px auto;
-    border-right: 10px solid var(--darkchoco);
-    border-left: 10px solid var(--darkchoco);
-    background-color: rgb(225,194,210);
+    height: fit-content;
 }

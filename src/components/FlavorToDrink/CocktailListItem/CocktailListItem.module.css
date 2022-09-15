@@ -1,5 +1,4 @@
 .body {
-  /* background-color: rgb(225, 194, 210); */
   background-color: var(--militarygreen);
   width: 355px;
   margin: 0 auto;
@@ -28,9 +27,6 @@
   margin: 0 auto;
 }
 
-.body ul {
-  list-style: none;
-}
 
 .body label {
   font-size: 35px;
@@ -47,10 +43,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.bodyMobile ul {
-  list-style: none;
 }
 
 .bodyMobile label {

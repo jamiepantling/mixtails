@@ -1,41 +1,38 @@
 import { Component, useState } from "react";
-import CocktailList from "../CocktailList/CocktailList";
 import { useMediaQuery } from "react-responsive";
 import style from "./FlavourListItem.module.css";
-
+import CocktailListItem from "../CocktailListItem/CocktailListItem";
 
 export default function FlavourListItem(props) {
   const [showCocktails, setShowCocktails] = useState(false);
 
-  const isMobile = useMediaQuery({ maxWidth: 800 });
-  const isDesktop = useMediaQuery({ minWidth: 800 });
 
+  const clickHandler = () => {
+    setShowCocktails(!showCocktails);
+    console.log("clicked");
+  };
   return (
-    <div>
-      {isDesktop && (
-        <div>
-          <h3
-            className={style.flavour}
-            onClick={() => setShowCocktails({ showCocktails: !showCocktails })}
-          >
+    <div className={style.flavourOuter}>
+
+        <div className={style.flavourContainer}>
+          <h3 className={style.flavour} onClick={clickHandler}>
             {props.content}
           </h3>
-          <div className={style.filler}></div>
-          {showCocktails ? <CocktailList cocktails={props.cocktails} /> : <></>}
+          {showCocktails ? (
+            <div className={style.cocktailsContainer}>
+              {props.cocktails
+                .sort((a, b) =>
+                  a.name > b.name ? 1 : b.name > a.name ? -1 : 0
+                )
+                .map((cocktail) => (
+                  <CocktailListItem cocktail={cocktail} />
+                ))}
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
-      )}
-      {isMobile && (
-        <div>
-          <h3
-            className={style.flavourMobile}
-            onClick={() => setShowCocktails({ showCocktails: !showCocktails })}
-          >
-            {props.content}
-          </h3>
-          <div className={style.fillerMobile}></div>
-          {showCocktails ? <CocktailList cocktails={props.cocktails} /> : <></>}
-        </div>
-      )}
+     
     </div>
   );
 }

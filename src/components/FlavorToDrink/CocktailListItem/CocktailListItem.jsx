@@ -27,13 +27,13 @@ export default function CocktailListItem(props) {
                 <label>Instructions</label>
                 <div className={style.instructions}>{props.cocktail.instruction}</div>
                 <label>Ingredients</label>
-                <ul>
+
                   {props.cocktail.ingredients.map((ingredient) => (
-                    <li key={ingredient._id}>
+                    <div key={ingredient._id}>
                       {ingredient.name} {ingredient.qty}
-                    </li>
+                    </div>
                   ))}
-                </ul>
+
               </div>
             </div>
           ) : (
