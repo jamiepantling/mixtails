@@ -23,7 +23,7 @@ height: 90vh
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 5px;
+  padding: 10px 0;
   width: 90%;
   max-width: 700px;
   height: 200px;
@@ -34,7 +34,7 @@ height: 90vh
   color: var(--offwhite);
   font-family: Permanent Marker;
   filter: var(--dropShadow);
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .subPanel {
@@ -88,5 +88,13 @@ height: 90vh
     max-width: 1000px;
     height: 250px;
     font-size: 70px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding-top: 30px;
+  }
+  .card {
+    font-size: 40px;
   }
 }
