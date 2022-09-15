@@ -27,7 +27,7 @@ export default function MoodPage(props) {
 
   return (
     <main>
-      <Header setUserInState={props.setUserInState} public={props.public} />
+      <Header setUserInState={props.setUserInState} user={props.user} public={props.public} />
       <div className={style.content}>
         <h1 className={style.title}> pick a mixtail</h1>
 

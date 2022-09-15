@@ -41,7 +41,7 @@ export default class UserProfilePage extends Component {
   render() {
     return (
       <main className={style.userPbody}>
-        <Header setUserInState={this.props.setUserInState} />
+        <Header setUserInState={this.props.setUserInState} user={this.props.user} />
         <div className={style.profileInfoContainer}>
           <h1>{this.props.user.username}</h1>
           <div>{this.props.user.email}</div>

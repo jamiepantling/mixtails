@@ -11,7 +11,7 @@ export default function HomePage(props) {
   return (
     <main>
 
-      <Header setUserInState={props.setUserInState} public={props.public}/>
+      <Header setUserInState={props.setUserInState} user={props.user} public={props.public}/>
 
       {isMobile && (
         <div className={style.cardContainer}>

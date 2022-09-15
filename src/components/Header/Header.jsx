@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
 import { useMediaQuery } from "react-responsive";
+import userEvent from "@testing-library/user-event";
 
 export default function Header(props) {
   const isMobile = useMediaQuery({ maxWidth: 800 });
@@ -38,7 +39,7 @@ export default function Header(props) {
               </div>
             ) : (
               <Link className={style.navLink} to={"/user"}>
-                Profile
+                {props.user.username}
               </Link>
             )}
           </div>
@@ -71,7 +72,7 @@ export default function Header(props) {
               </div>
             ) : (
               <Link className={style.navLinkMobile} to={"/user"}>
-                Profile
+                {props.user.username}
               </Link>
             )}
           </div>

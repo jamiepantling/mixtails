@@ -7,7 +7,7 @@ import AllCocktailList from "../../components/FlavorToDrink/AllCocktailList/AllC
 export default function CocktailsPage(props) {
   return (
     <main>
-      <Header setUserInState={props.setUserInState} public={props.public} />
+      <Header setUserInState={props.setUserInState} user={props.user} public={props.public} />
       <div className={style.title}>all cocktails</div>
       <div className={style.cocktailsContainer}>
         <AllCocktailList />
