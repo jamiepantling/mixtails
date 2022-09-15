@@ -17,9 +17,6 @@ export default function MixtapeDetail(props) {
   let [error, setError] = useState("");
   let [success, setSuccess] = useState("");
 
-  const isMobile = useMediaQuery({ maxWidth: 800 });
-  const isBigScreen = useMediaQuery({ minWidth: 801 });
-
   useEffect(() => {
     async function getMoods() {
       let res = await moodApi.getMoods();
@@ -67,17 +64,21 @@ export default function MixtapeDetail(props) {
   };
 
   return (
-    <div>
-      <h1>Mixtape: {mixtape.name}</h1>
-
+    <div className={style.main}>
       <div className={style.content}>
+        <h1>Mixtail: {mixtape.name}</h1>
+
         <h3 className={style.h3}>Cocktails:</h3>
         <div className={style.detailsList}>
           {mixtape.cocktails &&
             mixtape.cocktails.map((c) => <span>{c.name}</span>)}
         </div>
         <div className={style.detailsList}>
-          <a href={mixtape.playlists} target="_blank" className={style.spotifyAnchor}>
+          <a
+            href={mixtape.playlists}
+            target="_blank"
+            className={style.spotifyAnchor}
+          >
             <div className={style.playlistButton}>
               <div className={style.spotify}>
                 <FontAwesomeIcon icon={brands("spotify")} />
@@ -86,61 +87,38 @@ export default function MixtapeDetail(props) {
             </div>
           </a>
         </div>
-      </div>
-      {props.user && mixtape.createdBy === props.user._id ? (
-        <div>
+
+        {props.user && mixtape.createdBy === props.user._id ? (
           <div>
-            <h1>Update</h1>
-            <form onSubmit={handleSubmit}>
-              <label className={style.label}>Update name:</label>
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              ></input>
-              {error ? <p>{error}</p> : <></>}
-              <label className={style.label}>Update playlist:</label>
-              <input
-                type="text"
-                name="playlist"
-                value={playlist}
-                onChange={(e) => setPlaylist(e.target.value)}
-              ></input>
-              <br />
-              <button className={style.button}>
-                <span>Save</span>
-              </button>
-              {success ? <p>{success}</p> : <></>}
-            </form>
-          </div>
+            <div>
+              <h1>Update</h1>
+              <form onSubmit={handleSubmit}>
+                <label className={style.label}>Update name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
+                {error ? <p>{error}</p> : <></>}
+                <label className={style.label}>Update playlist:</label>
+                <input
+                  type="text"
+                  name="playlist"
+                  value={playlist}
+                  onChange={(e) => setPlaylist(e.target.value)}
+                ></input>
+                <br />
+                <button className={style.button}>
+                  <span>Save</span>
+                </button>
+                {success ? <p>{success}</p> : <></>}
+              </form>
+            </div>
 
-          <div className={style.moodButtonSection}>
-            <h2>{mixtape.name}'s moods:</h2>
-            {isBigScreen && (
-              <div
-                className={`${style.moodButtonContainer} ${style.moodButtonContainerBigScreen}`}
-              >
-                {mixtape.moods
-                  .sort((a, b) =>
-                    a.content > b.content ? 1 : b.content > a.content ? -1 : 0
-                  )
-                  .map((mood) => (
-                    <div className={style.moodButton}>
-                      {mood.content}
+            <div className={style.moodButtonSection}>
+              <h2>{mixtape.name}'s moods:</h2>
 
-                      <div
-                        className={style.xButton}
-                        id={mood._id}
-                        onClick={() => handleMoodClick(mood)}
-                      >
-                        X
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            )}
-            {isMobile && (
               <div
                 className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}
               >
@@ -162,11 +140,10 @@ export default function MixtapeDetail(props) {
                     </div>
                   ))}
               </div>
-            )}
-          </div>
-          <div className={style.moodButtonSection}>
-            <h2>Add moods to {mixtape.name}:</h2>
-            {isMobile && (
+            </div>
+            <div className={style.moodButtonSection}>
+              <h2>Add moods to {mixtape.name}:</h2>
+
               <div
                 className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}
               >
@@ -188,51 +165,13 @@ export default function MixtapeDetail(props) {
                     </div>
                   ))}
               </div>
-            )}
-            {isBigScreen && (
-              <div
-                className={`${style.moodButtonContainer} ${style.moodButtonContainerBigScreen}`}
-              >
-                {moods
-                  .filter(
-                    (mood) =>
-                      !mixtape.moods.some((curr) => curr._id === mood._id)
-                  )
-                  .sort((a, b) =>
-                    a.content > b.content ? 1 : b.content > a.content ? -1 : 0
-                  )
-                  .map((mood) => (
-                    <div
-                      className={`${style.moodButton} ${style.addMoodButton}`}
-                      id={mood._id}
-                      onClick={() => handleMoodClick(mood)}
-                    >
-                      {mood.content}
-                    </div>
-                  ))}
-              </div>
-            )}
+            </div>
           </div>
-        </div>
-      ) : (
-        <>
-          <div className={style.moodButtonSection}>
-            <h2>{mixtape.name}'s moods:</h2>
-            {isBigScreen && (
-              <div
-                className={`${style.moodButtonContainer} ${style.moodButtonContainerBigScreen}`}
-              >
-                {mixtape.moods &&
-                  mixtape.moods
-                    .sort((a, b) =>
-                      a.content > b.content ? 1 : b.content > a.content ? -1 : 0
-                    )
-                    .map((mood) => (
-                      <div className={style.moodButton}>{mood.content}</div>
-                    ))}
-              </div>
-            )}
-            {isMobile && (
+        ) : (
+          <>
+            <div className={style.moodButtonSection}>
+              <h2>{mixtape.name}'s moods:</h2>
+
               <div
                 className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}
               >
@@ -245,10 +184,10 @@ export default function MixtapeDetail(props) {
                       <div className={style.moodButton}>{mood.content}</div>
                     ))}
               </div>
-            )}
-          </div>
-        </>
-      )}
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 }
