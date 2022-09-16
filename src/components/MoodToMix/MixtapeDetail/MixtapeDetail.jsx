@@ -34,6 +34,7 @@ export default function MixtapeDetail(props) {
   }
 
   const handleSubmit = async (evt) => {
+    console.log(evt);
     evt.preventDefault();
     if (!name) {
       setError("Mixtape name is required.");
@@ -44,7 +45,9 @@ export default function MixtapeDetail(props) {
         name,
         playlist,
       });
-      if (fetchResponse) setSuccess("Saved.");
+      if (fetchResponse) {
+        setSuccess("Saved.");
+      }
       getMixtape(params.id);
     } catch (error) {
       console.log("Error: ", error);
@@ -62,62 +65,83 @@ export default function MixtapeDetail(props) {
     }
     setMixtape({ ...mixtape, moods: tempMoods });
   };
-
   return (
     <div className={style.main}>
       <div className={style.content}>
-        <h1>Mixtail: {mixtape.name}</h1>
-
-        <h3 className={style.h3}>Cocktails:</h3>
-        <div className={style.detailsList}>
-          {mixtape.cocktails &&
-            mixtape.cocktails.map((c) => <span>{c.name}</span>)}
-        </div>
-        <div className={style.detailsList}>
-          <a
-            href={mixtape.playlists}
-            target="_blank"
-            className={style.spotifyAnchor}
+        <h3 className={style.mood}>
+          <span
+            className={name.length < 34 ? style.moodTitle : style.moodTitleLong}
           >
-            <div className={style.playlistButton}>
-              <div className={style.spotify}>
-                <FontAwesomeIcon icon={brands("spotify")} />
-              </div>
-              Playlist
-            </div>
-          </a>
-        </div>
-
+            {name}
+          </span>
+        </h3>
         {props.user && mixtape.createdBy === props.user._id ? (
-          <div>
-            <div>
-              <h1>Update</h1>
-              <form onSubmit={handleSubmit}>
-                <label className={style.label}>Update name:</label>
+          <div className={style.formContainer}>
+            <form onSubmit={handleSubmit}>
+              <div className={style.inputButtonContainer}>
                 <input
                   type="text"
                   name="name"
                   value={name}
+                  className={`${style.input} ${style.nameInput}`}
                   onChange={(e) => setName(e.target.value)}
                 ></input>
                 {error ? <p>{error}</p> : <></>}
-                <label className={style.label}>Update playlist:</label>
+                <br />
+                <button className={style.button}>
+                  <span>Save</span>
+                </button>
+              </div>
+              {success ? <p>{success}</p> : <></>}
+            </form>
+          </div>
+        ) : (
+          <></>
+        )}
+        <h2>Cocktail</h2>
+        <div className={style.cocktailsContainer}>
+          {mixtape.cocktails &&
+            mixtape.cocktails.map((c) => (
+              <div className={style.cocktailButton}>{c.name}</div>
+            ))}
+        </div>
+
+        <a
+          href={mixtape.playlists}
+          target="_blank"
+          className={style.spotifyAnchor}
+        >
+          <div className={style.playlistButton}>
+            <div className={style.spotify}>
+              <FontAwesomeIcon icon={brands("spotify")} />
+            </div>
+            Playlist
+          </div>
+        </a>
+
+        {props.user && mixtape.createdBy === props.user._id ? (
+          <div>
+            <div className={style.formContainer}>
+              <form onSubmit={handleSubmit}>
+                <div className={style.inputButtonContainer}>
                 <input
                   type="text"
                   name="playlist"
                   value={playlist}
+                  className={`${style.input} ${style.playlistInput}`}
                   onChange={(e) => setPlaylist(e.target.value)}
                 ></input>
                 <br />
                 <button className={style.button}>
                   <span>Save</span>
                 </button>
+                </div>
                 {success ? <p>{success}</p> : <></>}
               </form>
             </div>
 
             <div className={style.moodButtonSection}>
-              <h2>{mixtape.name}'s moods:</h2>
+              <h2>Current moods</h2>
 
               <div
                 className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}
@@ -142,7 +166,7 @@ export default function MixtapeDetail(props) {
               </div>
             </div>
             <div className={style.moodButtonSection}>
-              <h2>Add moods to {mixtape.name}:</h2>
+              <h2>Add moods</h2>
 
               <div
                 className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}
@@ -170,7 +194,7 @@ export default function MixtapeDetail(props) {
         ) : (
           <>
             <div className={style.moodButtonSection}>
-              <h2>{mixtape.name}'s moods:</h2>
+              <h3 className={style.h3}>Moods</h3>
 
               <div
                 className={`${style.moodButtonContainer} ${style.moodButtonContainerMobile}`}
