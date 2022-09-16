@@ -28,6 +28,7 @@ body {
   margin: 0;
   font-family: Robinson;
   font-size: 20px;
+  letter-spacing: 0.7px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: beige;

@@ -1,119 +1,199 @@
 .main {
-    color: var(--tanned);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 90vh
-    /* flex: 1 1 auto */
+  color: var(--tanned);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
-    letter-spacing: 0.3px;
-    font-size: x-large;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  filter: var(--dropShadow);
+  border-radius: 5px;
+  width: 400px;
+  margin: 15px 0;
 }
-.li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.button {
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 20px auto;
-    filter: var(--dropShadow);
-    border: none;
-  }
-  
-.button > span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    filter: var(--dropShadow);
-  }
 
-  
-.label {
-    display: block;
-    margin-top: 15px;
-    text-decoration: underline;
-    font-size: 23px;
-    margin-bottom: 0
+.button {
+  width: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+  margin: 0 10px;
+  box-shadow: 1px 1px 1px;
+
+  /* filter: var(--dropShadow); */
+  border: none;
+  height: 36px;
 }
+
+.button > span {
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+  letter-spacing: 0.7px;
+  /* filter: var(--dropShadow); */
+}
+
 
 .div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .moodButton {
-    margin: 4px;
-    background: var(--mixtapeYellow);
-    padding: 4px 8px;
-    border: 2px solid black;
-    border-radius: 5px;
-    font-family: 'Permanent Marker', cursive;
-    font-size: large;
-    width: 150px;
-    box-shadow: 3px 3px 1px;
-    display: flex;
-    justify-content: space-between;
-    color: black
+  margin: 4px;
+  background: var(--mixtapeYellow);
+  padding: 4px 8px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: "Permanent Marker", cursive;
+  font-size: large;
+  width: 150px;
+  box-shadow: 3px 3px 1px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
 }
 
 .moodButtonContainer {
-    display: grid;
-    margin-bottom: 50px;
+  display: grid;
+  margin-bottom: 10px;
 }
 .moodButtonContainerMobile {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .moodButtonContainerBigScreen {
-    grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .moodButtonSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .xButton {
-    background-color: none;
-    color: rgb(224, 63, 43);
-    cursor: pointer;
+  background-color: none;
+  color: rgb(224, 63, 43);
+  cursor: pointer;
 }
 .addMoodButton {
-    cursor: pointer
-}
-.detailsList{
-    margin-bottom: 10px;
-    text-decoration: none;
-    
+  cursor: pointer;
 }
 
 .spotify {
-    color: rgb(24, 182, 80)
+  color: rgb(24, 182, 80);
 }
 
 .playlistButton {
-    cursor: pointer;
-    width: 100px;
-    padding: 5px;
-    border-radius: 5px;
-    /* background-color: var(--tanned); */
-    margin: 20px auto;
-    /* filter: var(--dropShadow); */
-    color: black;
-    border: 1px solid black;
-    box-shadow: 1px 1px;
-    display: flex;
-    justify-content: space-around;
-  }
-  .spotifyAnchor {
-    text-decoration: none;
-  }
+  cursor: pointer;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 1px 1px;
+  display: flex;
+  justify-content: space-around;
+}
+.spotifyAnchor {
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.mood {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../../../public/MixtapeTback.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Permanent Marker", cursive;
+  width: 250px;
+  height: 195px;
+  margin: 0 auto 10px auto;
+  line-height: 10vh;
+  filter: var(--dropShadow);
+}
+
+.moodTitle {
+  position: absolute;
+  line-height: 20px;
+  height: 30px;
+  transform: rotate(-10deg);
+  margin-right: 15px;
+  margin-top: 35px;
+  font-size: 32px;
+  color: beige;
+  filter: var(--dropShadow);
+  line-height: 30px;
+  padding: 0 15px;
+}
+.moodTitleLong {
+  position: absolute;
+  line-height: 20px;
+  height: 30px;
+  transform: rotate(-10deg);
+  margin-right: 15px;
+  margin-top: 35px;
+  font-size: 20px;
+  color: beige;
+  filter: var(--dropShadow);
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+.cocktailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px
+}
+
+.cocktailButton {
+  margin: 4px 0;
+  background: var(--mixtapeYellow);
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 2xl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  box-shadow: 3px 3px 1px black;
+  color: black;
+}
+
+.formContainer {
+  margin-bottom: 30px;
+}
+
+.inputButtonContainer {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.input {
+  font-size: 20px;
+  width: 250px;
+  border: 2px solid black;
+  height: 40px;
+}
+
+.nameInput {
+  font-family: Permanent Marker;
+  background-color: var(--mixtapeYellow);
+  text-align: center;
+}
+
+.playlistInput {
+    background-color: var(--offwhite);
+}
