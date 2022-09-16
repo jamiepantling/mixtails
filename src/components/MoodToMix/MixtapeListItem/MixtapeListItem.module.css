@@ -30,7 +30,10 @@
 .mixtapeInfoContainer a:hover {
   color: var(--lipstickred);
 }
-
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
 .cocktailsList {
     line-height: 30px;
 }
@@ -52,10 +55,7 @@
   justify-content: space-around;
   font-size: x-large;
 }
-.spotifyAnchor {
-  text-decoration: none;
-  margin-top: 10px
-}
+
 
 .cocktailButton {
     margin: 4px 0;

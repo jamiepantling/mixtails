@@ -5,19 +5,20 @@ import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export default function MixtapeListItem(props) {
   return (
+    <Link
+    to={`/mixtapes/${props.mixtape._id}`}
+    className={style.link}>
     <div className={style.mixtapeInfoContainer}>
       <h3>
         <Link to={`/mixtapes/${props.mixtape._id}`}>{props.mixtape.name}</Link>
       </h3>
       <p className={style.cocktailsContainer}>
-        {/* Cocktails:{" "} */}
         {props.mixtape.cocktails.map((cocktail) => (
           <div className={style.cocktailButton}>{cocktail.name}</div>
         ))}
       </p>
-      <a
-        href={props.mixtape.playlists}
-        target="_blank"
+      <div
+
         className={style.spotifyAnchor}
       >
         <div className={style.playlistButton}>
@@ -26,7 +27,8 @@ export default function MixtapeListItem(props) {
           </div>
           Playlist
         </div>
-      </a>
+      </div>
     </div>
+    </Link>
   );
 }
