@@ -34,9 +34,6 @@ export default class UserProfilePage extends Component {
     }
   }
 
-  // componentDidUpdate() {
-  //   console.log("ComponentDidUpdate: ", this.state.mixtapes);
-  // }
 
   render() {
     return (
@@ -46,8 +43,7 @@ export default class UserProfilePage extends Component {
           <h1>{this.props.user.username}</h1>
           <div>{this.props.user.email}</div>
           {this.props.user.bio && <div>Bio: {this.props.user.bio}</div>}
-          {/* <div>Fav Drinks: {this.props.user.favdrinks}</div>
-          <div>Fav Mixtapes: {this.props.favmixtapes}</div> */}
+
         </div>
         <div
           className={style.editProfileButton}

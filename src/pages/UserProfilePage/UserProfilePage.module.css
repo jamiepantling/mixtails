@@ -13,12 +13,13 @@
 
 .editProfileButton {
     cursor: pointer;
-    width: 110px;
+    width: 130px;
     padding: 5px;
     border-radius: 5px;
     background-color: var(--militarygreen);
     margin: 20px auto;
     filter: var(--dropShadow);
+    
 }
   
 .editProfileButton > span {
