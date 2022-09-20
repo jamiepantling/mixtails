@@ -1,70 +1,74 @@
 .content {
- /* border: 1px solid red; */
- height: 100vh;
- display: flex;
- flex-direction: column;
- align-items: center;
- /* justify-content: center; */
- /* margin: 20px; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-    font-size: 100px;
-    font-family: Robinson;
-    color: var(--tanned);
-    
+  font-size: 100px;
+  font-family: Robinson;
+  color: var(--tanned);
 }
 
 .mood:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .mood {
-    display: flex;
-    justify-content: center;
-    background-image: url('/public/MixtapeTback.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Permanent Marker', cursive;
-    width: 180px;
-    height: 180px;
-    margin: 20px auto;
-    line-height: 10vh;
-    filter: var(--dropShadow);
+  display: flex;
+  justify-content: center;
+  background-image: url("/public/MixtapeTback.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Permanent Marker", cursive;
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  line-height: 10vh;
+  filter: var(--dropShadow);
 }
+
 .createMood {
-    display: flex;
-    justify-content: center;
-    background-image: url('/public/MixtapeTback.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Permanent Marker', cursive;
-    width: 180px;
-    height: 130px;
-    margin: 0 auto;
-    line-height: 10vh;
-    filter: var(--dropShadow);
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-image: url("/public/MixtapeTback.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Permanent Marker", cursive;
+  width: 180px;
+  height: 130px;
+  margin: 0 auto 15px auto;
+  line-height: 10vh;
+  filter: var(--dropShadow);
+  cursor: pointer;
 }
 
 .moodTitle {
-    position: absolute;
-    line-height: 20px;
-    height: 30px;
-    transform: rotate(-10deg);
-    margin-right: 15px;
-    margin-top: 20px;
-    font-size: 32px;
-    color: beige;
-    filter: var(--dropShadow);
- 
+  position: absolute;
+  line-height: 20px;
+  height: 30px;
+  transform: rotate(-10deg);
+  margin-right: 15px;
+  margin-top: 20px;
+  font-size: 32px;
+  color: beige;
+  filter: var(--dropShadow);
 }
+
+.introMixtailFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .publicIntro {
-    color: var(--tanned);
-    font-size: 30px;
-    max-width: 500px;
-    margin-bottom: 15px;
-    max-width: 250px;
+  color: var(--tanned);
+  font-size: 30px;
+  max-width: 500px;
+  margin-bottom: 15px;
+  max-width: 250px;
 }
