@@ -15,7 +15,7 @@ Here's a link to [the deployed app](https://mixtails.herokuapp.com/).
 ### Home Page
 ![shot1](./public/Screenshot1.png)
 ### Moods Page
-![shot2](./public/Screenshot2.png)
+![shot2](./public/Screenshot4.png)
 ### Flavours Page
 ![shot3](./public/Screenshot3.png)
 
