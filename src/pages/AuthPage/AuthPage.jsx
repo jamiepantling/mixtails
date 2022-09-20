@@ -6,8 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function AuthPage(props) {
   const [showLogin, setShowLogin] = useState(props.login);
-  console.log(props.login);
-  console.log(showLogin);
+
   return (
     <main className={style.AuthPage}>
       <div className={style.logoContainer}>

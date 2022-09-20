@@ -18,7 +18,14 @@ export default class SignUpForm extends Component {
   };
 
   handleSubmit = async (evt) => {
+    console.log(evt)
     evt.preventDefault();
+    if (this.state.password != this.state.confirm) {
+      return this.setState({ error: "Please make sure password and confirmation match" })
+    }
+    if (this.state.password.length < 6) {
+      return this.setState({ error: "Please make sure password is at least 6 characters" })
+    }
     try {
       const fetchResponse = await fetch("/api/users/signup", {
         method: "POST",
@@ -98,16 +105,18 @@ export default class SignUpForm extends Component {
             <button
               className={style.signUpButton}
               type="submit"
-              disabled={disable}
+              // disabled={disable}
             >
               <span> SIGN UP</span>
             </button>
           </form>
         </div>
-        {this.state.error.length ? <p className="error-message">&nbsp;{this.state.error}</p> : <></> }
-          <Link className={style.continueButton} to={"/home"}>
-              <span>Continue without signing up</span>
-            </Link>
+        {this.state.error.length ? <div className={style.errorMessage}>&nbsp;{this.state.error}</div> : <></> }
+        <Link className={style.continueButtonLink} to={"/home"}>
+            <div className={style.continueButton}>
+              Continue without an account
+            </div>
+          </Link>
       </div>
     );
   }
