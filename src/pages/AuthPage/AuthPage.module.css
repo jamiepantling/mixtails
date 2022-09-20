@@ -1,52 +1,51 @@
 .AuthPage {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    justify-content: center;
-    margin-top: 15vh 0;
-    height: 100vh;
-    /* padding-top: 30px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh 0;
+  height: 100vh;
 }
 
 .signUpButton {
-    width: 90px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--militarygreen);
-    margin: 0 auto 40px auto ;
-    filter: var(--dropShadow);
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    letter-spacing: 0.7px;
-  }
-  
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--militarygreen);
+  margin: 0 auto 40px auto;
+  filter: var(--dropShadow);
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  letter-spacing: 0.7px;
+}
+
 .signUpButton > span {
-    color: white;
-    font-family: Robinson;
-    font-size: 25px;
-    text-shadow: 2px 2px rgb(136, 136, 136)
-  }
+  color: white;
+  font-family: Robinson;
+  font-size: 25px;
+}
+
 .logoContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 80px; */
 }
+
 .mixtailsTitle {
   font-size: 100px;
   color: var(--tanned);
-  /* text-shadow: 1px 1px rgb(151, 151, 151); */
   font-family: Permanent Marker;
 }
+
 .logo {
   margin-left: 10px;
-  max-height: 200px
+  max-height: 200px;
 }
+
 @media screen and (max-width: 500px) {
   .mixtailsTitle {
     font-size: 70px;
