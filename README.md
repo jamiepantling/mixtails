@@ -19,12 +19,10 @@ Here's a link to [the deployed app](https://mixtails.herokuapp.com/).
 ### Flavours Page
 ![shot3](./public/Screenshot3.png)
 
-## <u>Freezer Features</u>
-* Improve responsiveness of website
+## <u>Icebox Features</u>
+* Ability to add more than one cocktail to a mixtail
 * Create a Cocktail Show Page for people to be able share cocktail recipe and info
-* Hitting the Spotify Api 
-* Add AWS
-* Implement Weather API and sort drinks by weather at your location
+* Hitting the Spotify Api to embed playlists
 
 
 ## <u>Proposal ERD and Wireframe</u>
