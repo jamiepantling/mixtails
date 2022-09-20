@@ -1,6 +1,6 @@
 # ___Mixtails___
 
-Mixtails helps you set the mood of your evening - combine a playlist of songs with a selection of cocktails into a 'mixtail'. Users can log in, create mixtails, browse others and share their own.
+Mixtails helps you set the mood of your evening - combine a playlist of songs with a cocktail into a 'mixtail'. Users can log in, create mixtails, browse others' and share their own.
 
 Here's a link to [the deployed app](https://mixtails.herokuapp.com/).
 
@@ -8,7 +8,7 @@ Here's a link to [the deployed app](https://mixtails.herokuapp.com/).
 * React
 * Express
 * Node.js
-* Mongodb 
+* MongoDB
 * HTML/CSS 
 
 ## <u>Screenshots of Mixtails in the wild</u>
