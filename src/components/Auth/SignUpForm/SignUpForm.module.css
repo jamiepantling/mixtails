@@ -21,7 +21,7 @@
     color: white;
     font-family: Robinson;
     font-size: 25px;
-    filter: var(--dropShadow);
+    letter-spacing: 0.7px;
 }
 
 .signUpContainer input {
@@ -56,22 +56,27 @@
     }
 }
 
-.continueButton {
-    width: 200px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: var(--tanned);
-    margin: 0 auto 10px auto;
-    filter: var(--dropShadow);
-    border: none;
-    cursor: pointer;
+
+  .continueButtonLink {
     text-decoration: none;
   }
   
-  .continueButton > span {
+  .continueButton {
+    width: 220px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--militarygreen);
+    margin: 10px auto;
+    filter: var(--dropShadow);
+    border: none;
+    cursor: pointer;
     color: white;
     font-family: Robinson;
     font-size: 25px;
-    filter: var(--dropShadow);
+  }
+
+  .errorMessage {
+    color: var(--tanned);
+    font-size: 25px;
   }
   

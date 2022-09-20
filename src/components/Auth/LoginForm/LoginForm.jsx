@@ -17,6 +17,9 @@ export default class SignUpForm extends Component {
 
   handleSubmit = async (evt) => {
     evt.preventDefault();
+    if (this.state.password.length < 8) {
+      console.log("short password");
+    }
     try {
       // 1. POST our new user info to the server
       const fetchResponse = await fetch("/api/users/login", {
@@ -38,7 +41,9 @@ export default class SignUpForm extends Component {
       this.props.setUserInState(userDoc);
     } catch (err) {
       console.log("SignupForm error", err);
-      this.setState({ error: "Sign Up Failed - Try Again" });
+      this.setState({
+        error: "That email or password isn't right. Please try again.",
+      });
     }
   };
 
@@ -69,10 +74,17 @@ export default class SignUpForm extends Component {
               <span>LOG IN</span>
             </button>
           </form>
-          {this.state.error.length ? <p className="error-message">&nbsp;{this.state.error}</p> : <></> }
-          <Link className={style.continueButton} to={"/home"}>
-              <span>Continue without logging in</span>
-            </Link>
+          {this.state.error.length ? (
+            <div className={style.errorMessage}>{this.state.error}</div>
+          ) : (
+            <></>
+          )}
+
+          <Link className={style.continueButtonLink} to={"/home"}>
+            <div className={style.continueButton}>
+              Continue without an account
+            </div>
+          </Link>
         </div>
       </div>
     );
