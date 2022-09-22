@@ -25,7 +25,7 @@ Here's a link to [the deployed app](https://mixtails.herokuapp.com/).
 * Hitting the Spotify Api to embed playlists
 
 
-## <u>Proposal ERD and Wireframe</u>
+## <u>ERD and Wireframe</u>
 ### <u>ERD</u>
 
 ![ERD](./public/Project%204.png)
